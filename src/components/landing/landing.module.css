@@ -1,0 +1,83 @@
+.full-landing-container{
+    /* min-height: calc(100vh - 100px); */
+    /* background-color: aqua; */
+
+
+    @media screen and (min-width: 600px) {
+        padding-top: 100px;
+    }
+    
+    display: flex;
+    align-items: center;
+    .landing-container{
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+
+            .text{
+                color: var(--font-color-2);
+            }
+
+            .title{
+                font-size: 60px;
+                color: var(--font-color);
+                text-align: center;
+            }
+
+            .description{
+                color: var(--font-color-2);
+                font-size: 20px;
+                text-align: center;
+
+                @media screen and (min-width: 600px) {
+                    width: 80%;
+                }
+            }
+
+            .button-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                transition: width 0.3s ease, justify-content 0.3s ease;
+                -webkit-transition: width 0.3s ease, justify-content 0.3s ease;
+                -moz-transition: width 0.3s ease, justify-content 0.3s ease;
+                -ms-transition: width 0.3s ease, justify-content 0.3s ease;
+                -o-transition: width 0.3s ease, justify-content 0.3s ease;
+                background: linear-gradient(to top, var(--button-color), var(--button-color-hover));
+                color: var(--font-color-3);
+                padding: 1rem 1.5rem;
+                border-radius: 32rem;
+                font-size: 15px;
+                cursor: pointer;
+                white-space: nowrap;
+                width: 150px;
+                
+                button{
+                    position: relative;
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                }
+
+                svg {
+                    display: none;
+                }
+
+                &:hover {
+                    width: 220px;
+                    justify-content: space-between; 
+                }
+
+                &:hover svg {
+                    display: inline-block;
+                }
+
+            }
+            
+        }
+    }
+}

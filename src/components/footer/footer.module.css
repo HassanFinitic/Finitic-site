@@ -1,0 +1,158 @@
+.footer-container{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; */
+
+    .top{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+
+        @media screen and (min-width: 600px) {
+            gap: 100px;
+            flex-direction: row;
+        }
+
+        .content{
+            display: flex;
+            flex: 1.2;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            padding: 1rem;
+            /* background-color: aquamarine; */
+
+
+            p{
+                position: relative;
+                color: var(--gray-font-color);
+                font-size: 14px;
+                font-weight: 600;
+
+                @media screen and (max-width: 600px) {
+                    width: 60%;
+                }
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -30%;
+                    width: 2px;
+                    height: 70%;
+                    background-color: var(--white-font-color);
+                    transform: translateY(20%);
+                    -webkit-transform: translateY(20%);
+                    -moz-transform: translateY(20%);
+                    -ms-transform: translateY(20%);
+                    -o-transform: translateY(20%);
+
+                    @media screen and (max-width: 600px) {
+                        display: none;  
+                    }
+                }
+
+            }
+
+        }
+
+        .quick-links{
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: start;
+            padding: 1rem;
+            gap: 20px;
+
+            .quick-link{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                p{
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: var(--white-font-color);
+
+                    @media screen and (max-width: 600px) {
+                        font-size: 14px;
+                    }
+                }
+
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 7px;
+
+                    li{
+                        list-style: none;
+                        font-size: 14px;
+                        color: var(--gray-font-color);
+
+                        @media screen and (max-width: 600px) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    hr{
+        border: 1px solid var(--gray-font-color);
+        opacity: 0.3;
+    }
+
+    .bottom{
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: start;
+        padding: 1rem;
+        margin-top: 50px;
+
+        @media screen and (min-width: 600px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .copyright{
+
+            p{
+                color: var(--gray-font-color);
+                font-size: 14px;
+                margin-bottom: 7px;
+
+                @media screen and (max-width: 600px) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .social-icons{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            padding: 1rem 0;
+            width: 120px;
+            /* background-color: aqua; */
+
+            a{
+                color: var(--white-font-color);
+                transition: color 0.3s ease-in-out;
+                
+                &:hover{
+                    color: green;
+                }
+            }
+        }
+    }
+}

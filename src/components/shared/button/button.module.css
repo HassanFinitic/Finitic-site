@@ -1,0 +1,43 @@
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: width 0.3s ease, justify-content 0.3s ease;
+    -webkit-transition: width 0.3s ease, justify-content 0.3s ease;
+    -moz-transition: width 0.3s ease, justify-content 0.3s ease;
+    -ms-transition: width 0.3s ease, justify-content 0.3s ease;
+    -o-transition: width 0.3s ease, justify-content 0.3s ease;
+    background: linear-gradient(to top, var(--button-color), var(--button-color-hover));
+    color: var(--font-color-3);
+    padding: 1rem 1.5rem;
+    border-radius: var(--main-border-radius);
+    -webkit-border-radius: var(--main-border-radius);
+    -moz-border-radius: var(--main-border-radius);
+    -ms-border-radius: var(--main-border-radius);
+    -o-border-radius: var(--main-border-radius);
+    font-size: 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 150px;
+    
+    button{
+        position: relative;
+        outline: none;
+        border: none;
+        background-color: transparent;
+    }
+
+    svg {
+        display: none;
+    }
+
+    &:hover {
+        width: 220px;
+        justify-content: space-between; 
+    }
+
+    &:hover svg {
+        display: inline-block;
+    }
+}
