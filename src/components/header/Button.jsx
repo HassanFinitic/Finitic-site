@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Button() {
+export default function Button({title}) {
   return (
-    <button>Start New Challenge</button>
+    <button>{title}</button>
   )
 }

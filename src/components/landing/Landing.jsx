@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import style from "./landing.module.css";
 import data from "../../data/landingPage.json";
 import Aos from "aos";
-import "aos/dist/aos.css"; 
 import Button from "../shared/button/Button";
 
 export default function Landing() {

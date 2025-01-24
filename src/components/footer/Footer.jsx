@@ -5,7 +5,7 @@ import { CiFacebook } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import Logo from "../header/Logo";
-import logo from "../../assets/images/logo.png"
+import logo from "../../../public/assets/images/logo.png"
 import {quickLinksData} from "../../data/quickLinks"
 import CurrentYear from './CurrentYear';
 import Link from "next/link";

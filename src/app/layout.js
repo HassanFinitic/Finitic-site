@@ -1,15 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import {Sora} from "next/font/google";
 import "./globals.css";
+import "aos/dist/aos.css"; 
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sora = Sora({
+  variable: "--font-sora",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
 });
 
@@ -21,10 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${sora.variable}`}>
         <Header />
         <div
-          className="container"
           style={{
             marginTop: "100px",
             minHeight: "100vh",
