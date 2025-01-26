@@ -7,7 +7,7 @@ import Aos from "aos";
 const Products = () => {
     useEffect(() => {
         Aos.init({
-          duration: 2500, 
+          duration: 1000, 
           once: true
         });
       }, []);

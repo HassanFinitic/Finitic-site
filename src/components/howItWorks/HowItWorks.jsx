@@ -42,10 +42,17 @@ const HowItWorks = () => {
         const iconId = `icon-${entry.target.id}`;
         if (entry.isIntersecting) {
           document.querySelectorAll(".icon").forEach((icon) => {
-            if (icon.id === iconId ||
-              (entry.target.id === "two" && icon.id === "icon-one") ||
-              (entry.target.id === "three" && ["icon-one", "icon-two"].includes(icon.id))) {
-              icon.classList.add("active");
+            if(  entry.target.id === "one"){
+              getElementById("icon-one").classList.add("active");
+            }
+            if(entry.target.id === "two"){
+              getElementById("icon-one").classList.add("active");
+              getElementById("icon-two").classList.add("active");
+            }
+            if( entry.target.id === "three"){
+              getElementById("icon-one").classList.add("active");
+              getElementById("icon-two").classList.add("active");
+              getElementById("icon-three").classList.add("active");
             }
           });
         } else {
@@ -62,7 +69,7 @@ const HowItWorks = () => {
   return (
     <div className={style["how-it-works__container"]}>
       <Header title="How it works" decription="Customizable, efficient Forex trading CRM solutions." />
-      <div className={` how-it-works__layout `}>
+      <div id="how-it-works" className={` how-it-works__layout `}>
         <div className={`how-it-works__sidebar `}>
           <div className={"sidebar-content"}>
             <Link goto={"one"} id="icon-one"

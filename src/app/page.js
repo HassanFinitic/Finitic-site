@@ -22,7 +22,7 @@ export default function Home() {
     <Products />
     <Pricing />
     <HowItWorks />
-    {/* <StayAHead /> */}
+    <StayAHead />
     </>
   );
 }

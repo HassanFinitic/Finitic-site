@@ -33,20 +33,20 @@ export const productsData = [
       title: "PAMMMAM",
       description:
         "Enable efficient management of pooled accounts with customizable tools that align with your brokerage’s Forex trading strategies.",
-            delay: "1500"
+             delay: "1000"
     },
     {
       icon: <Mt4 />,
       title: "MT4/MT5 Administration",
       description:
         "Seamlessly integrate with leading Forex trading platforms, optimizing broker operations and enhancing strategic trading.",
-               delay: "2000"
+      delay: "500"
     },
     {
       icon: <Prop />,
       title: "Prop Firm Solutions",
       description:
         "Empower brokers to design proprietary trading programs with tools for evaluating performance, implementing Forex signals, and fostering trader success.",
-         delay: "2500"
+        delay: "0"
     },
   ];
