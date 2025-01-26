@@ -36,8 +36,6 @@
 html,
 body {
   font-family: "Sora", serif !important;
-  /* max-width: 100vw; */
-  /* overflow-x: hidden; */
 }
 
 body {
@@ -81,20 +79,19 @@ a {
 } */
 .how-it-works__layout {
   display: flex;
-  flex-direction: column; 
+  flex-direction: row; 
   gap: 50px;
   padding: 20px 0;
 }
-
-   .sidebar-content{
+  .sidebar-content{
     width: fit-content;
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
-     position: sticky;
-     top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 100px;
     
-   }
+  }
 .how-it-works__sidebar {
   display: flex;
   flex-direction: column;
@@ -122,4 +119,10 @@ a {
 .how-it-works__sidebar  .icon.active svg.three  {
   stroke: white  ; 
   fill: white  ;
+}
+@media (max-width: 768px) {
+ 
+  .how-it-works__sidebar{
+    display: none;
+  }
 }

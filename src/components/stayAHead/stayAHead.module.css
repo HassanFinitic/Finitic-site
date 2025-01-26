@@ -1,0 +1,28 @@
+.title{
+    color: var(--blue-black);
+    font-size: 42px;
+    text-align: center;
+    font-weight: 700;
+}
+.p{
+    color: var(--font-heading-1);
+    font-size: 18px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    line-height: 36px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; 
+    padding: 30px;
+}
+.stayAhead__Card{
+    border-radius: 24px; 
+    padding: 28px ;
+    background-color: var(--blue-black);
+    color: #fff;
+    transform: scale(1);
+    box-shadow: inset 0 -2px 20px 0 rgba(248, 248, 248, 0.8); 
+}

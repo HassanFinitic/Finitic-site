@@ -11,13 +11,17 @@ import { useRef, useEffect } from "react"
 
 const HowItWorks = () => {
   const sectionRefs = useRef([]);
-  const scroll2El = elID => {
-    window.scrollTo({
-      top: document.getElementById(elID).offsetTop - 60,
-      behavior: 'smooth',
-    });
+  const scroll2El = (elID) => {
+    const element = document.getElementById(elID);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 60,
+        behavior: 'smooth',
+      });
+    } else {
+      console.error(`Element with ID "${elID}" not found.`);
+    }
   };
-
   const onBtnClick = (e) => {
     e.preventDefault();
     console.log(e.target, "togo");
@@ -29,38 +33,27 @@ const HowItWorks = () => {
 
   useEffect(() => {
     const sections = sectionRefs.current;
-
     const options = {
       root: null,
-      threshold:1 , 
+      threshold: 1,
     };
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const iconId = `icon-${entry.target.id}`;
-
         if (entry.isIntersecting) {
-   
           document.querySelectorAll(".icon").forEach((icon) => {
-            console.log(["icon-one", "icon-two"].includes(icon.id),icon.id,"sa")
-            if (
-              icon.id === iconId 
-              ||
+            if (icon.id === iconId ||
               (entry.target.id === "two" && icon.id === "icon-one") ||
-              (entry.target.id === "three" && ["icon-one", "icon-two"].includes(icon.id))
-            ) {
+              (entry.target.id === "three" && ["icon-one", "icon-two"].includes(icon.id))) {
               icon.classList.add("active");
             }
           });
         } else {
-       
           document.getElementById(iconId)?.classList.remove("active");
         }
       });
     }, options);
-
     sections.forEach((section) => observer.observe(section));
-
     return () => {
       observer.disconnect();
     };
@@ -72,17 +65,21 @@ const HowItWorks = () => {
       <div className={` how-it-works__layout `}>
         <div className={`how-it-works__sidebar `}>
           <div className={"sidebar-content"}>
-          <Link id="icon-one"
-            className="icon"
-            href="#one" onClick={onBtnClick}><User /> </Link>
-          <Link id="icon-two"
-            className="icon"
-
-            href="#two" onClick={onBtnClick}><Keyboard /></Link>
-          <Link id="icon-three"
-            className="icon"
-            href="#three" onClick={onBtnClick}><Guide /></Link>
-            </div>
+            <Link goto={"one"} id="icon-one"
+              className="icon"
+              href="#one" onClick={onBtnClick}><User /> </Link>
+            <Link goto={"two"} id="icon-two"
+              className="icon"
+              href="#two" onClick={onBtnClick}><Keyboard /></Link>
+            <Link
+              id="icon-three"
+              className="icon"
+              goto={"three"}
+              href="#three"
+              onClick={onBtnClick}>
+              <Guide />
+            </Link>
+          </div>
         </div>
         <div className={style["how-it-works__content"]}>
           {howItWorksData.map((feature, index) => (

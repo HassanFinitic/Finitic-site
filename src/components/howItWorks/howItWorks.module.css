@@ -1,14 +1,6 @@
 .how-it-works__container{
     padding: 100px 40px;
 }
-
-   /* .sidebar-content{
-    width: fit-content;
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
-      position: relative;
-   } */
 .how-it-works__content{
     display: flex;
     flex-direction: column;
@@ -69,6 +61,9 @@
     .textContainer,
     .featureImage {
       max-width: 100%;
+    }
+    .how-it-works__content{
+      padding: 0px 20px;
     }
   }
   

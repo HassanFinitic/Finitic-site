@@ -19,3 +19,12 @@
         width: 90%;
     }
   }
+  
+  @media (max-width: 768px) {
+ 
+    .h2{
+        width: 100%;
+        font-size: 30px;
+       
+     }
+  }

@@ -9,6 +9,7 @@ const Confidence = () => {
     useEffect(() => {
         Aos.init({
           duration: 1500, 
+          once: true
         });
       }, []);
   return (

@@ -9,6 +9,7 @@ import Products from "@/components/products/Products";
 import Confidence from "@/components/confidence/Confidence";
 import Pricing from "@/components/pricing/Pricing";
 import HowItWorks from "@/components/howItWorks/HowItWorks";
+import StayAHead from "@/components/stayAHead/StayAHead";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
     <Products />
     <Pricing />
     <HowItWorks />
+    {/* <StayAHead /> */}
     </>
   );
 }

@@ -8,6 +8,7 @@ const Products = () => {
     useEffect(() => {
         Aos.init({
           duration: 2500, 
+          once: true
         });
       }, []);
   return (
