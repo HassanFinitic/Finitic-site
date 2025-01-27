@@ -10,6 +10,8 @@ import Confidence from "@/components/confidence/Confidence";
 import Pricing from "@/components/pricing/Pricing";
 import HowItWorks from "@/components/howItWorks/HowItWorks";
 import StayAHead from "@/components/stayAHead/StayAHead";
+import Testimonials from "@/components/testimonials/Testimonials";
+import Subscribe from "@/components/subscribe/Subscribe";
 
 export default function Home() {
   return (
@@ -23,6 +25,8 @@ export default function Home() {
     <Pricing />
     <HowItWorks />
     <StayAHead />
+    <Testimonials />
+    <Subscribe />
     </>
   );
 }

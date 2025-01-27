@@ -17,18 +17,15 @@ export default function Landing() {
     <div className={style["full-landing-container"]}>
       <div className={`container ${style["landing-container"]}`}>
         <div className={style["content"]}>
-
           <p data-aos="fade-up" className={style["text"]}>
             {data.text}
           </p>
-
           <p 
             data-aos="fade-up"
             data-aos-delay="200"
             className={style["title"]}>
               {data.title}
           </p>
-
           <p
             data-aos="fade-up"
             data-aos-delay="400"
