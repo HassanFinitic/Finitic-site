@@ -63,9 +63,7 @@
     border-radius: 8px;
     z-index: 10;
 }
-.button-container{
-    width: 100%;
-}
+
 
 @media (max-width: 1024px) {
     .testimonials-grid {

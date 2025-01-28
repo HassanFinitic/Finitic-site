@@ -1,6 +1,6 @@
 .products-container{
   /* background: var(--radial); */
-  padding: 100px 0;
+  padding: 20px 0;
 }
 .p{
     color: var(--font-p);
@@ -72,6 +72,7 @@
   @media (max-width: 1024px) {
     .grid-container {
       grid-template-columns: repeat(2, 1fr);
+      padding: 10px 0;
     }
     .grid-item {
       padding: 20px;
@@ -81,6 +82,7 @@
   }
 
   @media (max-width: 480px) {
+  
     .grid-container {
       grid-template-columns: 1fr;
       

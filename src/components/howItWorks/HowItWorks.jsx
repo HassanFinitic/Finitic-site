@@ -8,7 +8,7 @@ import { howItWorksData } from "@/data/howItWorksData"
 import Image from "next/image"
 import Link from "next/link"
 import { useRef, useEffect } from "react"
-
+import Aos from "aos"
 const HowItWorks = () => {
   const sectionRefs = useRef([]);
   const scroll2El = (elID) => {
@@ -32,11 +32,16 @@ const HowItWorks = () => {
   }
 
   useEffect(() => {
+    Aos.init({
+      duration: 500,
+      once: true
+  });
     const sections = sectionRefs.current;
     const options = {
       root: null,
       threshold: 1,
     };
+    
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const iconId = `icon-${entry.target.id}`;
@@ -58,7 +63,7 @@ const HowItWorks = () => {
       observer.disconnect();
     };
   }, []);
-
+ 
   return (
     <div className={style["how-it-works__container"]}>
       <Header title="How it works" decription="Customizable, efficient Forex trading CRM solutions." />
@@ -83,7 +88,7 @@ const HowItWorks = () => {
         </div>
         <div className={style["how-it-works__content"]}>
           {howItWorksData.map((feature, index) => (
-            <div key={feature.id} ref={(el) => (sectionRefs.current[index] = el)} id={feature.link} className={style.feature}>
+            <div data-aos="fade-up"   data-aos-duration={feature.duration}  key={feature.id} ref={(el) => (sectionRefs.current[index] = el)} id={feature.link} className={style.feature}>
               <div className={style.textContainer}>
                 <div className={style.iconAndNumber}>
                   <span className={style.number}>{`0${feature.id}`}</span>

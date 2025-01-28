@@ -12,6 +12,7 @@ import HowItWorks from "@/components/howItWorks/HowItWorks";
 import StayAHead from "@/components/stayAHead/StayAHead";
 import Testimonials from "@/components/testimonials/Testimonials";
 import Subscribe from "@/components/subscribe/Subscribe";
+import Faq from "@/components/faq/Faq";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
     <StayAHead />
     <Testimonials />
     <Subscribe />
+    <Faq />
     </>
   );
 }

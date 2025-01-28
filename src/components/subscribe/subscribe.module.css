@@ -4,7 +4,7 @@
 .subscribe-container{
     background: var(--blue-black);
     border-radius: 44px ;
-    padding: 30px 175px;
+    padding: 60px 175px;
     color: #ffff;
     text-align: center;
 
@@ -22,7 +22,7 @@
     margin: 30px auto;
 }
 .subscribe-form {
-    height: 80px;
+    height: 60px;
 }
 .subscribe-form input{
     background: transparent;
@@ -66,7 +66,7 @@
    }
    @media (max-width: 900px) {
     .subscribe-container{
-        padding: 30px 20px;
+        padding: 40px 20px;
     }
     .subscribe-form input{
         width: 350px;
