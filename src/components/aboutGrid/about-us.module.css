@@ -1,0 +1,30 @@
+.about-us-grid-container{
+  padding: 30px 0px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; 
+  gap: 20px; 
+  align-items: stretch;
+}
+.about-us-grid-container__item{
+    height: 500px;
+    width: 100% !important;
+    background-color: #f5f5f5;
+
+}
+
+.about-us-grid-container__item .about-img{
+    width: 100% !important;
+    background-color: #f5f5f5;
+    border-radius: 24px !important;
+    object-fit: fill;
+    background-position: center; 
+}
+@media (max-width: 425px) {
+ 
+    .about-us-grid-container{
+        display:unset;
+        grid-template-columns: auto; 
+    
+    }
+  }
+

@@ -33,4 +33,9 @@ export const linksData = [
         url: "/",
         text: "Blogs",
     },
+    {
+        id: 7,
+        url: "/about-us",
+        text: "About us",
+    },
 ];

@@ -1,6 +1,4 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Header from "../components/header/Header";
+
 import Landing from "@/components/landing/Landing";
 import Hero from "@/components/heroSection/Hero";
 import Clients from "@/components/clients/Clients";

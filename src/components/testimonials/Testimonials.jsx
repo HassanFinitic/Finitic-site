@@ -9,12 +9,12 @@ import { useEffect } from "react"
 import Aos from "aos";
 
 const Testimonials = () => {
-      useEffect(() => {
-            Aos.init({
-                duration: 500,
-                once: true
-            });
-        }, []);
+    useEffect(() => {
+        Aos.init({
+            duration: 500,
+            once: true
+        });
+    }, []);
     return (
         <div className={`container ${style["testimonials-container"]}`}>
             <Header title={"Testimonials"} decription={"Trusted by 14,000+ users"} />
@@ -32,13 +32,11 @@ const Testimonials = () => {
                         </div>
                     </div>
                 ))}
-
-              
             </div>
             <div className="overlay"></div>
             <div>
-           <Button text={"See All Reviews"} center={true} background={"black"}/>
-           </div>
+                <Button text={"See All Reviews"} center={true} background={"black"} />
+            </div>
         </div>
     )
 }
