@@ -1,9 +1,11 @@
+
 import Header from '@/components/shared/header/Header'
 import React from 'react'
 import style from './about-us.module.css'
 import AboutGrid from '@/components/aboutGrid/AboutGrid'
-import Count from '@/components/countUp/CountUp'
 import OurFeature from '@/components/ourFeature/OurFeature'
+import CountUpItems from '@/components/countUp/CountUpItems'
+
 
 export default function page() {
     return (
@@ -13,7 +15,7 @@ export default function page() {
             <p>   Our Purpose: <span> Elevating Financial Operations </span>
                 <br /> Since our inception, FINITIC has focused on crafting cutting-edge solutions to simplify and enhance brokerage operations. From ensuring top-tier data security to streamlining workflows with tools like Forex signals and Forex trading platforms, our suite of products empowers brokers and traders to thrive in the competitive landscape of Forex trading.</p>
             <AboutGrid />
-            <Count />
+            <CountUpItems />
             <p>Our flagship products are designed to deliver reliability, security, and innovation. Whether you're a startup establishing your presence or an established brokerage firm scaling new heights, FINITIC offers Customized solutions for Forex analysis and Forex trading courses and tools for managing currency trading and client relationships efficiently.</p>
             <div className={style["about-us-col"]}>
                 <span className={style.bold}>Driving Technological Advancement in Finance</span>
