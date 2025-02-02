@@ -40,7 +40,7 @@
     padding: 20px 0px;
   }
   .active {
-    max-height: 200px;
+    max-height: 250px;
   }
   .accordionItem:last-child .accordionContent:not(.active) {
     border: none;

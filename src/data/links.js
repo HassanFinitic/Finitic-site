@@ -36,6 +36,11 @@ export const linksData = [
     {
         id: 7,
         url: "/about-us",
-        text: "About us",
+        text: "About Us",
+    },
+    {
+        id: 8,
+        url: "/contact-us",
+        text: "Contact Us",
     },
 ];
