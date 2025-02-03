@@ -3,6 +3,7 @@ import style from "./partnership.module.css"
 import Image from "next/image"
 import img from "./../../../public/assets/images/partnershipImg.avif"
 import WhyFintic from "@/components/whyFintic/WhyFintic"
+import PartnershipModels from "@/components/partnershipModels/page"
 const page = () => {
   return (
     <div >
@@ -18,6 +19,7 @@ const page = () => {
              </div>
         </div>
         <WhyFintic />
+        <PartnershipModels />
     </div>
   )
 }

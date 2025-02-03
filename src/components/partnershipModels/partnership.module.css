@@ -1,0 +1,19 @@
+.partnership-models__container{
+    padding: 50px ;
+}
+.partnership-models{
+   display: flex;
+   justify-content: space-between;
+   padding: 20px 0 ;
+}
+.partnership-models__pagination{
+   display: flex;
+   flex-direction: column;
+}
+.partnership-models__pagination button{
+   background: transparent;
+   padding: 20px 0;
+   border-left: 2px solid #daf2f9 ;
+   color: rgb(102, 109, 128);
+ 
+ } 
