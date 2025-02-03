@@ -1,3 +1,6 @@
+.header{
+   padding: 30px 0px;
+}
 .span{
     color: var(--blue-black);
     text-align: center;

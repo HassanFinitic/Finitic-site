@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react"
 import Header from "../shared/header/Header"
-import Switch from "../shared/switch/Switch"
+// import Switch from "../shared/switch/Switch"
 import style from "./pricing.module.css"
 import { pricingData } from "@/data/pricingData"
 import Check from "../../../public/assets/icons/Check"
@@ -19,13 +19,13 @@ const Pricing = () => {
     return (
         <div className="pricing-container" >
             <Header title="Pricing" decription="Choose your plan " />
-            <div className={style["switch-container"]} >
+            {/* <div className={style["switch-container"]} >
                 <span className={value ? `${style["span"]}  ` :
                     `${style["span"]} ${style["active"]}`}>Monthly</span>
                 <Switch setValue={setValue} value={value} />
                 <span className={value ? `${style["span"]}  ${style["active"]}` :
                     `${style["span"]}`}>Yearly</span>
-            </div>
+            </div> */}
             <div className={style.pricingContainer} data-aos="zoom-in-up">
             {pricingData.map((plan, index) => (
                 <div key={index} className={index === 1 ? `${style["pricingCard"]} ${style["active"]}` : `${style["pricingCard"]}`}>
@@ -38,7 +38,7 @@ const Pricing = () => {
                         ))}
                     </ul>
                     <div className={style["button-container"]}>
-                    <Button title="Get Started" />
+                    <Button url={"/registeration"} title="Get Started" />
                     </div>
                 </div>
             ))}
