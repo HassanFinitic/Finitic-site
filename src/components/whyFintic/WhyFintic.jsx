@@ -5,7 +5,6 @@ import featuresData from '@/data/myFinitic'
 const WhyFintic = () => {
   return (
     <section className='container'>
-
       <Header notCenter={true} title={"Partner with FINITIC"} decription={"Why Partner with FINITIC?"} />
       <div className={style.container}>
       {featuresData.map((group, index) => (
