@@ -1,0 +1,90 @@
+.subscribe{
+    padding: 50px 40px ; 
+}
+.subscribe-container{
+    background: var(--blue-black);
+    border-radius: 44px ;
+    padding: 60px 175px;
+    color: #ffff;
+    text-align: center;
+
+}
+.subscribe-container h3{
+    line-height: 38px;
+    font-size: 42px;
+    font-weight: 500;
+    padding: 40px;
+}
+.subscribe-container p{
+    font-size: 20px;
+    line-height: 30px;
+    width: 85%;
+    margin: 30px auto;
+}
+.subscribe-form {
+    height: 60px;
+}
+.subscribe-form input{
+    background: transparent;
+    display: block;
+    background: rgb(46, 63, 94);
+    color:rgb(195, 196, 198);
+    width: 465px;
+    margin: 0 auto;
+    padding: 22px 150px 22px 20px;
+    border-radius: 30px;
+    border: 0px;
+    position: relative;
+   
+ 
+}
+.subscribe-form input.animation{
+    animation: horizontal-shaking 0.5s ease;
+}
+.subscribe-form input::placeholder{
+    color:rgb(195, 196, 198);
+}
+.subscribe-form button{
+    background:rgb(235, 119, 47);
+    color: #ffff;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: 0px;
+    margin: 20px 0;
+    cursor: pointer;
+    position: relative;
+    top: -72px;
+    right: -156px;
+
+}
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+   }
+   @media (max-width: 900px) {
+    .subscribe-container{
+        padding: 40px 20px;
+    }
+    .subscribe-form input{
+        width: 350px;
+    }
+    .subscribe-form button{
+        right: -100px;
+    }
+  }
+  @media (max-width: 450px) {
+    .subscribe{
+        padding: 20px ; 
+    }
+    .subscribe-form input{
+        width: 300px ;
+    }
+    .subscribe-form button{
+        right: -73px ;
+    }
+  }
+
+ 

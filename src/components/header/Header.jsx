@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import logo from "../../assets/images/logo.png";
+import logo from "../../../public/assets/images/logo.png";
 import Link from "next/link";
 import style from "./header.module.css";
 import Links from "./Links";
@@ -21,8 +21,8 @@ export default function Header() {
   console.log(linksData)
 
   return (
-    <div className={`${style["full-header-container"]}`}>
-      <div className={`container ${style["header-container"]}`}>
+    <nav className={`${style["full-header-container"]}`}>
+      <div className={` ${style["navbar"]} ${style["header-container"]}`}>
         
         {/* Logo */}
         <Logo logo={logo} alt="Finitic Logo" />
@@ -32,7 +32,7 @@ export default function Header() {
 
       <div className={style["button-container"]}>
         {/* Button */}
-        <Button />
+        <Button  title="Start New Challenge" />
 
         {/* Mobile Menu Icon */}
         <Icon toggleIcon={toggleIcon} isOpen={isOpen} style={style} />
@@ -46,6 +46,6 @@ export default function Header() {
         />
       </div>
       </div>
-    </div>
+    </nav>
   );
 }

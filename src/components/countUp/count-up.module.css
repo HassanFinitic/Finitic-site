@@ -1,0 +1,33 @@
+.count-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding: 50px 0;
+}
+.count{
+    font-size: 64px;
+    color: var(--blue-black);
+}
+.count-up__item{
+    align-items: center;
+}
+.suffix{
+    font-size: 64px;
+    color: #FFA348 !important;
+}
+.text{
+    text-align: center;
+    font-weight: 400;
+    padding: 0px !important;
+    font-size: 14px;
+}
+@media (max-width: 1025px) {
+   
+    .count-container{
+        flex-direction: flex;
+        gap: 50px;
+
+    }
+}

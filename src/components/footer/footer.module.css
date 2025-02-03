@@ -1,9 +1,18 @@
+.full-footer-container{
+    background-image: url("./../../../public/assets/images/footer.jpg"); 
+    background-position: center;
+}
+.journey-container{
+    padding: 100px;;
+
+}
 .footer-container{
     /* display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 1rem; */
+ 
 
     .top{
         display: flex;
@@ -156,3 +165,10 @@
         }
     }
 }
+@media (max-width: 768px) {
+ 
+    .journey-container{
+        padding: 50px 10px;;
+    
+    }
+  }

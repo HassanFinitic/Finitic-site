@@ -1,7 +1,7 @@
 import React from 'react'
 import style from "./hero.module.css"
 import Image from 'next/image'
-import banner from "../../assets/images/banner.jpg"
+import banner from "../../../public/assets/images/banner.jpg"
 
 export default function Hero() {
   return (

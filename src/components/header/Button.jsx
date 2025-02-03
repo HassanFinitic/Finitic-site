@@ -1,7 +1,14 @@
+import Link from 'next/link'
 import React from 'react'
 
-export default function Button() {
+export default function Button({ title, url }) {
   return (
-    <button>Start New Challenge</button>
+    <>
+      {url ?
+        <Link href={url}>{title}</Link>
+        :
+        <button>{title}</button>
+      }
+    </>
   )
 }

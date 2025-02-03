@@ -1,0 +1,48 @@
+.clients-container{
+    overflow: hidden
+}
+.partners-container {
+    padding: 76px 0;
+    overflow: hidden 
+}
+.partners-content {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    overflow: hidden;
+}
+.title{
+    color: var(--font-color-4);
+    font-size: 16px;
+    text-align: center;
+}
+.partners {
+    gap: 62px;
+    padding-left: 62px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: fit-content;
+    animation: moveImages 7s infinite linear 
+}
+
+.partner-item {
+    width: 167px;
+    height: 48px;
+}
+
+.partner-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+}
+@keyframes moveImages {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

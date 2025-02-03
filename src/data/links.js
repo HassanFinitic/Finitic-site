@@ -1,25 +1,32 @@
 export const linksData = [
+ 
     {
         id: 1,
-        url: "/",
-        text: "How it works",
-    },
-    {
-        id: 2,
         url: "/products",
         text: "Products",
+        subLinks:[
+            {
+                id:1,
+                url:"/",
+                text:"eret"
+            }
+        ]
     },
+   
     {
+        id: 2,
+        url: "/partnership",
+        text: "Become a Partner",
+    },
+     {
         id: 3,
-        // url: "/support",
-        url: "/",
+        url: "/support",
         text: "Support",
     },
     {
         id: 4,
-        // url: "/become-partner",
-        url: "/",
-        text: "Become a Partner",
+        url: "/pricing",
+        text: "Pricing",
     },
     {
         id: 5,
@@ -27,10 +34,15 @@ export const linksData = [
         url: "/",
         text: "FAQ",
     },
-    {
-        id: 6,
-        // url: "/blogs",
-        url: "/",
-        text: "Blogs",
-    },
+    // {
+    //     id: 7,
+    //     url: "/about-us",
+    //     text: "About Us",
+    // },
+    // {
+    //     id: 8,
+    //     url: "/contact-us",
+    //     text: "Contact Us",
+    // },
+  
 ];

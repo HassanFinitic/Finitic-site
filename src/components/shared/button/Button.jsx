@@ -1,13 +1,31 @@
-import React, { useEffect } from 'react'
+
+import Link from "next/link";
 import style from "./button.module.css"
 import { FaArrowRight } from "react-icons/fa";
 
-export default function Button({ text }) {
+export default function Button({ text, center, background, url }) {
 
   return (
-    <div data-aos="fade-up" className={style["button-container"]}>
-      <button>{text}</button>
-      <FaArrowRight />
-    </div>
+    <>
+      {url ?
+        <Link href={url} className={`${style["button-container"]}`}
+          style={{
+            margin: center ? "0 auto" : "0",
+            background: background ? "linear-gradient(to top, rgb(47, 47, 47), rgb(98, 98, 98))" : "linear-gradient(to top, var(--button-color), var(--button-color-hover))"
+          }}>
+          <button>{text}</button>
+          <FaArrowRight />
+        </Link>
+        :
+        <div className={`${style["button-container"]}`}
+          style={{
+            margin: center ? "0 auto" : "0",
+            background: background ? "linear-gradient(to top, rgb(47, 47, 47), rgb(98, 98, 98))" : "linear-gradient(to top, var(--button-color), var(--button-color-hover))"
+          }}>
+          <button>{text}</button>
+          <FaArrowRight />
+        </div>
+      }
+    </>
   )
 }

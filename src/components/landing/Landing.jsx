@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import style from "./landing.module.css";
 import data from "../../data/landingPage.json";
 import Aos from "aos";
-import "aos/dist/aos.css"; 
 import Button from "../shared/button/Button";
 
 export default function Landing() {
@@ -18,18 +17,15 @@ export default function Landing() {
     <div className={style["full-landing-container"]}>
       <div className={`container ${style["landing-container"]}`}>
         <div className={style["content"]}>
-
           <p data-aos="fade-up" className={style["text"]}>
             {data.text}
           </p>
-
           <p 
             data-aos="fade-up"
             data-aos-delay="200"
             className={style["title"]}>
               {data.title}
           </p>
-
           <p
             data-aos="fade-up"
             data-aos-delay="400"

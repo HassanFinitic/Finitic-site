@@ -5,15 +5,33 @@ import { CiFacebook } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import Logo from "../header/Logo";
-import logo from "../../assets/images/logo.png"
+import logo from "../../../public/assets/images/logo.png"
 import {quickLinksData} from "../../data/quickLinks"
 import CurrentYear from './CurrentYear';
 import Link from "next/link";
+import Header from "../shared/header/Header";
+import Button from "../shared/button/Button";
+import { useEffect } from "react";
+import Aos from "aos";
 
 export default function Footer() {
+   useEffect(() => {
+          Aos.init({
+              duration: 500,
+              once: true
+          });
+      }, []);
   return (
     <div className={`${style["full-footer-container"]}`}>
       <div className={`container ${style["footer-container"]}`}>
+        <div className={style["journey-container"]} 
+            data-aos="fade-up"
+            data-aos-delay="200">  
+            <Header  decription={"Start your journey from today"} />
+            <div style={{padding: "1rem 0"}} >
+            <Button text={"Contact us"} center={true} />
+            </div>
+        </div>
         <div className={style["top"]}>
             <div className={style["content"]}>
               <Logo logo={logo} alt="Finitic Logo" />

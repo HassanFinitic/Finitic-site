@@ -1,0 +1,22 @@
+.feature-grid-row-one{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    padding: 20px 0px;
+}
+.feature-card .feature-title{
+   padding-top: 20px;
+   color:var(--blue-black);
+}
+.feature-grid-row-two{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    padding: 20px 0px;
+}
+@media (max-width: 1024px) {
+    .feature-grid-row-one, .feature-grid-row-two{
+        grid-template-columns: 1fr ;
+        gap: 50px;
+    }
+  }
