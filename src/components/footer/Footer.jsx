@@ -35,17 +35,17 @@ export default function Footer() {
         <div className={style["top"]}>
             <div className={style["content"]}>
               <Logo logo={logo} alt="Finitic Logo" />
-              <p>Solutions that fuel growth and accelerate <br /> your business success</p>
+              <p className={style["solutions"]}>Solutions that fuel growth and accelerate <br /> your business success</p>
             </div>
             <div className={style["quick-links"]}>
               {
                 quickLinksData.map((quickLink) => (
                   <div key={quickLink.id} className={style["quick-link"]}>
-                    <p>{quickLink.title}</p>
-                    <ul>
+                    <p className={style["title"]}>{quickLink.title}</p>
+                    <ul className={style["links"]}>
                       {
                         quickLink.links.map((link) => (
-                          <li key={link.id}>
+                          <li className={style["link"]} key={link.id}>
                             <Link href={link.url}>{link.text}</Link>
                           </li>
                         ))
@@ -56,17 +56,17 @@ export default function Footer() {
               }
             </div>
         </div>
-        <hr />
+        <hr  className={style["hr"]} />
         <div className={style["bottom"]}>
             <div className={style["copyright"]}>
-              <p>Copyright © <CurrentYear /> FINITIC INFORMATION TECHNOLOGY</p>
-              <p>All Rights Reserved</p>
+              <p className={style["copyright-text"]}>Copyright © <CurrentYear /> FINITIC INFORMATION TECHNOLOGY</p>
+              <p className={style["copyright-text"]}>All Rights Reserved</p>
             </div>
             <div className={style["social-icons"]}>
-              <Link href="/"><CiFacebook /></Link>
-              <Link href="/"><FaInstagram /></Link>
-              <Link href="/"><FaLinkedin /></Link>
-              <Link href="/"><RiTwitterXFill /></Link>
+              <Link className={style["social-icon"]} href="/"><CiFacebook /></Link>
+              <Link className={style["social-icon"]} href="/"><FaInstagram /></Link>
+              <Link className={style["social-icon"]} href="/"><FaLinkedin /></Link>
+              <Link className={style["social-icon"]} href="/"><RiTwitterXFill /></Link>
             </div>
         </div>
       </div>

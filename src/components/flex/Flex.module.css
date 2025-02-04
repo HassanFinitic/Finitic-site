@@ -1,0 +1,20 @@
+.flex {
+    display: flex;
+    flex-direction: var(--direction);
+    justify-content: var(--justify);
+    align-items: var(--align);
+    gap: var(--gap);
+    flex-wrap: var(--wrap);
+  
+    @media (max-width: 1024px) {
+      flex-direction: var(--direction-large);
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: var(--direction-medium);
+    }
+  
+    @media (max-width: 480px) {
+      flex-direction: var(--direction-small);
+    }
+  }

@@ -36,7 +36,7 @@
             /* background-color: aquamarine; */
 
 
-            p{
+            .solutions{
                 position: relative;
                 color: var(--gray-font-color);
                 font-size: 14px;
@@ -84,7 +84,7 @@
                 flex-direction: column;
                 gap: 10px;
 
-                p{
+                .title{
                     font-size: 18px;
                     font-weight: 600;
                     color: var(--white-font-color);
@@ -94,12 +94,12 @@
                     }
                 }
 
-                ul{
+                .links{
                     display: flex;
                     flex-direction: column;
                     gap: 7px;
 
-                    li{
+                    .link{
                         list-style: none;
                         font-size: 14px;
                         color: var(--gray-font-color);
@@ -113,7 +113,7 @@
         }
     }
 
-    hr{
+    .hr{
         border: 1px solid var(--gray-font-color);
         opacity: 0.3;
     }
@@ -134,7 +134,7 @@
 
         .copyright{
 
-            p{
+            .copyright-text{
                 color: var(--gray-font-color);
                 font-size: 14px;
                 margin-bottom: 7px;
@@ -154,7 +154,7 @@
             width: 120px;
             /* background-color: aqua; */
 
-            a{
+            .social-icon{
                 color: var(--white-font-color);
                 transition: color 0.3s ease-in-out;
                 

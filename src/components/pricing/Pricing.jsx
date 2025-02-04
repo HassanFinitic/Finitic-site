@@ -19,13 +19,6 @@ const Pricing = () => {
     return (
         <div className="pricing-container" >
             <Header title="Pricing" decription="Choose your plan " />
-            {/* <div className={style["switch-container"]} >
-                <span className={value ? `${style["span"]}  ` :
-                    `${style["span"]} ${style["active"]}`}>Monthly</span>
-                <Switch setValue={setValue} value={value} />
-                <span className={value ? `${style["span"]}  ${style["active"]}` :
-                    `${style["span"]}`}>Yearly</span>
-            </div> */}
             <div className={style.pricingContainer} data-aos="zoom-in-up">
             {pricingData.map((plan, index) => (
                 <div key={index} className={index === 1 ? `${style["pricingCard"]} ${style["active"]}` : `${style["pricingCard"]}`}>

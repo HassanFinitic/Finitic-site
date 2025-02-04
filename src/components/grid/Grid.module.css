@@ -1,0 +1,18 @@
+ /* Grid.module.scss */
+.grid {
+  display: grid;
+  gap: var(--gap);
+
+   /* Large screens (default) */
+  grid-template-columns: repeat(var(--cols-large), 1fr);
+
+   /* Medium screens */
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(var(--cols-medium), 1fr);
+  }
+
+   /* Small screens */
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(var(--cols-small), 1fr);
+  }
+}

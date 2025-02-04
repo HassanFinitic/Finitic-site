@@ -56,14 +56,14 @@
                 white-space: nowrap;
                 width: 150px;
                 
-                button{
+                .button{
                     position: relative;
                     outline: none;
                     border: none;
                     background-color: transparent;
                 }
 
-                svg {
+                .arrow {
                     display: none;
                 }
 
@@ -72,7 +72,7 @@
                     justify-content: space-between; 
                 }
 
-                &:hover svg {
+                &:hover .arrow {
                     display: inline-block;
                 }
 
