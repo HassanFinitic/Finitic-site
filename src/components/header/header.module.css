@@ -93,7 +93,7 @@
   /* end the links */
 
   .button-container {
-    button {
+    .button {
       position: relative;
       outline: none;
       border: none;
@@ -122,7 +122,8 @@
         display: block;
       }
 
-      div {
+      .line_one,
+      .line_two {
         width: 15px;
         height: 2px;
         background-color: var(--font-color-2);
@@ -173,7 +174,7 @@
       align-items: start;
       gap: 20px;
 
-      a {
+      .mobile-link {
         color:#1f1f1f;
         text-decoration: none;
       }

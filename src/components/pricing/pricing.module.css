@@ -71,7 +71,7 @@
   }
 
   .button-container {
-    a {
+    .Link {
       position: relative;
       outline: none;
       border: none;
@@ -108,7 +108,7 @@
     fill: var(--blue-black);
 }
 .pricingCard.active .button-container {
-  a {
+  .Link {
       background: #f9f9f9;
       color: #2a2a2a;
     }

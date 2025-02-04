@@ -17,8 +17,8 @@
     outline: 1px solid #608af9;
 }
  /* Hide arrows for WebKit browsers (Chrome, Safari, Edge) */
-input[type="number"]::-webkit-inner-spin-button,
+/* input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
+} */

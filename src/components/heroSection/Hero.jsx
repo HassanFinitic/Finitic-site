@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div className={`container ${style["full-hero-container"]}`}>
         <div className={ `container ${style["hero-container"]}`}>  
-            <Image src={banner} alt="banner Image" />
+            <Image className={style["hero-image"]} src={banner} alt="banner Image" />
         </div>
     </div>
   )
