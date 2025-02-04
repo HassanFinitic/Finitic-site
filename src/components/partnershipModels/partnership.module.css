@@ -1,19 +1,71 @@
-.partnership-models__container{
-    padding: 50px ;
+.partnership-models__container {
+   padding: 50px;
 }
-.partnership-models{
+.partnership-models__container h6{
+   font-size: 20px;
+   font-weight: 500;
+   color: #1A2B56;
+   margin-bottom: 20px;
+} 
+.partnership-models {
    display: flex;
    justify-content: space-between;
-   padding: 20px 0 ;
+   padding: 20px 0;
 }
-.partnership-models__pagination{
+
+.partnership-models__pagination {
    display: flex;
    flex-direction: column;
+   padding: 20px 50px;
 }
-.partnership-models__pagination button{
+
+/* Button Styling */
+.partnership-models__pagination button {
    background: transparent;
-   padding: 20px 0;
-   border-left: 2px solid #daf2f9 ;
+   padding: 20px;
+   font-weight: 500;
+   font-size: 20px;
+   cursor: pointer;
    color: rgb(102, 109, 128);
- 
- } 
+   border: none;
+   text-align: start;
+   transition: color 0.3s ease-in-out;
+}
+
+/* Change color when active */
+.pagination.active button {
+   color: #1A2B56;
+   font-weight: bold;
+}
+
+/* Description Text */
+.partnership-models__pagination p {
+   width: 50%;
+   padding: 10px 30px;
+   line-height: 32px;
+}
+
+/* Border effect */
+.pagination {
+   border-left: 5px solid #daf2f9;
+   transition: border-color 0.3s ease-in-out;
+}
+
+/* Active border color */
+.pagination.active {
+   border-left: 5px solid #1A2B56;
+}
+
+/* Content Wrapper - controls animation */
+.content-wrapper {
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+   opacity: 0;
+}
+
+/* Show content when active */
+.pagination.active .content-wrapper {
+   max-height: 200px; /* Adjust height as needed */
+   opacity: 1;
+}
