@@ -5,7 +5,7 @@
 }
 .title{
     color: var(--font-heading-3);
-    font-size: 42px;
+    font-size: 2rem;
     text-align: center;
     font-weight: 500;
 }
@@ -25,6 +25,21 @@
     border: 1px solid #E6E6E6;
     color: #999999 ;
 }
+
+  
+  .link {
+    width: 100%;
+    margin-top: -15px;
+    margin-left: 15px;
+    color: #0070f3; 
+    text-decoration: none; 
+    font-size: 12px;
+    
+  }
+  
+  .link:hover {
+    text-decoration: underline; 
+  }
 .select:hover{
     border: 1px solid #608af9 ;
 }
