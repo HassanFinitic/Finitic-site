@@ -26,7 +26,6 @@ const Subscribe = () => {
                 <div className={style["subscribe-form"]}>
                     <input id="subscribe-input" value={email} onChange={(e) => { setEmail(e.target.value) }} type="email" required placeholder="Enter your email address" />
                     <button className={style["absolute-btn"]} type="submit" onClick={handleSubmit}>Subscribe</button>
-
                 </div>
             </div>
         </div>

@@ -17,7 +17,7 @@ const Pricing = () => {
           });
         }, []);
     return (
-        <div className="pricing-container" >
+        <div className={`pricing-container`} >
             <Header title="Pricing" decription="Choose your plan " />
             <div className={style.pricingContainer} data-aos="zoom-in-up">
             {pricingData.map((plan, index) => (
@@ -30,8 +30,10 @@ const Pricing = () => {
                             </li>
                         ))}
                     </ul>
-                    <div className={style["button-container"]}>
-                    <Button url={"/registeration"} title="Get Started" />
+                    <div className={`${style["button-container"]}`}>
+                    <Button 
+                    url={"/registration"} 
+                    title="Get Started" />
                     </div>
                 </div>
             ))}

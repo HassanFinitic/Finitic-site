@@ -71,13 +71,13 @@
   }
 
   .button-container {
-    .Link {
+    a {
       position: relative;
       outline: none;
       border: none;
       background: var(--button-gradient);
       color: var(--font-color-3);
-      padding: .8rem 1.5rem;
+      padding: 0.5rem 1rem;
       border-radius: var(--main-border-radius);
       -webkit-border-radius: var(--main-border-radius);
       -moz-border-radius: var(--main-border-radius);
@@ -88,6 +88,7 @@
       overflow: hidden;
       z-index: 1;
     }
+ 
   }
   .pricingCard.active {
     background-color: var(--blue-black);
@@ -108,7 +109,7 @@
     fill: var(--blue-black);
 }
 .pricingCard.active .button-container {
-  .Link {
+  a {
       background: #f9f9f9;
       color: #2a2a2a;
     }

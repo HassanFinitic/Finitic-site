@@ -22,20 +22,24 @@
     margin: 30px auto;
 }
 .subscribe-form {
-    height: 60px;
+    display: flex;
+    background: rgb(46, 63, 94);
+    padding: 10px ;
+    border-radius: 50px;
+    justify-content: space-between;
 }
 .subscribe-form input{
     background: transparent;
     display: block;
-    background: rgb(46, 63, 94);
     color:rgb(195, 196, 198);
     width: 465px;
-    margin: 0 auto;
-    padding: 22px 150px 22px 20px;
+    width: 100%;
+    border-radius: 50px;
     border-radius: 30px;
-    border: 0px;
+    outline: 0;
     position: relative;
-   
+    border:0px;
+    padding-left: 15px ;
  
 }
 .subscribe-form input.animation{
@@ -50,11 +54,11 @@
     padding: 15px 40px;
     border-radius: 30px;
     border: 0px;
-    margin: 20px 0;
+    /* margin: 20px 0; */
     cursor: pointer;
-    position: relative;
+    /* position: relative;
     top: -72px;
-    right: -156px;
+    right: -156px; */
 
 }
 @keyframes horizontal-shaking {
@@ -76,6 +80,12 @@
     }
   }
   @media (max-width: 450px) {
+    .subscribe-container h3{
+        line-height: 38px;
+        font-size: 30px;
+        font-weight: 500;
+        padding: 40px;
+    }
     .subscribe{
         padding: 20px ; 
     }
@@ -84,6 +94,24 @@
     }
     .subscribe-form button{
         right: -73px ;
+    }
+    .subscribe-form {
+        display: flex;
+        flex-direction: column;
+        background: transparent;
+        padding: 10px ;
+        border-radius: 50px;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .subscribe-form input{
+        display: flex;
+        padding: 20px ;
+        background: rgb(46, 63, 94);
+        border-radius: 50px;
+        width: 100%;
+
+        justify-content: space-between;
     }
   }
 
