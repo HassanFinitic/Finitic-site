@@ -26,7 +26,9 @@
     background: rgb(46, 63, 94);
     padding: 10px ;
     border-radius: 50px;
+    width: 60%;
     justify-content: space-between;
+    margin: auto;
 }
 .subscribe-form input{
     background: transparent;
@@ -61,6 +63,7 @@
     right: -156px; */
 
 }
+
 @keyframes horizontal-shaking {
     0% { transform: translateX(0) }
     25% { transform: translateX(5px) }
@@ -68,6 +71,18 @@
     75% { transform: translateX(5px) }
     100% { transform: translateX(0) }
    }
+   @media (max-width: 1024px) {
+
+    .subscribe-form {
+        display: flex;
+        background: rgb(46, 63, 94);
+        padding: 10px ;
+        border-radius: 50px;
+        width: 100%;
+        justify-content: space-between;
+        margin: auto;
+    }
+  }
    @media (max-width: 900px) {
     .subscribe-container{
         padding: 40px 20px;
@@ -77,6 +92,15 @@
     }
     .subscribe-form button{
         right: -100px;
+    }
+    .subscribe-form {
+        display: flex;
+        background: rgb(46, 63, 94);
+        padding: 10px ;
+        border-radius: 50px;
+        width: 100%;
+        justify-content: space-between;
+        margin: auto;
     }
   }
   @media (max-width: 450px) {
@@ -103,6 +127,7 @@
         border-radius: 50px;
         justify-content: space-between;
         gap: 10px;
+        width: 100%;
     }
     .subscribe-form input{
         display: flex;
