@@ -2,7 +2,7 @@
    padding: 50px;
 }
 .partnership-models__container h6{
-   font-size: 20px;
+   font-size: 30px;
    font-weight: 500;
    color: #1A2B56;
    margin-bottom: 20px;
@@ -17,9 +17,36 @@
    display: flex;
    flex-direction: column;
    padding: 20px 50px;
+   width: 50%;
+   position: relative;
 }
-
-/* Button Styling */
+.partnership-models__pagination .pagination{
+   position: relative;
+}
+.partnership-models__pagination .pagination:nth-of-type(1) button:before {
+   position: absolute;
+   top:20px;
+   left: -40px;
+   content: '01';
+}
+.partnership-models__pagination .pagination:nth-of-type(2) button:before {
+   position: absolute;
+   top:20px;
+   left: -40px;
+   content: '02';
+}
+.partnership-models__pagination .pagination:nth-of-type(3) button:before {
+   position: absolute;
+   top:20px;
+   left: -40px;
+   content: '03';
+}
+.partnership-models__pagination .pagination:nth-of-type(4) button:before {
+   position: absolute;
+   top:20px;
+   left: -40px;
+   content: '04';
+}
 .partnership-models__pagination button {
    background: transparent;
    padding: 20px;
@@ -32,31 +59,31 @@
    transition: color 0.3s ease-in-out;
 }
 
-/* Change color when active */
+
 .pagination.active button {
    color: #1A2B56;
    font-weight: bold;
 }
 
-/* Description Text */
+
 .partnership-models__pagination p {
-   width: 50%;
+   
    padding: 10px 30px;
    line-height: 32px;
 }
 
-/* Border effect */
+
 .pagination {
    border-left: 5px solid #daf2f9;
    transition: border-color 0.3s ease-in-out;
 }
 
-/* Active border color */
+
 .pagination.active {
    border-left: 5px solid #1A2B56;
 }
 
-/* Content Wrapper - controls animation */
+
 .content-wrapper {
    max-height: 0;
    overflow: hidden;
@@ -64,8 +91,47 @@
    opacity: 0;
 }
 
-/* Show content when active */
+
 .pagination.active .content-wrapper {
-   max-height: 200px; /* Adjust height as needed */
+   max-height: 200px; 
    opacity: 1;
 }
+
+.partnership-image {
+ 
+   height: auto;
+   opacity: 0;
+   transition: opacity 0.4s ease-in-out;
+   border-radius: 20px;
+   width: 50%;
+}
+
+.partnership-image.active {
+   opacity: 1;
+}
+@media (max-width: 768px) {
+   .partnership-models__container {
+      padding: 30px;
+   }
+   
+.partnership-models__pagination {
+   display: flex;
+   flex-direction: column;
+   padding: 20px ;
+   width: 100%;
+}
+.partnership-models {
+
+   flex-direction: column;
+   gap: 30px
+}.partnership-image {
+ 
+   height: auto;
+   opacity: 0;
+   transition: opacity 0.4s ease-in-out;
+   border-radius: 20px;
+   width: 100%;
+}
+
+
+ }
