@@ -4,6 +4,9 @@ import Image from "next/image"
 import img from "./../../../public/assets/images/partnershipImg.avif"
 import WhyFintic from "@/components/whyFintic/WhyFintic"
 import PartnershipModels from "@/components/partnershipModels/page"
+import HowItWorksPartnership from "@/components/howItWorksPartnership/HowItWorksPartnership"
+import Subscribe from "@/components/subscribe/Subscribe"
+import Faq from "@/components/faq/Faq"
 const page = () => {
   return (
     <div >
@@ -20,6 +23,9 @@ const page = () => {
         </div>
         <WhyFintic />
         <PartnershipModels />
+        <HowItWorksPartnership />
+        <Subscribe />
+        <Faq />
     </div>
   )
 }

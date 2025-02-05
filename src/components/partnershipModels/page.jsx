@@ -1,36 +1,19 @@
 "use client";
 import { useState } from "react";
 import style from "./partnership.module.css";
+import Image from "next/image";
+import { partnershipModels } from "@/data/partnershipData";
 
-const partnershipModels = [
-  {
-    title: "Agency Model",
-    description:
-      "Collaborate as an agent by introducing clients to FINITIC and earn competitive commissions. This model fosters mutual growth in the forex trading industry and rewards your network-building efforts.",
-  },
-  {
-    title: "Product Integration",
-    description:
-      "Integrate your technology or services with FINITIC’s ecosystem to offer comprehensive solutions to forex brokers. Together, we can provide seamless experiences that drive success in currency exchange.",
-  },
-  {
-    title: "Affiliate Referrals",
-    description:
-      "Refer potential clients to FINITIC and earn attractive referral commissions. Share our forex trading strategies and innovative solutions with your network and watch your efforts translate into real rewards.",
-  },
-  {
-    title: "Reseller Opportunities",
-    description:
-      "Become a reseller of FINITIC’s cutting-edge forex CRM software and services. Strengthen your portfolio by offering proven forex trading CRM solutions while leveraging our global reputation.",
-  },
-];
+
 
 const PartnershipModels = () => {
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState("Agency Model");
 
   const handleToggle = (title) => {
-    setActive(active === title ? null : title);
+    setActive(active === title ? "Agency Model": title);
   };
+
+  const activeModel = partnershipModels.find((model) => model.title === active);
 
   return (
     <div className={style["partnership-models__container"]}>
@@ -55,6 +38,16 @@ const PartnershipModels = () => {
             </div>
           ))}
         </div>
+        {activeModel && (
+          <Image
+            src={activeModel.image}
+            width={625}
+            objectFit="cover"
+            height={474}
+            alt={activeModel.title}
+            className={`${style["partnership-image"]} ${active ? style["active"] : ""}`}
+          />
+        )}
       </div>
     </div>
   );
