@@ -7,8 +7,13 @@ export const linksData = [
         subLinks:[
             {
                 id:1,
-                url:"/",
-                text:"eret"
+                url:"/products/ib",
+                text:"Ib"
+            },
+            {
+                id:2,
+                url:"/products/forex",
+                text:"Forex"
             }
         ]
     },
