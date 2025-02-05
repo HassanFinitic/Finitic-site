@@ -17,6 +17,7 @@ import Rewards from '../../../../public/assets/icons/Rewards.png'
 import MultipleCurrencies from '../../../../public/assets/icons/MultipleCurrencies.png'
 import Subscribe from '@/components/subscribe/Subscribe'
 import Faq from '@/components/faq/Faq'
+import WhyFintic from '@/components/productsRoute/IB/WhyFinitic'
 
 
 
@@ -60,13 +61,17 @@ export default function page() {
             <p className={style.description}>The most effective marketing and management tool for introducing brokers. With advanced features and customizable options, it empowers your partners to achieve more in the forex market.</p>
           </div>
           <div className={style.right_bottom}>
-          <Scheduling  />
+          <Scheduling subTitle={"Boost Your IB Performance"} buttonTitle={"Become a Partner"}  />
           </div>
         </div>
 
       <div className={`${style.custom_Grid}`}>
         <div className="container">
         <div className="container">
+        <Heading
+          title={"Flexable Reward"}
+          subTitle={"Program for Partners."}
+        />
           <CustomGrid cards={cards} />
         </div>
         </div>
@@ -83,6 +88,10 @@ export default function page() {
         {/* feature box */}
         <Cards data={featuresIB} />
           </div>
+        </div>
+
+        <div style={{backgroundColor: "white", marginTop: "100px", borderRadius: "24px"}} className={`container ${style.howItWorks}`}>
+          <WhyFintic />
         </div>
 
         <div className={`container ${style.subscribe}`}>
