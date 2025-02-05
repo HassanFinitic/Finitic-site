@@ -18,7 +18,7 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
-  console.log(linksData)
+
 
   return (
     <nav className={`${style["full-header-container"]}`}>

@@ -1,10 +1,10 @@
 .subscribe{
-    padding: 50px 40px ; 
+    padding: 70px 0;
 }
 .subscribe-container{
     background: var(--blue-black);
     border-radius: 44px ;
-    padding: 60px 175px;
+    padding: 60px;
     color: #ffff;
     text-align: center;
 
@@ -103,7 +103,7 @@
         margin: auto;
     }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 600px) {
     .subscribe-container h3{
         line-height: 38px;
         font-size: 30px;
