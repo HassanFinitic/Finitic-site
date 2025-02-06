@@ -14,10 +14,14 @@ export const linksData = [
                 id:2,
                 url:"/products/forex",
                 text:"Forex"
+            },
+            {
+                id:3,
+                url:"/products/physical-gold",
+                text:"Physical Gold"
             }
         ]
     },
-   
     {
         id: 2,
         url: "/partnership",

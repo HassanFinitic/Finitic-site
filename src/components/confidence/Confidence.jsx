@@ -13,7 +13,7 @@ const Confidence = () => {
         });
       }, []);
   return (
-    <div className={`  ${styles["confidence-container"]}`}>
+    <div className={` container ${styles["confidence-container"]}`}>
         <Header  decription="We Ensure Your Business Operates with Confidence" />
         <div className={styles["grid-container"]}>
             {confidenceData.map((product,index) => (

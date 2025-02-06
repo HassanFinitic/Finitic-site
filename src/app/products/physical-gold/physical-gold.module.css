@@ -2,12 +2,8 @@
     padding: 50px 0;
     text-align: center;
 }
-.forex-container .decription{
-   width: 60%;
-   margin: auto;
-   color: #929398;
-   text-align: center;
-   
+.decription{
+    
 }
 .button {
     display: inline-block;
@@ -35,3 +31,4 @@
     transform: translateY(0);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
+  

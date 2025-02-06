@@ -1,10 +1,10 @@
 "use client";
-import { productsData } from "@/data/products"
 import Header from "../shared/header/Header"
 import styles from "./products.module.css"
 import React, { useEffect } from "react";
 import Aos from "aos";
-const Products = () => {
+import Grid from "../grid/Grid";
+const Products = ({productsData,subDescription,description,title}) => {
     useEffect(() => {
         Aos.init({
           duration: 1000, 
@@ -12,12 +12,12 @@ const Products = () => {
         });
       }, []);
   return (
-    <div className={`container ${styles["products-container"]}`}>
-        <Header title="Products" decription="Optimize Your Brokerage with FINITIC" />
-        <p className={styles.p}>Explore our diverse range of products tailored to optimize operations, enhance client relationships, and drive success in the trading business</p>
-        <div className={styles["grid-container"]}>
+    <div className={` ${styles["products-container"]}`}>
+        <Header title={title} decription={description} />
+        {subDescription && <p className={styles.p}>{subDescription}</p>}
+        <Grid className={"container"} colsLarge={3} colsMedium={2} colsSmall={1} gap="24px">
             {productsData.map((product,index) => (
-                <div key={index} className={styles["grid-item"]} data-aos="flip-left"
+                <div key={index}  className={styles["grid-item"]} data-aos="flip-left"
                   data-aos-easing="ease-out-cubic"
                   data-aos-duration={product.delay}>
                     <div>{product.icon}</div>
@@ -25,7 +25,7 @@ const Products = () => {
                     <p>{product.description}</p>
                 </div>
             ))}
-        </div>
+        </Grid>
     </div>
   )
 }

@@ -18,7 +18,7 @@ const Subscribe = () => {
         });
     }, []);
     return (
-        <div className={`  ${style["subscribe"]}`}>
+        <div className={`container  ${style["subscribe"]}`}>
             <div className={style["subscribe-container"]} data-aos="zoom-in-up">
                 <Qoute />
                 <h3>Stay Ahead in Forex Innovation</h3>

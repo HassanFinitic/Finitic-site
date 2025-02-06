@@ -65,7 +65,7 @@ const HowItWorks = () => {
   }, []);
  
   return (
-    <div className={style["how-it-works__container"]}>
+    <div className={ `container ${style["how-it-works__container"]}`}>
       <Header title="How it works" decription="Customizable, efficient Forex trading CRM solutions." />
       <div className={` how-it-works__layout `}>
         <div className={`how-it-works__sidebar `}>

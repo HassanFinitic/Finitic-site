@@ -1,6 +1,8 @@
 .products-container{
   /* background: var(--radial); */
-  padding: 20px 0;
+  padding: 70px 0;
+  background: linear-gradient(to bottom, #f8f9fc, #eef0f4);
+  
 }
 .p{
     color: var(--font-p);

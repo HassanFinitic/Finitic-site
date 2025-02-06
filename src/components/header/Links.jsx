@@ -32,7 +32,7 @@ export default function Links({ linksData }) {
                   <span className={style["gray-text"]}>{link.text}</span>
                 </div>
               ) : (
-                <Link href={link.url} className={style["link"]}>
+                <Link      onClick={() => setActiveDropdown(null)} href={link.url} className={style["link"]}>
                   <span className={style["white-text"]}>{link.text}</span>
                   <span className={style["gray-text"]}>{link.text}</span>
                 </Link>

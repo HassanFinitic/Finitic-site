@@ -1,10 +1,16 @@
 .whyFinicCrm-container{
-    padding: 50px 0;
+    padding: 50px ;
+}
+.finitic-crm__grid-container{
+  background: linear-gradient(to bottom right, #F2F2F2, #EEEEEE);
+  padding: 50px ;
+  margin: 20px auto;
+
 }
 .card {
     background: white;
     border-radius: 8px;
-    padding: 20px 40px 20px ;
+    padding: 20px   ;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
@@ -24,6 +30,7 @@
   .icon {
     object-fit: fill;
     border-radius: 20px;
+    width: 100%;
 
   }
   
@@ -39,4 +46,14 @@
     font-size: 14px;
     color: #555;
     text-align: left;
+    
   }
+  @media (max-width: 768px) {
+    .whyFinicCrm-container{
+      padding: 0px ;
+  }
+  .finitic-crm__grid-container{
+    margin: 0px auto;
+
+  }
+  } 

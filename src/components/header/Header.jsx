@@ -1,8 +1,6 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
 import logo from "../../../public/assets/images/logo.png";
-import Link from "next/link";
 import style from "./header.module.css";
 import Links from "./Links";
 import {linksData} from "../../data/links"
