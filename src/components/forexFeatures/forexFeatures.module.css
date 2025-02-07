@@ -14,11 +14,11 @@
     font-size: 1.2rem;
     color: #666;
     line-height: 1.6;
-    padding: 30px 0;
     text-align: center;
     margin: auto;
     font-weight: 500;
     text-align: left;
+    
   }
   
   .button {
@@ -107,10 +107,31 @@
   border-radius: 10px;
 
 }
+.feature-icon{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--blue-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.feature-icon-x{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #FF0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
 .feature-title{
  font-size: 20px;
  font-weight: 500;
  text-align: left;
+ padding: 20px 0;
 }
 @media (max-width: 768px) {
   .features .title {

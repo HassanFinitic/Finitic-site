@@ -3,6 +3,8 @@ import style from "./forexFeatures.module.css";
 import smile from "../../../public/assets/icons/smile.svg";
 import smileMeh from "../../../public/assets/icons/smileMeh.svg";
 import Image from "next/image";
+import Check from "../../../public/assets/icons/Check";
+import X from "../../../public/assets/icons/X";
 const ForexFeatures = () => {
   return (
     <div className={"container"}>
@@ -27,12 +29,14 @@ const ForexFeatures = () => {
         <div className={style.content}>
           <div className={style.row}>
             <div className={style.cell}>
+              <div className={style["feature-icon"]}><Check color={"#fff"} size={15}/></div>
               <h6 className={style["feature-title"]}>Effortless Lead Management</h6>
               <p className={style.description}>
                 Automatically track and convert leads with seamless follow-ups.
               </p>
             </div>
             <div className={style.cell}>
+            <div className={style["feature-icon-x"]}><X color={"#fff"} size={15}/></div>
               <h6 className={style["feature-title"]}>Missed Opportunities </h6>
               <p className={style.description}>
                 Leads slip through due to manual tracking.
@@ -41,12 +45,14 @@ const ForexFeatures = () => {
           </div>
           <div className={style.row}>
             <div className={style.cell}>
+            <div className={style["feature-icon"]}><Check color={"#fff"} size={15}/></div>
               <h6 className={style["feature-title"]}>IB Portal Integration</h6>
               <p className={style.description}>
                 Provide your Introducing Brokers with real-time commission and performance tracking.
               </p>
             </div>
             <div className={style.cell}>
+            <div className={style["feature-icon-x"]}><X color={"#fff"} size={15}/></div>
               <h6 className={style["feature-title"]}>IB Confusion</h6>
               <p className={style.description}>
                 Lack of proper commission and performance tracking.
@@ -56,12 +62,14 @@ const ForexFeatures = () => {
         
           <div className={style.row}>
             <div className={style.cell}>
+            <div className={style["feature-icon"]}><Check color={"#fff"} size={15}/></div>
               <h6 className={style["feature-title"]}>Hassle-Free Payments </h6>
               <p className={style.description}>
               Ensure smooth deposits and withdrawals with secure transaction handling.
               </p>
             </div>
             <div className={style.cell}>
+            <div className={style["feature-icon-x"]}><X color={"#fff"} size={15}/></div>
               <h6 className={style["feature-title"]}>Payment Delays </h6>
               <p className={style.description}>
               Slow, inefficient deposit and withdrawal processes.
@@ -70,12 +78,14 @@ const ForexFeatures = () => {
           </div>
           <div className={style.row}>
             <div className={style.cell}>
+            <div className={style["feature-icon"]}><Check color={"#fff"} size={15}/></div>
               <h6 className={style["feature-title"]}>Global Reach </h6>
               <p className={style.description}>
               Multilingual support to engage and retain clients worldwide.
               </p>
             </div>
             <div className={style.cell}>
+            <div className={style["feature-icon-x"]}><X color={"#fff"} size={15}/></div>
               <h6 className={style["feature-title"]}>Limited Growth </h6>
               <p className={style.description}>
               Language barriers restrict client expansion.
@@ -84,12 +94,14 @@ const ForexFeatures = () => {
           </div>
           <div className={style.row}>
             <div className={style.cell}>
+            <div className={style["feature-icon"]}><Check color={"#fff"} size={15}/></div>
               <h6 className={style["feature-title"]}>Anywhere Access  </h6>
               <p className={style.description}>
               Mobile-friendly platform for managing your brokerage on the go.
               </p>
             </div>
             <div className={style.cell}>
+            <div className={style["feature-icon-x"]}><X color={"#fff"} size={15}/></div>
               <h6 className={style["feature-title"]}>Restricted Access  </h6>
               <p className={style.description}>
               No flexibility to manage operations from mobile devices.

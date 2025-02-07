@@ -10,13 +10,13 @@ export default function Cards({data}) {
 
     useEffect(() => {
         Aos.init({
-          duration: 2000, 
+          duration: 1000, 
         });
       }, []);
 
   return (
 <div className={style.cards}>
-          <Grid colsLarge={3} colsMedium={2} colsSmall={1} gap="20px">
+          <Grid colsLarge={3} colsMedium={2} colsSmall={1} gap="30px">
           {
             data.map((feature) => (
               <div data-aos="zoom-in-up" key={feature.id} className={style.feature}>

@@ -11,6 +11,7 @@ import Testimonials from "@/components/testimonials/Testimonials";
 import Subscribe from "@/components/subscribe/Subscribe";
 import Faq from "@/components/faq/Faq";
 import { productsData } from "@/data/products";
+import { confidenceData } from "@/data/confidenceData";
 export default function Home() {
   return (
     <>
@@ -18,7 +19,7 @@ export default function Home() {
       <Hero />
       <Clients />
       <Scheduling />
-      <Confidence />
+      <Confidence Data={confidenceData} />
       <Products
         productsData={productsData}
         title={"Products"}

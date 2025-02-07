@@ -1,11 +1,11 @@
 "use client"
-import { confidenceData } from "@/data/confidenceData"
 import Header from "../shared/header/Header"
 import styles from "./confidence.module.css"
 import React, { useEffect } from "react";
 import Aos from "aos";
+import Grid from "../grid/Grid";
 
-const Confidence = () => {
+const Confidence = ({Data,title,decription}) => {
     useEffect(() => {
         Aos.init({
           duration: 1000, 
@@ -14,9 +14,10 @@ const Confidence = () => {
       }, []);
   return (
     <div className={` container ${styles["confidence-container"]}`}>
-        <Header  decription="We Ensure Your Business Operates with Confidence" />
-        <div className={styles["grid-container"]}>
-            {confidenceData.map((product,index) => (
+        <Header  decription={title || "We Ensure Your Business Operates with Confidence"} />
+        {decription && <p className={styles["confidence-decription"]}>Expand your portfolio with FINITIC’s gold trading platform and provide your clients with trusted solutions to diversify investments in precious metals trading.</p>}
+        <Grid colsLarge={3} colsMedium={2} colsSmall={1} gap={"30px"}>
+            {Data.map((product,index) => (
                 <div key={index} className={styles["grid-item"]} data-aos="flip-up"
                   data-aos-easing="ease-out-cubic"
                   data-aos-duration={product.delay}>
@@ -25,7 +26,7 @@ const Confidence = () => {
                     <p>{product.description}</p>
                 </div>
             ))}
-        </div>
+        </Grid>
     </div>
   )
 }
