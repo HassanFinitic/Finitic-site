@@ -9,17 +9,15 @@ import WhyFiniticGold from "@/components/whyFiniticGold/WhyFiniticGold";
 import Confidence from "@/components/confidence/Confidence";
 import { featuresGoldData } from "@/data/featuresGoldData";
 import ProductButton from "@/components/shared/productButton/ProductButton";
+import ProductHeader from "@/components/shared/productHeader/ProductHeader";
 const page = () => {
   return (
     <div className={` ${style["physical-gold-container"]}`}>
-      <Header
-        title={"Top-Tier Provider of Gold Trading Platforms"}
-        decription={"Comprehensive Physical Gold Trading Platform"}
-      />
+      <ProductHeader title={"Top-Tier Provider of Gold Trading Platforms"} productName={"Physical Gold"} startDescription={"Comprehensive "} endDescription={"Trading Platform"} />
       <p className={style.decription}>
         Secure, Scalable, and Fully Integrated System.
       </p>
-       <ProductButton title={"Request Your Demo"} />
+      <ProductButton title={"Request Your Demo"} />
       <div style={{ background: "#F3F3F3" }}>
         <div
           className="container">
@@ -51,7 +49,7 @@ const page = () => {
 
           </div>
           <WhyFiniticGold />
-         
+
         </div>
         <Confidence Data={featuresGoldData} title="Features That Set Us Apart" decription="Expand your portfolio with FINITIC’s gold trading platform and provide your clients with trusted solutions to diversify investments in precious metals trading." />
       </div>
