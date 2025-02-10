@@ -8,12 +8,12 @@ import StayAHead from '@/components/stayAHead/StayAHead';
 import Faq from '@/components/faq/Faq';
 import Subscribe from '@/components/subscribe/Subscribe';
 import ForexFeatures from '@/components/forexFeatures/ForexFeatures';
+import ProductHeader from '@/components/shared/productHeader/ProductHeader';
 
 export default function index() {
   return (
     <div className={`  ${style["forex-container"]}`}>
-      
-       <Header title={"Simplify, Optimize, Succeed"} decription={"Your Complete Forex CRM Solution"} />
+        <ProductHeader  title={"Simplify, Optimize, Succeed"} productName={"Forex CRM"} startDescription={"Your Complete"} endDescription={"Solution"}/>
        <p className={style.decription}>FINITIC’s Forex CRM: A seamless solution for forex brokers to manage clients, track leads, and scale operations efficiently.</p>
        <button className={style.button}>Get Your CRM in 7 days only</button>
        <WhyFiniticCrm />

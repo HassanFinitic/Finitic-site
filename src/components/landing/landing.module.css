@@ -4,7 +4,10 @@
 
 
     @media screen and (min-width: 600px) {
-        padding-top: 100px;
+        padding-top:60px;
+    }
+    @media screen and (max-width: 768px) {
+        padding-top: 30px;
     }
     
     display: flex;
@@ -25,6 +28,9 @@
                 font-size: 60px;
                 color: var(--font-color);
                 text-align: center;
+                @media screen and (max-width: 768px) {
+                    font-size: 40px;
+                }
             }
 
             .description{

@@ -30,7 +30,7 @@ export const productsData = [
     },
     {
       icon: <Mam />,
-      title: "PAM/MMAM",
+      title: "PAMM/MAM",
       description:
         "Enable efficient management of pooled accounts with customizable tools that align with your brokerage’s Forex trading strategies.",
              delay: "1000"
