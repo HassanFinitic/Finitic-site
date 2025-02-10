@@ -19,6 +19,11 @@ export const linksData = [
                 id:3,
                 url:"/products/physical-gold",
                 text:"Physical Gold"
+            },
+            {
+                id:4,
+                url:"/products/pamm-mam",
+                text:"PAMM/MAM"
             }
         ]
     },

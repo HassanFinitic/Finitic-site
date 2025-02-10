@@ -7,6 +7,7 @@ import { pricingData } from "@/data/pricingData"
 import Check from "../../../public/assets/icons/Check"
 import Button from "../header/Button"
 import Aos from "aos"
+import Link from "next/link"
 
 const Pricing = () => {
     const [value, setValue] = useState(false)
@@ -31,9 +32,7 @@ const Pricing = () => {
                         ))}
                     </ul>
                     <div className={`${style["button-container"]}`}>
-                    <Button 
-                    url={"/registration"} 
-                    title="Get Started" />
+                       <Link className={style.link} href={"/registration"} >Get Started</Link>
                     </div>
                 </div>
             ))}
