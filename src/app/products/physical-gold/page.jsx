@@ -8,6 +8,7 @@ import Image from "next/image";
 import WhyFiniticGold from "@/components/whyFiniticGold/WhyFiniticGold";
 import Confidence from "@/components/confidence/Confidence";
 import { featuresGoldData } from "@/data/featuresGoldData";
+import ProductButton from "@/components/shared/productButton/ProductButton";
 const page = () => {
   return (
     <div className={` ${style["physical-gold-container"]}`}>
@@ -18,12 +19,7 @@ const page = () => {
       <p className={style.decription}>
         Secure, Scalable, and Fully Integrated System.
       </p>
-      <div style={{
-        textAlign
-          : "center"
-      }}>
-        <button className={style.button}>Request Your Demo</button>
-      </div>
+       <ProductButton title={"Request Your Demo"} />
       <div style={{ background: "#F3F3F3" }}>
         <div
           className="container">

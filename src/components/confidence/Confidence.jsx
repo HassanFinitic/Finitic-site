@@ -4,6 +4,7 @@ import styles from "./confidence.module.css"
 import React, { useEffect } from "react";
 import Aos from "aos";
 import Grid from "../grid/Grid";
+import Image from "next/image";
 
 const Confidence = ({Data,title,decription}) => {
     useEffect(() => {
@@ -21,7 +22,9 @@ const Confidence = ({Data,title,decription}) => {
                 <div key={index} className={styles["grid-item"]} data-aos="flip-up"
                   data-aos-easing="ease-out-cubic"
                   data-aos-duration={product.delay}>
-                    <div></div>
+                    <div>
+                      <Image width={250} height={250} alt={product.title} src={product.image} />
+                    </div>
                     <h6>{product.title}</h6>
                     <p>{product.description}</p>
                 </div>

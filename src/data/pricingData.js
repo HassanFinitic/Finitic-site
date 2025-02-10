@@ -11,7 +11,7 @@ export const pricingData = [
         "CRM Users: 5 users (+$20 per user)",
         "IB Portal: Max 3 levels (+$50 per level)",
         "PSP Integration: 2 integrations (+$500 setup)",
-        "Copier/MAM/PAMM (MT5): $1 per million (Min. $1,000/month)",
+        "Copier/PAMM/MAM (MT5): $1 per million (Min. $1,000/month)",
       ],
     },
     {
@@ -22,7 +22,7 @@ export const pricingData = [
         "CRM Users: 25 users (+$20 per user)",
         "IB Portal: Unlimited levels (+$50 per level)",
         "PSP Integration: 5 integrations (+$500 setup)",
-        "Copier/MAM/PAMM (MT5): $1 per million (Min. $1,000/month)",
+        "Copier/PAMM/MAM (MT5): $1 per million (Min. $1,000/month)",
       ],
     },
     {
@@ -33,7 +33,7 @@ export const pricingData = [
         "CRM Users: 10 users (+$20 per user)",
         "IB Portal: Max 5 levels (+$50 per level)",
         "PSP Integration: 3 integrations (+$500 setup)",
-        "Copier/MAM/PAMM (MT5): $1 per million (Min. $1,000/month)",
+        "Copier/PAMM/MAM (MT5): $1 per million (Min. $1,000/month)",
       ],
     },
   

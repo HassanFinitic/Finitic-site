@@ -18,19 +18,19 @@ export const productsData = [
       icon: <Ib />,
       title: "IB Portal",
       description:
-        "Equip Introducing Brokers with a user-friendly system to track performance, manage commissions, and leverage advanced Forex analysis tools.",
+        "Equip Brokers with a user-friendly system to track performance, manage commissions, and leverage advanced Forex analysis tools.",
            delay: "500"
     },
     {
       icon: <Gold />,
       title: "Physical Gold System",
       description:
-        "Offer secure trading and management of gold assets, providing brokers with a reliable solution to diversify alongside Forex trading platforms.",
+        "Offer secure trading and management of gold assets, providing brokers with a reliable solution alongside Forex trading platforms.",
            delay: "1000"
     },
     {
       icon: <Mam />,
-      title: "PAMMMAM",
+      title: "PAM/MMAM",
       description:
         "Enable efficient management of pooled accounts with customizable tools that align with your brokerage’s Forex trading strategies.",
              delay: "1000"

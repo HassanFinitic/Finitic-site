@@ -1,6 +1,6 @@
-.subscribe{
+/* .subscribe{
     padding: 70px 0;
-}
+} */
 .subscribe-container{
     background: var(--blue-black);
     border-radius: 44px ;
@@ -85,7 +85,7 @@
   }
    @media (max-width: 900px) {
     .subscribe-container{
-        padding: 40px 20px;
+        padding: 40px 5px;
     }
     .subscribe-form input{
         width: 350px;
@@ -105,13 +105,8 @@
   }
   @media (max-width: 600px) {
     .subscribe-container h3{
-        line-height: 38px;
         font-size: 30px;
-        font-weight: 500;
-        padding: 40px;
-    }
-    .subscribe{
-        padding: 20px ; 
+        padding: 20px;
     }
     .subscribe-form input{
         width: 300px ;
@@ -137,6 +132,12 @@
         width: 100%;
 
         justify-content: space-between;
+    }
+    .subscribe-container p{
+        font-size: 16px;
+        line-height: 30px;
+        width: 85%;
+        margin: 10px auto;
     }
   }
 
