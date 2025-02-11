@@ -267,7 +267,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: 10px;
   transition: transform 0.3s;
 }
 
@@ -311,8 +311,9 @@
 
 .dropdown-content a {
   display: block;
-  padding: 15px;
+  padding: 10px;
   color: #333;
+  font-size: 14px;
   text-decoration: none;
   transition: background 0.3s;
 }

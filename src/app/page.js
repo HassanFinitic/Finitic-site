@@ -33,7 +33,7 @@ export default function Home() {
       <StayAHead />
       <Testimonials />
       <Subscribe />
-      <Faq />
+      <Faq  />
     </>
   );
 }

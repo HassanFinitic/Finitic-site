@@ -9,6 +9,7 @@ import Pamm4 from '../../../../public/assets/icons/Pamm4'
 import { Pamm3 } from '../../../../public/assets/icons/Pamm3'
 import PamSolution from '@/components/pamSolution/PamSolution'
 import PamBenefits from '@/components/pamBenefits/PamBenefits'
+import WhyChooseFinitic from '@/components/whyChooseFinitic/WhyChooseFinitic'
 const page = () => {
   return (
     <div className=''>
@@ -36,6 +37,7 @@ const page = () => {
             </div>
             <PamSolution />
             <PamBenefits />
+            <WhyChooseFinitic />
     </div>
   )
 }

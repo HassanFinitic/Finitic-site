@@ -25,7 +25,7 @@ export default function Links({ linksData }) {
             <li className={style["link-item"]}>
               {link.subLinks ? (
                 <div
-                  onClick={() => toggleDropdown(link.id)}
+                  // onClick={() => toggleDropdown(link.id)}
                   className={style["link"]}
                 >
                   <span className={style["white-text"]}>{link.text}</span>
