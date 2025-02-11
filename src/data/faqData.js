@@ -12,7 +12,8 @@ export const faqData = [{
     
 },{
     title:"What is the pricing structure of FINITIC?",
-    content:"FINITIC offers flexible pricing plans depending on your brokerage’s needs. We have different plans with features tailored to support a variety of client sizes, from small startups to large-scale enterprises. Please visit our pricing page for more detailed information on each plan."
+    content:"FINITIC offers flexible pricing plans depending on your brokerage’s needs. We have different plans with features tailored to support a variety of client sizes, from small startups to large-scale enterprises.",
+    sub: " Please visit our pricing page for more detailed information on each plan."
     
 },
 {
