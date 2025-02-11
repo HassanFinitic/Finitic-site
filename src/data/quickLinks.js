@@ -10,22 +10,22 @@ export const quickLinksData = [
             },
             {
                 id: 2,
-                url: "/about",
+                url: "/about-us",
                 text: "About Us",
             },
-            {
-                id: 3,
-                url: "/legal",
-                text: "Legal",
-            },
-            {
-                id: 4,
-                url: "/blog",
-                text: "Blog",
-            },
+            // {
+            //     id: 3,
+            //     url: "/legal",
+            //     text: "Legal",
+            // },
+            // {
+            //     id: 4,
+            //     url: "/blog",
+            //     text: "Blog",
+            // },
             {
                 id: 5,
-                url: "/contact",
+                url: "/contact-us",
                 text: "Contact Us",
             },
         ],

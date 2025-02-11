@@ -29,10 +29,10 @@ const AccordionItem = ({ title, children }) => {
     );
 };
 
-const Faq = () => {
+const Faq = ({landingPage,description}) => {
     return (
         <div className={`  ${styles["faq-container"]}`}>
-            <Header title={"FAQs"} decription={"Find Answers to Your Queries"} />
+            <Header title={"FAQs"} decription={ description||"Find Answers to Your Queries"} />
             <div className="container">
                 <div className={styles.accordion}>
                     {faqData.map((item, index) => (
@@ -42,8 +42,9 @@ const Faq = () => {
                     ))}
                 
                 </div>
-                
-                <Button text={"See All FAQ"} center={true} background={"black"}/>
+                {landingPage && <Button text={"See All FAQ"} center={true} background={"black"}/>
+                }
+
             </div>
         </div>
     );

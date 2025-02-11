@@ -24,6 +24,11 @@ export const linksData = [
                 id:4,
                 url:"/products/pamm-mam",
                 text:"PAMM/MAM"
+            },
+            {
+                id:5,
+                url:"/products/prop-firm",
+                text:"Prop Firm"
             }
         ]
     },
@@ -44,7 +49,7 @@ export const linksData = [
     },
     {
         id: 5,
-        url: "/",
+        url: "/faq",
         text: "FAQ",
     },
     {

@@ -25,7 +25,7 @@ const page = () => {
         <PartnershipModels />
         <HowItWorksPartnership />
         <Subscribe />
-        <Faq /> 
+        <Faq  landingPage={true} /> 
     </div>
   )
 }

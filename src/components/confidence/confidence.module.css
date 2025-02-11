@@ -22,10 +22,11 @@
   }
   .image-container img{
     width: 100%;
-    object-fit: fill;
+    object-fit: none;
+    border-radius: 20px;
   }
   .grid-item h6 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     padding-top: 20px;
     color: var(--font-p)
