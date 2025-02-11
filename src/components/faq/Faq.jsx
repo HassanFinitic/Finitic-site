@@ -38,6 +38,7 @@ const Faq = ({landingPage,description}) => {
                     {faqData.map((item, index) => (
                         <AccordionItem key={index} title={item.title}>
                             <p>{item.content}</p>
+                            <p className={styles.sub}>{item.sub}</p>
                         </AccordionItem>
                     ))}
                 

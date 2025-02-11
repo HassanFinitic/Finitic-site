@@ -21,7 +21,7 @@ const WhyFinitic = () => {
         {
           number: "03",
           title: "Real-Time Insights",
-          description: "Access live data for informed decition-making in currency trading.",
+          description: "Access live data for informed decision-making in currency trading.",
           icon:<PartnershipThree />
         }
       ];

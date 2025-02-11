@@ -2,7 +2,7 @@ export const featuresGoldData = [
     {
         title: "Flexible Trading Options",
         description:
-          "Facilitate spot trading, physical settlement, and leveraged trading to accommodate various investment strategies.",
+          "Facilitate spot trading, physical settlement, and leverage trading to accommodate various investment strategies.",
     image: "/assets/images/gold1.png",
       },
       {
