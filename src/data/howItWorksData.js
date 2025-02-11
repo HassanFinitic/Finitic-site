@@ -21,7 +21,7 @@ export const howItWorksData = [
     {
       id: 3,
       link: "three",
-      title: "Expert Guidance Every Step of the Way.",
+      title: "Expert Guidance Every Step of the Way",
       description:
         "Enjoy 24/7 support and regular updates to ensure your systems, like our Forex CRM software, stay secure and efficient.",
         image: "/assets/images/how-it-works3.jpg",

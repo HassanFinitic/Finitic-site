@@ -33,7 +33,7 @@ const PricingTable = () => {
               <td>$1 per million each side Min charge & 1000 monthly</td>
             </tr>
             <tr>
-              <td>PSP Integration (Extra $500 set up)</td>
+              <td>PSP Integration (Extra $500/set up)</td>
               <td>2</td>
               <td>5</td>
               <td>3</td>
