@@ -28,12 +28,7 @@ const StayAHead = () => {
                         <span>100%</span>
                         <div>Faster Integration  &nbsp;&nbsp;&nbsp;&nbsp; Custom Solutions</div>
                         <div className={style["stayAhead__Card-content-icons"]}>
-                            <div><Image width={34} height={34} src={timer} alt="timer" /></div>
-                            <div><Image width={34} height={34} src={integration} alt="integration" /></div>
-                            <div><Image width={34} height={34} src={setting} alt="setting" /></div>
-                            {/* <div className={style["arrow"]}>
-                        <Arrow />
-                        </div> */}
+                             <Image src={"/assets/images/stayAhead.png"} width={300} height={80} alt="Custom Solutions" />
                         </div>
                         <p>Our mission is to empower brokers to thrive in a competitive market with ease and confidence.</p>
                     </div>

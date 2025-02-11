@@ -22,7 +22,7 @@
   }
   .image-container img{
     width: 100%;
-    object-fit: none;
+    object-fit: cover;
     border-radius: 20px;
   }
   .grid-item h6 {

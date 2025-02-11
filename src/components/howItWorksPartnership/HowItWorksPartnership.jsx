@@ -32,7 +32,7 @@ const HowItWorksPartnership = () => {
         }
       ];
   return (
-    <div className={style.container}>
+    <div className={`container ${style.container}`}>
      <div className={style.header}>
       <span>HOW IT WORKS</span>
       <h2 className={style.heading}>Steps to Partnership</h2>

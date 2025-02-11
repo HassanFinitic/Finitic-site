@@ -10,32 +10,31 @@ import { Pamm3 } from '../../../../public/assets/icons/Pamm3'
 import PamSolution from '@/components/pamSolution/PamSolution'
 import PamBenefits from '@/components/pamBenefits/PamBenefits'
 import WhyChooseFinitic from '@/components/whyChooseFinitic/WhyChooseFinitic'
+import IconsSection from '@/components/shared/iconsSection/IconsSection'
 const page = () => {
   return (
     <div className=''>
         <ProductHeader  title={"Prop Firm System"} productName={"PAMM/MAM"} startDescription={"Advanced "} endDescription={"Systems for Scalable pamm Management"}/>
         <p className={style["pam__description"]}>Optimize Portfolio Performance with Smart Investment Allocation</p>
          <ProductButton title={"Book A Demo"} />
-         <div className={`container ${style["pamm-container"]}`}>
-              <div className={style["pamm-item"]}>
-                <Pamm1 />
-                Margin Requirement from 0.5%
-              </div>
-              <div className={style["pamm-item"]}>
-              <Pamm2 />
-                14+ Connectivity Options
-              </div>
-              <div className={style["pamm-item"]}>
-              <Pamm3 />
-                13 Instruments
-              </div>
-              <div className={style["pamm-item"]}>
-              <Pamm4 />
-                23/5 Trading hours
-              </div>
-
-            </div>
-            <PamSolution />
+            <IconsSection iconsInfo={[{
+              icon: <Pamm1 />,
+              title:"Multiple Accounts Managed"
+            },
+            {
+              icon: <Pamm2 />,
+              title:"Performance Tracking"
+            },
+            {
+              icon: <Pamm3 />,
+              title:"Allocation Methods"
+            },
+            {
+              icon: <Pamm4 />,
+              title:"System Integration"
+            }
+            ]} />
+            <PamSolution image="/assets/images/pam.png" highLightTitle="PAMM/MAM" title="Solutions" description="Our PAMM (Percentage Allocation Management Module) and MAM (Multi-Account Manager) systems revolutionize asset and forex trading portfolio management. Designed for brokers, they provide efficient, scalable, and customizable solutions tailored for modern trading platforms." />
             <PamBenefits />
             <WhyChooseFinitic />
     </div>

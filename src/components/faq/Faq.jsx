@@ -31,7 +31,7 @@ const AccordionItem = ({ title, children }) => {
 
 const Faq = ({landingPage,description}) => {
     return (
-        <div className={`  ${styles["faq-container"]}`}>
+        <div className={`  container ${styles["faq-container"]}`}>
             <Header title={"FAQs"} decription={ description||"Find Answers to Your Queries"} />
             <div className="container">
                 <div className={styles.accordion}>

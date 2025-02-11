@@ -39,8 +39,8 @@ export const linksData = [
     },
      {
         id: 3,
-        url: "/",
-        text: "Support",
+        url: "/contact-us",
+        text: "Contact Us",
     },
     {
         id: 4,
@@ -52,11 +52,7 @@ export const linksData = [
         url: "/faq",
         text: "FAQ",
     },
-    {
-        id: 6,
-        url: "/privacy-policy",
-        text: "Privacy Policy",
-    }
+ 
     // {
     //     id: 7,
     //     url: "/about-us",

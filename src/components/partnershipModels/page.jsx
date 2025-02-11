@@ -16,7 +16,7 @@ const PartnershipModels = () => {
   const activeModel = partnershipModels.find((model) => model.title === active);
 
   return (
-    <div className={style["partnership-models__container"]}>
+    <div className={` container ${style["partnership-models__container"]}`}>
       <h6>Our Partnership Models</h6>
       <div className={style["partnership-models"]}>
         <div className={style["partnership-models__pagination"]}>
