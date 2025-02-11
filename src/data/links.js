@@ -39,7 +39,7 @@ export const linksData = [
     },
      {
         id: 3,
-        url: "/support",
+        url: "/",
         text: "Support",
     },
     {
@@ -52,6 +52,11 @@ export const linksData = [
         url: "/faq",
         text: "FAQ",
     },
+    {
+        id: 6,
+        url: "/privacy-policy",
+        text: "Privacy Policy",
+    }
     // {
     //     id: 7,
     //     url: "/about-us",
