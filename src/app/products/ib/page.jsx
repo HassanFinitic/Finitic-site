@@ -69,8 +69,8 @@ export default function page() {
         <div className="container">
         <div className="container">
         <Heading
-          title={"Flexable Reward"}
-          subTitle={"Program for Partners."}
+          title={"Flexible Rewards"}
+          subTitle={"Program for Partners"}
         />
           <CustomGrid cards={cards} />
         </div>
@@ -83,7 +83,7 @@ export default function page() {
             {/* heading */}
         <Heading
           title={"Key Features of FINITIC’s IB Portal"}
-          subTitle={"Powerful Tools to optimize your partners performance and maximize growth."}
+          subTitle={"Powerful Tools to optimize your partners performance and maximize growth"}
         />
         {/* feature box */}
         <Cards data={featuresIB} />
