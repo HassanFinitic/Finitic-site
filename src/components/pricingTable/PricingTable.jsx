@@ -27,7 +27,7 @@ const PricingTable = () => {
               <td>Max 5 level</td>
             </tr>
             <tr>
-              <td>Copier/ MAM/ PAMM Module only for MT5</td>
+              <td>Copier/PAMM/MAM Module only for MT5</td>
               <td>$1 per million each side Min charge & 1000 monthly</td>
               <td>$1 per million each side Min charge & 1000 monthly</td>
               <td>$1 per million each side Min charge & 1000 monthly</td>

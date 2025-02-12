@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Privacy.module.css'; 
-import { array } from 'yup';
+import { array, number } from 'yup';
 
 const mainContent = `
 Finitic ("We" and "us") are committed to protecting and respecting your privacy. 
@@ -9,7 +9,7 @@ This privacy policy ("Privacy Policy”), together with our Customer Terms and a
 
 By using the Service, you accept the terms of this Privacy Policy. In the event of a conflict between the terms of this Privacy Policy and the Customer Terms, the Customer Terms will control. 
 
-<bold>Information we may collect from you: </bold> 
+Information we may collect from you:  
 
 We may collect and process the following information about you. 
 `;
@@ -18,12 +18,13 @@ We may collect and process the following information about you.
 const ourPolicy = [
     {
         id: 1,
+        number: 1,
         title: "Information you give us",
-        content: `If you decide to register with or use the Service, you will be asked to provide certain information about yourself. You will voluntarily provide us with Personal Data which includes your name, email address and contact details when you: `,
+        content: `If you decide to register or use the Service, you will be asked to provide certain information about yourself. You will voluntarily provide us with Personal Data which includes your name, email address and contact details when you: `,
         array: [
             {
                 id: 1,
-                text: "Request and receive Customer Support ."
+                text: "Request and receive Customer Support."
             },
             {
                 id: 2,
@@ -38,7 +39,8 @@ const ourPolicy = [
     },
     {
         id: 2,
-        title: "Information we collect about you.",
+        number: 2,
+        title: "Information we collect about you",
         content: `Each time you use the Service we may automatically collect the following information:`,
         array: [
             {
@@ -55,39 +57,45 @@ const ourPolicy = [
             },
             {
                 id: 4,
-                text: "§ We may also collect non-personally identifiable information (e.g. gender and location) to assist in providing the Service to you. Non-personally identifiable information by itself cannot be used to identify or contact you. However, this information may be combined with other identifiers in a way that enables you to be identified."
+                text: "We may also collect non-personally identifiable information (e.g. gender and location) to assist in providing the Service to you. Non-personally identifiable information by itself cannot be used to identify or contact you. However, this information may be combined with other identifiers in a way that enables you to be identified."
             }
         ],
         lastContent: `By submitting your Personal Data and non-personally identifiable information, you consent to the collection, use and transfer of your information in accordance with the terms of this Privacy Policy. `
     },
     {
         id: 3,
-        title: "Information we receive from other sources.",
+        number: 3,
+        title: "Information we receive from other sources",
         content: "We may receive information about you if you use any of the other websites we operate or the other services we provide. In this case we will have informed you when we collected that data that it may be shared internally and combined with data collected via the Service. We are also working closely with third parties (including, for example, business partners, sub-contractors in technical, payment and delivery services, advertising networks, analytics providers, search information providers, credit reference agencies) and may receive information about you from them. ",
         array:[]
     },
     {
         id: 4,
+        number: 4,
         title: "Use of cookies",
         content: "We use cookies on our website to distinguish you from other users of our website and Service. This helps us to provide you with a better experience when you browse our website and allows us to improve the website and Service.",
         array: []
     },
     {
         id: 5,
+        number: 5,
         title: "If you are under 13 years of age",
         content: "If you're under the age of 13, you may not have an account on the Service. We do not knowingly collect information from or direct any of our content specifically to children under 13. If we learn or have reason to suspect that you are a user who is under the age of 13, we will unfortunately have to close your account. Please see our Customer Terms for information about account termination.",
         array: [],
     },
     {
         id: 6,
-        title: "Uses made of Information.",
+        number: 6,
+        title: "Uses made of Information",
         content: "We will only use information held about you for the following purposes.",
         array: []
     },
     {
         id: 7,
-        title: "Information you give to us. We will use this information :",
-        content: "To understand and improve our Services to you.",
+        number: "A",
+        title: "Information you give to us",
+        content: `We will use this information :
+To understand and improve our Services to you.`,
         array: [
             {
                 id: 2,
@@ -107,7 +115,7 @@ const ourPolicy = [
             },
             {
                 id: 6,
-                text: "To carry out our obligations arising from any contracts entered into between you and us and to provide you with the information, products and services that you request from us."
+                text: "To carry out our obligations arising from any contracts between you and us and to provide you with the information, products and services that you request from us."
             },
             {
                 id: 7,
@@ -121,8 +129,10 @@ const ourPolicy = [
     },
     {
         id: 8,
-        title: "Information we collect about you. We will use this information:",
-        content: "To administer our Service and for internal operations, including troubleshooting, data analysis, testing, research, statistical and survey purposes.",
+        number: "B",
+        title: "Information we collect about you",
+        content: `We will use this information:
+To administer our Service and for internal operations, including troubleshooting, data analysis, testing, research, statistical and survey purposes.`,
         array: [
             {
                 id: 1,
@@ -141,27 +151,29 @@ const ourPolicy = [
                 text: "To make suggestions and recommendations to you and other users of our Service about services that may interest you or them."
             }
         ],
-        lastContent: "By using the Service, you agree that we can access, aggregate and use non-personally identifiable data we have collected from you. This data will in no way identify you or any other individual. We may use this aggregated non-personally identifiable data to"
+        lastContent: "By using the Service, you agree that we can access, aggregate and use non-personally identifiable data we have collected from you. This data will in no way identify you or any other individual. We may use this aggregated non-personally identifiable data to:"
   },
   {
     id: 9,
-    title: "Information we receive from other sources.",
+    number: "|",
+    title: "Information we receive from other sources",
     content: `
 We may combine this information with information you give to us and information we collect about you. We may use this information and the combined information for the purposes set out above (depending on the types of information we receive). By using the Service, you consent to Personal Data being collected, held and used in this way and for any other use you authorize. 
 
-Disclosure of your information 
-
-We may share your Personal Data with any member of our company. 
+▪️Disclosure of your information
+        We may share your Personal Data with any member of our company. 
     `
   },
   {
     id: 10,
-    title: "Information we share with third parties.",
+    number: "||",
+    title: "Information we share with third parties",
     content: "We may share your information with selected third parties including:",
     array: [
         {
             id: 1,
-            text: "Business partners, suppliers and sub-contractors for the performance of any contract we enter with them or you and for the purposes of providing part of the Service to you. Such third parties supply the hardware infrastructure, storage and associated services necessary for us to provide the Service. All information submitted to third parties will be encrypted using SSL technology. By using our websites and/or the Service you consent to our third-party service partners having access to your Personal Data. "
+            text: `Business partners, suppliers and sub-contractors for the performance of any contract we enter with them or you and for the purposes of providing part of the Service to you. Such third parties supply the hardware infrastructure, storage and associated services necessary for us to provide the Service. All information submitted to third parties will be encrypted using SSL technology.
+By using our websites and/or the Service you consent to our third-party service partners having access to your Personal Data.`
         },
         {
             id: 2,
@@ -171,7 +183,8 @@ We may share your Personal Data with any member of our company.
   },
   {
     id: 11,
-    title: "Personal Data we disclose to third parties.",
+    number: "|||",
+    title: "Personal Data we disclose to third parties",
     content: "We follow strict guidelines in the storage and disclosure of information which you have given us, to prevent unauthorized access. We comply with the laws of the countries from which we operate. We may disclose your Personal Data to third parties:",
     array: [
         {
@@ -184,13 +197,14 @@ We may share your Personal Data with any member of our company.
         },
         {
             id: 3,
-            text: "If we are under a duty to disclose or share your Personal Data to comply with any legal obligation, or to enforce or apply our Customer Terms and/or any other agreements; or to protect the rights, property, or safety of Finitic, our customers, or others. This includes exchanging information with other companies and organizations for the purposes of fraud protection and credit risk reduction. "
+            text: "If we are under a duty to disclose or share your Personal Data to comply with any legal obligation, or to enforce or apply our Customer Terms and/or any other agreements, or to protect the rights, property, or safety of Finitic, our customers, or others. This includes exchanging information with other companies and organizations for the purposes of fraud protection and credit risk reduction. "
         }
     ],
     lastContent: "In complying with court orders and similar legal processes, we strive for transparency. When permitted, we will make a reasonable effort to notify users of any disclosure of their information, unless we are prohibited by law or court order from doing so, or in rare, exigent circumstances. "
   },
   {
     id: 12,
+    number: 7,
     title: "Your rights",
     content: "",
     array:[],
@@ -223,16 +237,16 @@ We will retain de-personalized information after your account has been closed.
         title: "Complaints:",
         content: `If you have any complaints about our use of your information, please contact us as set out at the end of this Privacy Policy. 
 
-Where we store your Personal Data for EU Customers only 
+▪️Where we store your Personal Data [for EU Customers only] 
 
 The Personal Data that we collect from you may be transferred to, and stored at, a destination outside the European Economic Area ("EEA"). It may also be processed by staff operating outside the EEA who work for us or for one of our contractors. Such staff may be engaged in, among other things, the provision of support services. By submitting your Personal Data, you agree to this transfer, storing or processing outside of the EEA. We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy. 
 We always ensure that your information is only transferred in full accordance with BVI data protection laws and/or applicable EU data protection law. In particular, this means that your information will only be transferred to a country that provides an adequate level of protection, or the recipient is bound by standard contractual clause according to conditions provided by the European Commission (“EU Model Clauses”). You are responsible for checking the privacy policy of any third-party websites we link to. Our Service is accessible via the Internet and may potentially be accessed by any user around the world. Other users may access the Service from outside the EEA. This means that where you chose to upload your data to the Service, it could be accessed from anywhere around the world and therefore a transfer of your data outside of the EEA may be deemed to have occurred. You consent to such transfer of your data for and by way of this purpose. 
 
 Where we have given you (or where you have chosen) a password which enables you to access certain parts of the Service, you are responsible for keeping this password confidential. We ask you not to share any password with anyone. 
 
-Unfortunately, the transmission of information via the Internet is not completely secure. Although we will do our best to protect your Personal Data, we cannot guarantee the security of your data transmitted to our Service; any transmission is at your own risk. Once we have received your information, we will use strict procedures and security features to try to prevent unauthorised access. 
+Unfortunately, the transmission of information via the Internet is not completely secure. Although we will do our best to protect your Personal Data, we cannot guarantee the security of your data transmitted to our Service, any transmission is at your own risk. Once we have received your information, we will use strict procedures and security features to try to prevent unauthorised access. 
 
-The Service may contain links to and from third party websites of our partners, networks, advertisers and affiliate. If you follow a link to any of these websites, please note that these websites have their own privacy policies, and we do not accept any responsibility or liability for the privacy practices or content of these websites. 
+The Service may contain links to and from third party websites of our partners, networks, advertisers and affiliates. If you follow a link to any of these websites, please note that these websites have their own privacy policies, and we do not accept any responsibility or liability for the privacy practices or content of these websites. 
 
 Changes To This Privacy Policy 
 
@@ -260,7 +274,7 @@ export default function Page() {
             {
                 ourPolicy.map((item) => (
                     <div className={styles.policyItem} data-aos="fade-up" key={item.id}>
-                        <h2 className={styles.policyTitle}>{`${item.id}. ${item.title}`}</h2>
+                        <h2 className={styles.policyTitle}>{`${item.number}. ${item.title}`}</h2>
                         <p className={styles.content}>{item.content}</p>
                         {
                             item.array && 

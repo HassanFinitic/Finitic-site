@@ -75,6 +75,8 @@
   }
 
   .listItem{
+    white-space: pre-wrap; /* Preserve newlines and wrap text */
+    word-wrap: break-word; /* Handle long words */
     color: var(--font-color-2);
     font-size: 14px;
     margin-bottom: 7px;

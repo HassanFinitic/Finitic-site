@@ -9,7 +9,9 @@ const page = () => {
         <Header title={"Reviews"} decription={"Testimonials from our clients & partners"} />
         <Clients />
         <div className=" " style={{paddingTop: "50px"}}>
-        <TestimonialGrid />
+          <div className="container">
+            <TestimonialGrid />    
+          </div>
         </div>
     </div>
   )
