@@ -32,7 +32,7 @@ export default function Header() {
 
       <div className={style["button-container"]}>
         {/* Button */}
-        <Button  title="Start New Challenge" />
+        <Button url={"/contact-us"}  title="Start New Challenge" />
 
         {/* Mobile Menu Icon */}
         <Icon toggleIcon={toggleIcon} isOpen={isOpen} style={style} />

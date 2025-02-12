@@ -23,7 +23,7 @@ const Confidence = ({Data,title,decription}) => {
                   data-aos-easing="ease-out-cubic"
                   data-aos-duration={product.delay}>
                     <div className={styles["image-container"]}> 
-                      <Image width={250}  height={250} alt={product.title} src={product.image} />
+                      <Image width={250}  height={250} alt={product.imagealt || product.title} src={product.image} />
                     </div>
                     <h6>{product.title}</h6>
                     <p>{product.description}</p>

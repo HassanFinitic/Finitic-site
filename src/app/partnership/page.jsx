@@ -18,7 +18,7 @@ const page = () => {
                 <p>We recognize the transformative power of partnerships. By aligning with innovators and industry leaders in forex trading, we deliver solutions that empower forex brokers and create opportunities for our partners to earn and grow with us in the forex market.</p>
              </div>
              <div>
-                <Image src={img}  width={400} height={300} alt="" />
+                <Image src={img}  width={400} height={300} alt="image" />
              </div>
         </div>
         <WhyFintic />
