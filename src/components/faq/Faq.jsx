@@ -1,33 +1,13 @@
 "use client"
-import { useState } from "react";
 import styles from "./faq.module.css";
 import Header from "../shared/header/Header";
-import Plus from "../../../public/assets/icons/Plus";
 import { faqData } from "@/data/faqData";
 import Button from "../shared/button/Button";
+import AccordionItem from "./AccordionItem";
 
-const AccordionItem = ({ title, children }) => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    return (
-        <div className={styles.accordionItem}>
-            <button
-                className={styles.accordionHeader}
-                onClick={() => setIsOpen(!isOpen)}
-            >
-                <span className={`${isOpen ? styles["plus-active"] : ""}`}>
-                    <Plus />
-                </span>
-                {title}
-            </button>
-            <div
-                className={`${styles.accordionContent} ${isOpen ? styles.active : ""}`}
-            >
-                {children}
-            </div>
-        </div>
-    );
-};
+export const metadata = {
+    title: "FAQs - Finitic Technology",
+  };
 
 const Faq = ({landingPage,description}) => {
     return (
