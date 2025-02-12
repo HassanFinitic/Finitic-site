@@ -10,7 +10,15 @@ import Confidence from "@/components/confidence/Confidence";
 import { featuresGoldData } from "@/data/featuresGoldData";
 import ProductButton from "@/components/shared/productButton/ProductButton";
 import ProductHeader from "@/components/shared/productHeader/ProductHeader";
+<<<<<<< HEAD
 import { featuresGold } from "@/data/featuresGold";
+=======
+
+export const metadata = {
+  title: "Physical Gold - Finitic Technology",
+};
+
+>>>>>>> 9b8f96e3679e257de6eb24602486356d1fe1c35a
 const page = () => {
   return (
     <div className={` ${style["physical-gold-container"]}`}>

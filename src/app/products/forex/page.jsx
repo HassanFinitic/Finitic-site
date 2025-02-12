@@ -1,4 +1,3 @@
-
 import Header from '@/components/shared/header/Header';
 import style from './forex.module.css';
 import WhyFiniticCrm from '@/components/whyFiniticCrm/WhyFiniticCrm';
@@ -9,6 +8,10 @@ import Faq from '@/components/faq/Faq';
 import Subscribe from '@/components/subscribe/Subscribe';
 import ForexFeatures from '@/components/forexFeatures/ForexFeatures';
 import ProductHeader from '@/components/shared/productHeader/ProductHeader';
+
+export const metadata = {
+  title: "Forex - Finitic Technology",
+};
 
 export default function index() {
   return (

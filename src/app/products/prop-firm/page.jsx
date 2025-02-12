@@ -1,21 +1,18 @@
-import ProductHeader from "@/components/shared/productHeader/ProductHeader";
-import React from "react";
-import style from "./propFirm.module.css";
-import ProductButton from "@/components/shared/productButton/ProductButton";
-import PamSolution from "@/components/pamSolution/PamSolution";
-import Prop1 from "../../../../public/assets/icons/Prop1";
-import Prop2 from "../../../../public/assets/icons/Prop2";
-import Prop3 from "../../../../public/assets/icons/Prop3";
-import Prop4 from "../../../../public/assets/icons/Prop4";
-import IconsSection from "@/components/shared/iconsSection/IconsSection";
-import { propFirm } from "@/data/propfirm";
-import PartnershipModels from "@/components/partnershipModels/page";
-import WhyFiniticGold from "@/components/whyFiniticGold/WhyFiniticGold";
-import { featuresPropFirm } from "@/data/featuresPropFirm";
-import Subscribe from "@/components/subscribe/Subscribe";
-import { FaQ } from "react-icons/fa6";
-import Faq from "@/components/faq/Faq";
-import WhyPropFirm from "@/components/whyPropFirm/WhyPropFirm";
+import ProductHeader from '@/components/shared/productHeader/ProductHeader'
+import React from 'react'
+import style from "./propFirm.module.css"
+import ProductButton from '@/components/shared/productButton/ProductButton'
+import PamSolution from '@/components/pamSolution/PamSolution'
+import Prop1 from '../../../../public/assets/icons/Prop1'
+import Prop2 from '../../../../public/assets/icons/Prop2'
+import Prop3 from '../../../../public/assets/icons/Prop3'
+import Prop4 from '../../../../public/assets/icons/Prop4'
+import IconsSection from '@/components/shared/iconsSection/IconsSection'
+
+export const metadata = {
+  title: "Prop Firm - Finitic Technology",
+};
+
 const page = () => {
   return (
     <div className=" ">

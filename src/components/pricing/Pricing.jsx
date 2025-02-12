@@ -19,7 +19,7 @@ const Pricing = () => {
         }, []);
     return (
         <div className={` container pricing-container`} >
-            <Header title="Pricing" decription="Choose your plan " />
+            <Header title="Plans" decription="Choose your plan " />
             <div className={style.pricingContainer} data-aos="zoom-in-up">
             {pricingData.map((plan, index) => (
                 <div key={index} className={index === 1 ? `${style["pricingCard"]} ${style["active"]}` : `${style["pricingCard"]}`}>

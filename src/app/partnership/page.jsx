@@ -7,7 +7,15 @@ import PartnershipModels from "@/components/partnershipModels/page"
 import HowItWorksPartnership from "@/components/howItWorksPartnership/HowItWorksPartnership"
 import Subscribe from "@/components/subscribe/Subscribe"
 import Faq from "@/components/faq/Faq"
+<<<<<<< HEAD
 import { partnershipModels } from "@/data/partnershipData";
+=======
+
+export const metadata = {
+  title: "Partnership - Finitic Technology",
+};
+
+>>>>>>> 9b8f96e3679e257de6eb24602486356d1fe1c35a
 const page = () => {
   return (
     <div >
@@ -19,7 +27,7 @@ const page = () => {
                 <p>We recognize the transformative power of partnerships. By aligning with innovators and industry leaders in forex trading, we deliver solutions that empower forex brokers and create opportunities for our partners to earn and grow with us in the forex market.</p>
              </div>
              <div>
-                <Image src={img}  width={400} height={300} alt="" />
+                <Image src={img}  width={400} height={300} alt="image" />
              </div>
         </div>
         <WhyFintic />

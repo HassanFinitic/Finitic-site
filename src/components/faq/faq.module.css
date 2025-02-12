@@ -30,15 +30,18 @@
   .accordionContent {
     border-top: 2px solid rgb(233, 233, 233);
     padding: 0px 30px;
-    max-height: 0;
+    height: 0;
     font-size: 14px;
     overflow: hidden;
-    transition: max-height 500ms ease-out;
+    transition: height 500ms ease-out;
+    -webkit-transition: height 500ms ease-out;
+    -moz-transition: height 500ms ease-out;
+    -ms-transition: height 500ms ease-out;
+    -o-transition: height 500ms ease-out;
     color:rgb(106, 106, 106);
     font-weight: 500;
     line-height: 26px;
-
-  }
+}
   .accordionContent p {
     padding: 10px 0px 0px 0px;
   }
@@ -49,7 +52,8 @@
   } */
 
   .active {
-    max-height: 250px;
+    /* max-height: 250px; */
+    height: fit-content;
   }
   .accordionItem:last-child .accordionContent:not(.active) {
     border: none;

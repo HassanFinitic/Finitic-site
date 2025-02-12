@@ -32,7 +32,7 @@ export default function MobileMenu({ toggleIcon, linksData, isOpen, style }) {
           {link.subLinks && (
             <div className={`${style["mobile-dropdown"]} ${activeDropdown === link.id ? style["active"] : ""}`}>
               {link.subLinks.map((subLink, index) => (
-                <Link key={index} href={subLink.url} className={style["mobile-dropdown-link"]}>
+                <Link onClick={toggleIcon} key={index} href={subLink.url} className={style["mobile-dropdown-link"]}>
                   {subLink.text}
                 </Link>
               ))}

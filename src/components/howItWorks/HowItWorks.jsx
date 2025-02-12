@@ -98,7 +98,7 @@ const HowItWorks = () => {
               </div>
               <Image
                 src={feature.image}
-                alt={feature.title}
+                alt={feature.imagealt}
                 width={454}
                 height={300}
                 className={style.featureImage}

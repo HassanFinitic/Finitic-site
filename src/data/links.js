@@ -45,7 +45,7 @@ export const linksData = [
     {
         id: 4,
         url: "/pricing",
-        text: "Pricing",
+        text: "Plans",
     },
     {
         id: 5,

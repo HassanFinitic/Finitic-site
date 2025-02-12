@@ -34,7 +34,7 @@ export default function Landing() {
             {data.description}
           </p>
 
-          <Button text={data.buttonText} />
+          <Button url={"/contact-us"} text={data.buttonText} />
 
         </div>
       </div>

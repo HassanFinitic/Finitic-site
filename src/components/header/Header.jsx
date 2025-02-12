@@ -20,7 +20,9 @@ export default function Header() {
 
   return (
     <nav className={`${style["full-header-container"]}`}>
+        <div className="container">
       <div className={` ${style["navbar"]} ${style["header-container"]}`}>
+
         
         {/* Logo */}
         <Logo logo={logo} alt="Finitic Logo" />
@@ -30,7 +32,7 @@ export default function Header() {
 
       <div className={style["button-container"]}>
         {/* Button */}
-        <Button  title="Start New Challenge" />
+        <Button url={"/contact-us"}  title="Start New Challenge" />
 
         {/* Mobile Menu Icon */}
         <Icon toggleIcon={toggleIcon} isOpen={isOpen} style={style} />
@@ -43,6 +45,7 @@ export default function Header() {
           style={style}
         />
       </div>
+        </div>
       </div>
     </nav>
   );

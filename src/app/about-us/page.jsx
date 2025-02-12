@@ -6,6 +6,10 @@ import AboutGrid from '@/components/aboutGrid/AboutGrid'
 import OurFeature from '@/components/ourFeature/OurFeature'
 import CountUpItems from '@/components/countUp/CountUpItems'
 
+export const metadata = {
+    title: "About Us - Finitic Technology",
+  };
+
 
 export default function page() {
     return (

@@ -4,6 +4,11 @@ import HeadOffice from "../../../public/assets/icons/HeadOffice";
 import Phone from "../../../public/assets/icons/Phone";
 import Email from "../../../public/assets/icons/Email";
 import Submit from "@/components/shared/submit/Submit";
+
+export const metadata = {
+  title: "Contact Us - Finitic Technology",
+};
+
 const page = () => {
   return (
     <div className={`  ${style["contact-us_container"]}`}>
@@ -11,6 +16,7 @@ const page = () => {
         title={"Contact"}
         decription={"Contact us to discuss your needs and ideas"}
       />
+      <div className="container">
       <div className={style["contact-us_content"]}>
         <section className={style["contact-us__info-section"]}>
           <p>
@@ -70,6 +76,7 @@ const page = () => {
             </Submit>
           </form>
         </div>
+      </div>
       </div>
     </div>
   );

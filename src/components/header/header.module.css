@@ -279,7 +279,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 60px;
   left: -110px;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

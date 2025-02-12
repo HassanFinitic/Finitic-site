@@ -12,6 +12,25 @@ import Subscribe from "@/components/subscribe/Subscribe";
 import Faq from "@/components/faq/Faq";
 import { productsData } from "@/data/products";
 import { confidenceData } from "@/data/confidenceData";
+
+
+// export const metadata = {
+//     title: "Finitic Technology",
+//     description: "Finitic develops innovative FinTech solutions that empower brokers/investors to streamline your financial operations. Explore our cutting-edge products and services.",
+//     keywords: ["products", "products page"],
+//     icons: {
+//         icon: [
+//           {
+//             rel: "icon",
+//             url: "/favicon.png",
+//             type: "image/png",
+//           },
+//         ],
+//       },
+//   };
+
+
+
 export default function Home() {
   return (
     <>

@@ -11,6 +11,11 @@ import PamSolution from '@/components/pamSolution/PamSolution'
 import PamBenefits from '@/components/pamBenefits/PamBenefits'
 import WhyChooseFinitic from '@/components/whyChooseFinitic/WhyChooseFinitic'
 import IconsSection from '@/components/shared/iconsSection/IconsSection'
+
+export const metadata = {
+  title: "PAMM/MAM - Finitic Technology",
+};
+
 const page = () => {
   return (
     <div className=''>

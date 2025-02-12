@@ -6,7 +6,7 @@ export default function Button({ title, url }) {
   return (
     <>
       {url ?
-        <Link className={style.Link} href={url}>{title}</Link>
+        <Link className={style.button} href={url}>{title}</Link>
         :
         <button className={style.button}>{title}</button>
       }

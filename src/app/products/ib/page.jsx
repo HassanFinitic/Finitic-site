@@ -1,5 +1,3 @@
-'use client'
-
 import Scheduling from '@/components/scheduling/Scheduling'
 import React from 'react'
 import style from "./ib.module.css"
@@ -19,6 +17,9 @@ import Subscribe from '@/components/subscribe/Subscribe'
 import Faq from '@/components/faq/Faq'
 import WhyFintic from '@/components/productsRoute/IB/WhyFinitic'
 
+export const metadata = {
+  title: "IB - Finitic Technology",
+};
 
 
 export default function page() {
