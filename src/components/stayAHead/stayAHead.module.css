@@ -62,7 +62,10 @@
     position: relative;
 
 }
-
+.stayAhead__Card-content-icons {
+    width: 100%;
+    object-fit: fill;
+}
 .stayAhead__Card-content-icons div {
     padding: 15px;
     border-radius: 20px;

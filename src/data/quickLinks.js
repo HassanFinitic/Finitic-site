@@ -37,27 +37,27 @@ export const quickLinksData = [
         links: [
             {
                 id: 1,
-                url: "/",
+                url: "/products/forex",
                 text: "Forex CRM",
             },
             {
                 id: 2,
-                url: "/",
+                url: "/products/ib",
                 text: "IB Portal",
             },
             {
                 id: 3,
-                url: "/",
+                url: "/products/physical-gold",
                 text: "Physical Gold System",
             },
             {
                 id: 4,
-                url: "/",
+                url: "/products/pamm-mam",
                 text: "PAMM/MAM",
             },
             {
                 id: 5,
-                url: "/",
+                url: "/products/prop-firm",
                 text: "Prop Firm System",
             },
         ],
@@ -69,7 +69,7 @@ export const quickLinksData = [
         links: [
             {
                 id: 1,
-                url: "/",
+                url: "/faq",
                 text: "FAQ",
             },
             {
@@ -81,11 +81,6 @@ export const quickLinksData = [
                 id: 3,
                 url: "/",
                 text: "Privacy Policy",
-            },
-            {
-                id: 4,
-                url: "/",
-                text: "Useful Links",
             },
         ],
     },

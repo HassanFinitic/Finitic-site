@@ -1,0 +1,32 @@
+.pamm-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    padding: 50px 0;
+  }
+  
+  .pamm-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #EFEFEF;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 900px) {
+    .pamm-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .pamm-item {
+      width: 100%;
+  
+    }
+  }
