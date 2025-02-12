@@ -8,6 +8,11 @@ import Prop2 from '../../../../public/assets/icons/Prop2'
 import Prop3 from '../../../../public/assets/icons/Prop3'
 import Prop4 from '../../../../public/assets/icons/Prop4'
 import IconsSection from '@/components/shared/iconsSection/IconsSection'
+
+export const metadata = {
+  title: "Prop Firm - Finitic Technology",
+};
+
 const page = () => {
   return (
     <div className=' '>
