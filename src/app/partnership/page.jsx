@@ -7,6 +7,7 @@ import PartnershipModels from "@/components/partnershipModels/page"
 import HowItWorksPartnership from "@/components/howItWorksPartnership/HowItWorksPartnership"
 import Subscribe from "@/components/subscribe/Subscribe"
 import Faq from "@/components/faq/Faq"
+import { partnershipModels } from "@/data/partnershipData";
 const page = () => {
   return (
     <div >
@@ -22,7 +23,7 @@ const page = () => {
              </div>
         </div>
         <WhyFintic />
-        <PartnershipModels />
+        <PartnershipModels toggleData={partnershipModels}/>
         <HowItWorksPartnership />
         <Subscribe />
         <Faq  landingPage={true} /> 

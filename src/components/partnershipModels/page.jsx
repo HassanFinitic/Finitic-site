@@ -1,26 +1,28 @@
 "use client";
-import { useState } from "react";
+import {  useEffect, useState } from "react";
 import style from "./partnership.module.css";
 import Image from "next/image";
-import { partnershipModels } from "@/data/partnershipData";
 
 
 
-const PartnershipModels = () => {
-  const [active, setActive] = useState("Agency Model");
+
+const PartnershipModels = ({toggleData}) => {
+  const [active, setActive] = useState("");
 
   const handleToggle = (title) => {
-    setActive(active === title ? "Agency Model": title);
+    setActive(active === title ? toggleData["data"][0].title: title);
   };
-
-  const activeModel = partnershipModels.find((model) => model.title === active);
+  useEffect(() => { 
+    setActive(toggleData["data"][0].title);
+  }, []);
+  const activeModel = toggleData["data"].find((model) => model.title === active);
 
   return (
     <div className={` container ${style["partnership-models__container"]}`}>
-      <h6>Our Partnership Models</h6>
+      <h6>{toggleData.title}</h6>
       <div className={style["partnership-models"]}>
         <div className={style["partnership-models__pagination"]}>
-          {partnershipModels.map(({ title, description }) => (
+          {toggleData["data"].map(({ title, description }) => (
             <div
               key={title}
               className={`${style["pagination"]} ${active === title ? style["active"] : ""}`}

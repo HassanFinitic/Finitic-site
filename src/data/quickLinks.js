@@ -72,13 +72,13 @@ export const quickLinksData = [
                 url: "/faq",
                 text: "FAQ",
             },
+            // {
+            //     id: 2,
+            //     url: "/",
+            //     text: "Terms",
+            // },
             {
                 id: 2,
-                url: "/",
-                text: "Terms",
-            },
-            {
-                id: 3,
                 url: "/",
                 text: "Privacy Policy",
             },

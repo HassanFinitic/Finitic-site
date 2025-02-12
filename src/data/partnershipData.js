@@ -1,4 +1,5 @@
-export const partnershipModels = [
+export const partnershipModels = {title : "Our Partnership Models",
+  data:[
     {
       title: "Agency Model",
       description:
@@ -23,4 +24,4 @@ export const partnershipModels = [
         "Become a reseller of FINITIC’s cutting-edge forex CRM software and services. Strengthen your portfolio by offering proven forex trading CRM solutions while leveraging our global reputation.",
         image: "/assets/images/partner4.jpg",
     },
-  ];
+  ]};

@@ -5,6 +5,7 @@ export const whyFinticCrmData = [
       description:
         "Centralized tools to track and nurture client relationships across your forex trading platform.",
       icon: "/assets/images/forexCrm1.svg", 
+        delay: "0"
     },
     {
       id: 2,
@@ -12,6 +13,7 @@ export const whyFinticCrmData = [
       description:
         "Actionable insights to power smarter business decisions, from forex trading strategies to forex signals.",
         icon: "/assets/images/forexCrm2.svg", 
+            delay: "500"
     },
     {
       id: 3,
@@ -19,6 +21,7 @@ export const whyFinticCrmData = [
       description:
         "Manage client interactions seamlessly with integrated email, SMS, and notification systems.",
         icon: "/assets/images/forexCrm3.svg", 
+                    delay: "1000"
     },
     {
       id: 4,
@@ -26,6 +29,7 @@ export const whyFinticCrmData = [
       description:
         "Flexible features designed to fit your unique forex broker needs, ensuring smooth currency trading operations.",
         icon: "/assets/images/forexCrm4.svg", 
+                        delay: "0"
     },
     {
       id: 5,
@@ -33,5 +37,6 @@ export const whyFinticCrmData = [
       description:
         "Stay ahead of compliance requirements with built-in tools to meet regulatory standards worldwide.",
         icon: "/assets/images/forexCrm5.svg", 
+                 delay: "500"
     },
   ];
