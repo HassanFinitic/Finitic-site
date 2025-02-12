@@ -20,7 +20,9 @@ export default function Header() {
 
   return (
     <nav className={`${style["full-header-container"]}`}>
+        <div className="container">
       <div className={` ${style["navbar"]} ${style["header-container"]}`}>
+
         
         {/* Logo */}
         <Logo logo={logo} alt="Finitic Logo" />
@@ -43,6 +45,7 @@ export default function Header() {
           style={style}
         />
       </div>
+        </div>
       </div>
     </nav>
   );
