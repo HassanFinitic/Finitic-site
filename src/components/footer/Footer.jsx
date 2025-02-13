@@ -63,10 +63,10 @@ export default function Footer() {
               <p className={style["copyright-text"]}>All Rights Reserved</p>
             </div>
             <div className={style["social-icons"]}>
-              <Link className={style["social-icon"]} href="/"><CiFacebook /></Link>
-              <Link className={style["social-icon"]} href="/"><FaInstagram /></Link>
-              <Link className={style["social-icon"]} href="/"><FaLinkedin /></Link>
-              <Link className={style["social-icon"]} href="/"><RiTwitterXFill /></Link>
+              <Link className={style["social-icon"]} href="https://www.facebook.com/share/1BAeZGSZRD"><CiFacebook /></Link>
+              <Link className={style["social-icon"]} href="https://www.instagram.com/finiticme"><FaInstagram /></Link>
+              <Link className={style["social-icon"]} href="https://www.linkedin.com/company/finitic1/"><FaLinkedin /></Link>
+              <Link className={style["social-icon"]} href="https://x.com/finitic_me"><RiTwitterXFill /></Link>
             </div>
         </div>
       </div>
