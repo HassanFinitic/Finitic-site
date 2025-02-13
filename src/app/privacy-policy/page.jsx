@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Privacy.module.css'; 
-import { array, number } from 'yup';
 
 const mainContent = `
 Finitic ("We" and "us") are committed to protecting and respecting your privacy. 
@@ -254,8 +253,13 @@ We reserve the right to change this Privacy Policy at any time and any amended P
         `
     }
 ]
-
+export const metadata = {
+    title: "Privacy Policy | Finitic Technologies - Forex Data Protection",
+    description:"Review Finitic Technologies' Privacy Policy to understand how we protect your personal information and ensure data security in forex trading.",
+    keywords: ["Privacy policy", "forex data protection", "data security", "personal information", "forex trading" ],
+  };
 export default function Page() {
+  
   return (
     <div className={styles.fullContainer}>
         <div className="container">

@@ -13,7 +13,9 @@ import Subscribe from '@/components/subscribe/Subscribe'
 import Faq from '@/components/faq/Faq'
 
 export const metadata = {
-  title: "Prop Firm - Finitic Technology",
+  title: "Top Prop Trading Firm | Funded Forex Trading Accounts ",
+  description:"Join our leading proprietary trading firm and trade with a funded forex account. Access top-tier trading capital, risk management tools, and expert support. Start trading with no personal risk today!",
+  keywords: ["prop trading firm", "proprietary trading", "funded forex accounts", "forex prop firm", "trade with funded account", "best prop firm","forex funding programs", "prop firm trading challenge" ],
 };
 
 const page = () => {

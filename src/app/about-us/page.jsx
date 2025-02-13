@@ -7,8 +7,10 @@ import OurFeature from '@/components/ourFeature/OurFeature'
 import CountUpItems from '@/components/countUp/CountUpItems'
 
 export const metadata = {
-    title: "About Us - Finitic Technology",
-  };
+    title: "About Us | Finitic Technologies - Trusted Forex Broker",
+    description:"Learn about Finitic Technologies, a leading forex broker committed to transparency, innovation, and client success. Discover our history, mission, and team.",
+    keywords: [ "Forex broker", "trusted forex broker", "about us", "company history", "our team", "forex trading" ],
+};
 
 
 export default function page() {

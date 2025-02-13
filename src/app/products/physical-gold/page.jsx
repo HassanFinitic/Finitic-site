@@ -13,7 +13,9 @@ import ProductHeader from "@/components/shared/productHeader/ProductHeader";
 import { featuresGold } from "@/data/featuresGold";
 
 export const metadata = {
-  title: "Physical Gold - Finitic Technology",
+  title: "Physical Gold System | Buy & Sell Physical Gold | Finitic Technologies",
+  description:"Trade physical gold with Finitic Technologies. Securely buy, sell, and store physical gold with competitive pricing and reliable service.",
+  keywords: [ "Physical gold trading", "buy physical gold", "sell physical gold", "gold trading", "gold investment"  ],
 };
 
 const page = () => {

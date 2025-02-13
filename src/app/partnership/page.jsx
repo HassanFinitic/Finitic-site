@@ -10,7 +10,9 @@ import Faq from "@/components/faq/Faq"
 import { partnershipModels } from "@/data/partnershipData";
 
 export const metadata = {
-  title: "Partnership - Finitic Technology",
+  title: "Partner with Us | Finitic Partnership Programs",
+  description:"Grow your business with our forex and fintech partnership programs. Earn commissions, expand your reach, and collaborate with a trusted industry leader. Join our partnership program today! ",
+  keywords: ["forex partnership", "fintech affiliate program", "forex IB program","trading partnerships", "forex broker partnership", "fintech business collaboration" ],
 };
 
 const page = () => {

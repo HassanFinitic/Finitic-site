@@ -2,13 +2,9 @@ import Scheduling from '@/components/scheduling/Scheduling'
 import React from 'react'
 import style from "./ib.module.css"
 import { featuresIB } from '@/data/featuresIB'
-import Grid from '@/components/grid/Grid'
-import Flex from '@/components/flex/Flex'
 import Heading from '@/components/productsRoute/shared/Heading'
-import { MdElectricBolt } from "react-icons/md";
 import Cards from '@/components/productsRoute/IB/Cards'
 import CustomGrid from './../../../components/customGrid/CustomGrid';
-
 import commission from '../../../../public/assets/icons/commission.png'
 import CustomizableFrequency from '../../../../public/assets/icons/CustomizableFrequency.png'
 import Rewards from '../../../../public/assets/icons/Rewards.png'
@@ -18,7 +14,9 @@ import Faq from '@/components/faq/Faq'
 import WhyFintic from '@/components/productsRoute/IB/WhyFinitic'
 
 export const metadata = {
-  title: "IB - Finitic Technology",
+  title: "IB Portal | Introducing Broker Program | Finitic Technologies",
+  description:" Join our Introducing Broker (IB) program and earn commissions by referring clients. Access marketing materials, tracking tools, and dedicated support.",
+  keywords: [ "IB portal", "introducing broker", "forex IB program", "forex partnership", "earn commissions" ],
 };
 
 

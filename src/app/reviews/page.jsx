@@ -1,6 +1,4 @@
-
 import Header from "@/components/shared/header/Header"
-import style from "./reviews.module.css"
 import Clients from "@/components/clients/Clients"
 import TestimonialGrid from "@/components/testimonials/TestimonialGrid"
 const page = () => {

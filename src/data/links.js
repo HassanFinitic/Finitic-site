@@ -13,7 +13,7 @@ export const linksData = [
             {
                 id:2,
                 url:"/products/forex",
-                text:"Forex"
+                text:"Forex CRM"
             },
             {
                 id:3,
