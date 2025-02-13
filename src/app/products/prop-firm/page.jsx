@@ -18,7 +18,7 @@ export const metadata = {
 
 const page = () => {
   return (
-    <div className=" ">
+    <div className={style["prop-firm-container"]}>
       <ProductHeader
         title={"Prop Firm System"}
         productName={"Prop Trading Firms"}

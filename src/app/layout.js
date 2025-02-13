@@ -59,7 +59,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <GoogleTagManager gtmId="G-GRCL809B31" /> */}
       <link rel="icon" href="/favicon.png" sizes="any" type= "image/png"/>
       <body className={`${sora.variable}`}>
         <Header />

@@ -18,7 +18,7 @@ export const metadata = {
 
 const page = () => {
   return (
-    <div className=''>
+    <div className={style["pam-container"]}>
         <ProductHeader  title={"Prop Firm System"} productName={"PAMM/MAM"} startDescription={"Advanced "} endDescription={"Systems for Scalable pamm Management"}/>
         <p className={style["pam__description"]}>Optimize Portfolio Performance with Smart Investment Allocation</p>
          <ProductButton title={"Book A Demo"} />
