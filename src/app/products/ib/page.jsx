@@ -91,13 +91,15 @@ export default function page() {
           </div>
         </div>
 
-        <div style={{backgroundColor: "white", marginTop: "100px", borderRadius: "24px"}} className={`container ${style.howItWorks}`}>
+        <div style={{ padding: "0 50px", backgroundColor: "white", marginTop: "100px", borderRadius: "24px"}} className={`container ${style.howItWorks}`}>
           <WhyFintic />
         </div>
 
         <div className={`container ${style.subscribe}`}>
           <Subscribe />
         </div>
+
+        <br />
 
         <div className={`container ${style.faqs}`}>
           <Faq />
