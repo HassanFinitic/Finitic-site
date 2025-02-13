@@ -1,17 +1,28 @@
+"use client"
 import { whyFinticCrmData } from "@/data/whyFinticCrm"
 import Grid from "../grid/Grid"
 import Header from "../shared/header/Header"
 import style from "./whyFiniticCrm.module.css"
 import Image from "next/image"
+import Aos from "aos"
+import { useEffect } from "react"
 
 const WhyFiniticCrm = () => {
+      useEffect(() => {
+          Aos.init({
+            duration: 1000, 
+            once: true
+          });
+        }, []);
   return (
     <div className={ `     ${style["whyFinicCrm-container"]}`}>
       <Header fontSizeDescription="35px" decription={"Why Choose FINITIC's Forex CRM?"} />
       <div className={`container ${style["finitic-crm__grid-container"]}`}>
         <Grid  colsLarge={3} colsMedium={2} colsSmall={1} gap="24px">
           {whyFinticCrmData.slice(0, 3).map((card) => (
-            <div key={card.id} className={style.card}>
+            <div key={card.id} className={style.card} data-aos="flip-up"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration={card?.delay}>
               <div className={style.iconContainer}>
                 <Image width={100} height={200} src={card.icon} alt={card.title} className={style.icon} />
               </div>
@@ -24,7 +35,9 @@ const WhyFiniticCrm = () => {
       <div className={`container ${style["finitic-crm__grid-container"]}`}>
         <Grid colsLarge={2} colsMedium={2} colsSmall={1} gap="24px">
           {whyFinticCrmData.slice(3, 5).map((card) => (
-            <div key={card.id} className={style.card}>
+            <div key={card.id} data-aos="flip-up"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration={card?.delay}  className={style.card}>
               <div className={style.iconContainer}>
                 <Image width={100} height={200} src={card.icon} alt={card.title} className={style.icon} />
               </div>

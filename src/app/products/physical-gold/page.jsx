@@ -10,11 +10,15 @@ import Confidence from "@/components/confidence/Confidence";
 import { featuresGoldData } from "@/data/featuresGoldData";
 import ProductButton from "@/components/shared/productButton/ProductButton";
 import ProductHeader from "@/components/shared/productHeader/ProductHeader";
+<<<<<<< HEAD
+import { featuresGold } from "@/data/featuresGold";
+=======
 
 export const metadata = {
   title: "Physical Gold - Finitic Technology",
 };
 
+>>>>>>> 9b8f96e3679e257de6eb24602486356d1fe1c35a
 const page = () => {
   return (
     <div className={` ${style["physical-gold-container"]}`}>
@@ -53,8 +57,7 @@ const page = () => {
             </div>
             
           </div>
-          <WhyFiniticGold />
-
+          <WhyFiniticGold features={featuresGold}/>
         </div>
         <Confidence Data={featuresGoldData} title="Features That Set Us Apart" decription="Expand your portfolio with FINITIC’s gold trading platform and provide your clients with trusted solutions to diversify investments in precious metals trading." />
       </div>
