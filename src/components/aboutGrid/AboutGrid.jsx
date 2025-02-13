@@ -4,7 +4,7 @@ import style from "./about-us.module.css"
 const AboutGrid = () => {
     return (
         <div className={`${style["about-us-grid-container"]}`}>
-            {["/assets/images/about1.avif", "/assets/images/about3.avif", "/assets/images/about2.avif"].map((item) => (
+            {["/assets/images/about1.jpg", "/assets/images/about2.jpg", "/assets/images/about3.jpg"].map((item) => (
                 <div key={item} className="about-us-grid-container__item">
                     <Image
                         src={item}

@@ -6,6 +6,7 @@
 }
 .feature-card .feature-title{
    padding-top: 20px;
+   font-size: 20px;
    color:var(--blue-black);
 }
 .feature-grid-row-two{

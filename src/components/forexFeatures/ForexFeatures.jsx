@@ -7,13 +7,13 @@ import Check from "../../../public/assets/icons/Check";
 import X from "../../../public/assets/icons/X";
 const ForexFeatures = () => {
   return (
-    <div className={"container"}>
+    <div className={`container ${style["forex-features-container"]}`}>
       <div>
         <h4 className={style.title}>Transform Your Brokerage with</h4>
         <h4 className={style.title}>
           FINITIC's <span className={style["subtitle"]}>Forex CRM</span>
         </h4>
-        <p className={style.description}>
+        <p className={style["main-description"]}>
           We provide an advanced Forex CRM tailored to enhance broker-client
           relationships, automate operations, and drive growth in the forex
           trading industry. Our innovative solutions are designed to meet the

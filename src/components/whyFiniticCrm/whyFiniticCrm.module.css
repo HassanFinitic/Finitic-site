@@ -1,5 +1,5 @@
 .whyFinicCrm-container{
-    padding: 50px ;
+    padding: 50px  0;
 }
 .finitic-crm__grid-container{
   background: linear-gradient(to bottom right, #F2F2F2, #EEEEEE);
@@ -51,9 +51,11 @@
   @media (max-width: 768px) {
     .whyFinicCrm-container{
       padding: 0px ;
-  }
-  .finitic-crm__grid-container{
-    margin: 0px auto;
+    }
 
+  .finitic-crm__grid-container{
+    padding: 0px ;
+    margin: 10px auto;
+  
   }
   } 
