@@ -8,6 +8,9 @@ import Prop2 from '../../../../public/assets/icons/Prop2'
 import Prop3 from '../../../../public/assets/icons/Prop3'
 import Prop4 from '../../../../public/assets/icons/Prop4'
 import IconsSection from '@/components/shared/iconsSection/IconsSection'
+import WhyPropFirm from '@/components/whyPropFirm/WhyPropFirm'
+import Subscribe from '@/components/subscribe/Subscribe'
+import Faq from '@/components/faq/Faq'
 
 export const metadata = {
   title: "Prop Firm - Finitic Technology",
