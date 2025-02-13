@@ -7,15 +7,12 @@ import PartnershipModels from "@/components/partnershipModels/page"
 import HowItWorksPartnership from "@/components/howItWorksPartnership/HowItWorksPartnership"
 import Subscribe from "@/components/subscribe/Subscribe"
 import Faq from "@/components/faq/Faq"
-<<<<<<< HEAD
 import { partnershipModels } from "@/data/partnershipData";
-=======
 
 export const metadata = {
   title: "Partnership - Finitic Technology",
 };
 
->>>>>>> 9b8f96e3679e257de6eb24602486356d1fe1c35a
 const page = () => {
   return (
     <div >
