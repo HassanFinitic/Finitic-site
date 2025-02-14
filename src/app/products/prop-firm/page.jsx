@@ -32,7 +32,7 @@ const page = () => {
       </p>
       <ProductButton title={"Book A Demo"} />
       <PamSolution
-        image="/assets/images/propfirm.png"
+        image="/assets/images/propfirm.jpeg"
         highLightTitle="Prop Firm"
         title="System"
         description="Our Prop Firm System is a complete solution designed for brokers looking to establish and expand their proprietary trading firms. With advanced automation, seamless platform integration, and risk management tools, you can efficiently attract, evaluate, and manage traders while maximizing profitability."

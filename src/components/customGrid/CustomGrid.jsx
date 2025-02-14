@@ -28,7 +28,7 @@ const CustomGrid = ({ cards }) => {
               <Flex direction="row" justify="space-between" align="center">
                 <div className={styles.title}>{card.title}</div>
                 <div className={styles.icon}>
-                <Image src={card.icon} width={25} height={25} alt='icon'></Image>
+                <Image src={card.icon} width={30} height={30} alt='icon'></Image>
                 </div>
 
               </Flex>

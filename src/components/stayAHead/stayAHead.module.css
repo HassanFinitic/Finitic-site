@@ -65,6 +65,12 @@
 .stayAhead__Card-content-icons {
     width: 100%;
     object-fit: fill;
+    display: flex
+}
+.stayAhead__Card-content-icons img{
+    margin: auto;
+    width: 100%;
+    height: 90px;
 }
 .stayAhead__Card-content-icons div {
     padding: 15px;

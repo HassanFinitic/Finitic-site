@@ -5,7 +5,7 @@ import { featuresIB } from '@/data/featuresIB'
 import Heading from '@/components/productsRoute/shared/Heading'
 import Cards from '@/components/productsRoute/IB/Cards'
 import CustomGrid from './../../../components/customGrid/CustomGrid';
-import commission from '../../../../public/assets/icons/commission.png'
+import commission from '../../../../public/assets/icons/commission2.png'
 import CustomizableFrequency from '../../../../public/assets/icons/CustomizableFrequency.png'
 import Rewards from '../../../../public/assets/icons/Rewards.png'
 import MultipleCurrencies from '../../../../public/assets/icons/MultipleCurrencies.png'

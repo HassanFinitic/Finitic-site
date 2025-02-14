@@ -12,6 +12,7 @@ import Subscribe from "@/components/subscribe/Subscribe";
 import Faq from "@/components/faq/Faq";
 import { productsData } from "@/data/products";
 import { confidenceData } from "@/data/confidenceData";
+import DataAccessOptions from "@/components/dataAccessOptions/DataAccessOptions";
 
 
 // export const metadata = {
@@ -47,8 +48,10 @@ export default function Home() {
           "Explore our diverse range of products tailored to optimize operations, enhance client relationships, and drive success in the trading business"
         }
       />
+
       <Pricing />
       <HowItWorks />
+      <DataAccessOptions />
       <StayAHead />
       <Testimonials />
       <Subscribe />

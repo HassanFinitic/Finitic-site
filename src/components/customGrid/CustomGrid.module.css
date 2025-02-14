@@ -29,15 +29,15 @@
         font-weight: 500;
     }
     .icon{
-      padding: 15px;
-      background-color: var(--light-blue);
+      /* padding: 10px; */
+      /* background-color: var(--light-blue); */
       border-radius: 50%;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
       /* color: var(--font-color-); */
-      margin-right: 10px;
+      /* margin-right: 10px; */
 }
 }
 

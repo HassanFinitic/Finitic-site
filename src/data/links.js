@@ -8,7 +8,7 @@ export const linksData = [
             {
                 id:1,
                 url:"/products/ib",
-                text:"Ib"
+                text:"IB Portal"
             },
             {
                 id:2,
