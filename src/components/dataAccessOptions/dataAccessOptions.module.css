@@ -16,7 +16,7 @@
   }
   
   .icon {
-    background: #6c63ff;
+    background: var(--linear);
     color: white;
     border-radius: 20%;
     padding: 10px;
