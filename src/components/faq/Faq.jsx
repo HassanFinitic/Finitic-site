@@ -23,7 +23,7 @@ const Faq = ({landingPage,description}) => {
                     ))}
                 
                 </div>
-                {landingPage && <Button text={"See All FAQ"} center={true} background={"black"}/>
+                {landingPage && <Button url={"/faq"} text={"See All FAQ"} center={true} background={"black"}/>
                 }
 
             </div>

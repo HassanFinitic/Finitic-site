@@ -5,6 +5,7 @@ import smileMeh from "../../../public/assets/icons/smileMeh.svg";
 import Image from "next/image";
 import Check from "../../../public/assets/icons/Check";
 import X from "../../../public/assets/icons/X";
+import Link from "next/link";
 const ForexFeatures = () => {
   return (
     <div className={`container ${style["forex-features-container"]}`}>
@@ -19,7 +20,7 @@ const ForexFeatures = () => {
           trading industry. Our innovative solutions are designed to meet the
           demands of modern forex brokers.
         </p>
-        <button className={style.button}>Get a Demo</button>
+        <Link href={`/registration`}><button className={style.button}>Get a Demo</button></Link>
       </div>
       <div className={` container ${style.features}`}>
         <div className={style.header}>

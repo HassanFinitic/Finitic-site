@@ -6,6 +6,8 @@ import Faq from '@/components/faq/Faq';
 import Subscribe from '@/components/subscribe/Subscribe';
 import ForexFeatures from '@/components/forexFeatures/ForexFeatures';
 import ProductHeader from '@/components/shared/productHeader/ProductHeader';
+import Link from 'next/link';
+import { to } from './../../../../.next/static/chunks/[root of the server]__2e1cf5._';
 
 export const metadata = {
   title: "Forex CRM | CRM for Forex Brokers & Investors | Finitic Technologies",
@@ -18,7 +20,7 @@ export default function index() {
     <div className={`  ${style["forex-container"]}`}>
         <ProductHeader  title={"Simplify, Optimize, Succeed"} productName={"Forex CRM"} startDescription={"Your Complete"} endDescription={"Solution"}/>
        <p className={style.decription}>FINITIC’s Forex CRM: A seamless solution for forex brokers to manage clients, track leads, and scale operations efficiently.</p>
-       <button className={style.button}>Get Your CRM in 7 days only</button>
+       <Link href={`/contact-us`}><button className={style.button}>Get Your CRM in 7 days only</button></Link>
        <WhyFiniticCrm />
        <ForexFeatures />
        <Products productsData={productsDataForex} 
