@@ -13,6 +13,7 @@ const HowItWorks = () => {
   const sectionRefs = useRef([]);
   const scroll2El = (elID) => {
     const element = document.getElementById(elID);
+    
     if (element) {
       window.scrollTo({
         top: element.offsetTop - 60,
