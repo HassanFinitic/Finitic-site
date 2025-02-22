@@ -52,6 +52,11 @@ export const linksData = [
         url: "/faq",
         text: "FAQ",
     },
+    {
+        id: 6,
+        url: "/blog",
+        text: "Blog",
+    },
  
     // {
     //     id: 7,

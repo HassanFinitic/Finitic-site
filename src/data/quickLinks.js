@@ -82,6 +82,11 @@ export const quickLinksData = [
                 url: "/privacy-policy",
                 text: "Privacy Policy",
             },
+            {
+                id: 3,
+                url: "/blog",
+                text: "Blog",
+            },
         ],
     },
 ];
