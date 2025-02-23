@@ -7,7 +7,6 @@ import Subscribe from '@/components/subscribe/Subscribe';
 import ForexFeatures from '@/components/forexFeatures/ForexFeatures';
 import ProductHeader from '@/components/shared/productHeader/ProductHeader';
 import Link from 'next/link';
-import { to } from './../../../../.next/static/chunks/[root of the server]__2e1cf5._';
 
 export const metadata = {
   title: "Forex CRM | CRM for Forex Brokers & Investors | Finitic Technologies",
