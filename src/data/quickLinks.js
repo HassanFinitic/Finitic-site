@@ -85,7 +85,7 @@ export const quickLinksData = [
             {
                 id: 3,
                 url: "/blog",
-                text: "Blog",
+                text: "Blogs",
             },
         ],
     },
