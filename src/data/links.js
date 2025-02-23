@@ -49,13 +49,13 @@ export const linksData = [
     },
     {
         id: 5,
-        url: "/faq",
-        text: "FAQ",
+        url: "/blog",
+        text: "Blogs",
     },
     {
         id: 6,
-        url: "/blog",
-        text: "Blog",
+        url: "/faq",
+        text: "FAQs",
     },
  
     // {
