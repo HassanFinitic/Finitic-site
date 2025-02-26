@@ -19,7 +19,7 @@ const Testimonials = () => {
             <TestimonialGrid />
             <div className="overlay"></div>
             <div>
-                <Button url={"/reviews"} text={"See All Reviews"} center={true} background={"black"} />
+                <Button url={"/reviews"} text={"See All Reviews"} center={true} />
             </div>
         </div>
     )

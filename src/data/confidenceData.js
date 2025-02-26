@@ -1,6 +1,6 @@
 export const confidenceData = [
     {
-        image: "/assets/images/confidance3.png",
+        image: "/assets/images/confidance3.jpg",
         imagealt: "Customize your software to match your forex needs",
         title: "Customizable Solutions",
         description:
