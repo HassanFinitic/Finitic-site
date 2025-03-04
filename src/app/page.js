@@ -48,7 +48,7 @@ export default function Home() {
           "Explore our diverse range of products tailored to optimize operations, enhance client relationships, and drive success in the trading business"
         }
       />
-      <DataAccessOptions />
+      {/* <DataAccessOptions /> */}
 
       <Pricing />
       <HowItWorks />
