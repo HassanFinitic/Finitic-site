@@ -1,5 +1,8 @@
 .clients-container{
-    overflow: hidden
+    padding: 76px 0;
+    overflow: hidden;
+    background: linear-gradient(to right, #002366, #0057b7);
+    /* background-color: #002366; */
 }
 .partners-container {
     padding: 76px 0;
@@ -28,8 +31,11 @@
 }
 
 .partner-item {
-    width: 167px;
-    height: 48px;
+    box-sizing: border-box;
+    /* width: 167px; */
+    /* height: 48px; */
+    background-color: #fff;
+    padding: 12px;
 }
 
 .partner-image img {
