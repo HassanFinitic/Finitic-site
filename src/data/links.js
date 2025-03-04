@@ -29,6 +29,11 @@ export const linksData = [
                 id:5,
                 url:"/products/prop-firm",
                 text:"Prop Firm"
+            },
+            {
+                id:6,
+                url:"/products/data-tools",
+                text:"Data Tools"
             }
         ]
     },
