@@ -60,6 +60,11 @@ export const quickLinksData = [
                 url: "/products/prop-firm",
                 text: "Prop Firm System",
             },
+            {
+                id: 6,
+                url: "/products/data-tools",
+                text: "Market Data Tools",
+            }
         ],
     },
 

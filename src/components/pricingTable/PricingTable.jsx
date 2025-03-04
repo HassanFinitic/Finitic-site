@@ -28,9 +28,9 @@ const PricingTable = () => {
             </tr>
             <tr>
               <td>Copier/PAMM/MAM Module only for MT5</td>
+              {/* <td>$1 per million each side Min charge & 1000 monthly</td>
               <td>$1 per million each side Min charge & 1000 monthly</td>
-              <td>$1 per million each side Min charge & 1000 monthly</td>
-              <td>$1 per million each side Min charge & 1000 monthly</td>
+              <td>$1 per million each side Min charge & 1000 monthly</td> */}
             </tr>
             <tr>
               <td>PSP Integration (Extra $500/set up)</td>
