@@ -1,6 +1,6 @@
 export const confidenceData = [
     {
-        image: "/assets/images/confidance3.jpg",
+        image: "/assets/images/Customization.svg",
         imagealt: "Customize your software to match your forex needs",
         title: "Customizable Solutions",
         description:
@@ -8,7 +8,7 @@ export const confidenceData = [
         delay: "0"
     },
     {
-        image: "/assets/images/confidance1.jpg",
+        image: "/assets/images/Reports.svg",
         imagealt: "daily live forex trading reports",
         title: "Real-Time Data",
         description:
@@ -16,7 +16,7 @@ export const confidenceData = [
         delay: "500"
     },
     {
-        image: "/assets/images/confidance2.jpg",
+        image: "/assets/images/Realtime.svg",
         imagealt: "detailed fintech reporting",
         title: "Automated Reporting",
         description:
