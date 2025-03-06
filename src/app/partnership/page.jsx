@@ -36,7 +36,7 @@ const page = () => {
     <div >
         <Header title={"FINITIC Partnership Program"} decription={"Collaborate, Earn, and Grow"} />
         <p className={style.p}>Enhance your brokerage with advanced technology for smarter growth.</p>
-        <Flex justify="center" align="center" gap="20px" className={style.slogins}>
+        <Flex justify="center" align="center" gap="20px" className={style.slogins} wrap="wrap" directionSmall="column">
           {
             slogin.map((item, index) => (
               <Flex gap="5px" className={style.slogin} justify="center" align="center" key={index}>
