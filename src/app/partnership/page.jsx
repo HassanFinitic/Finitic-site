@@ -16,13 +16,35 @@ export const metadata = {
   keywords: ["forex partnership", "fintech affiliate program", "forex IB program","trading partnerships", "forex broker partnership", "fintech business collaboration" ],
 };
 
+const slogin = [
+  {
+    text: "Customizable",
+    icon: "./assets/images/Partnet-Customization.svg"
+  },
+  {
+    text: "Peak Performance",
+    icon: "./assets/images/Partner-Peak Performance.svg"
+  },
+  {
+    text: "Top Security",
+    icon: "./assets/images/Partner-Security.svg"
+  }
+]
+
 const page = () => {
   return (
     <div >
         <Header title={"FINITIC Partnership Program"} decription={"Collaborate, Earn, and Grow"} />
         <p className={style.p}>Enhance your brokerage with advanced technology for smarter growth.</p>
-        <Flex>
-          
+        <Flex justify="center" align="center" gap="20px" className={style.slogins}>
+          {
+            slogin.map((item, index) => (
+              <Flex gap="5px" className={style.slogin} justify="center" align="center" key={index}>
+                <Image src={item.icon}  width={40} height={40} alt="image" />
+                <span>{item.text}</span>
+              </Flex>
+            ))
+          }
         </Flex>
         <div className={`container ${style["partnership-flex"]}` }>
              <div>

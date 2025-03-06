@@ -48,3 +48,16 @@
         width: 100%;
       }
   }
+
+.slogins{
+    padding: 10px 0;
+}
+
+.slogin img{
+    /* border: 1px solid #cacaca; */
+    box-sizing: border-box;
+    object-fit: contain;
+    background-color: white;    
+    border-radius: 30%;
+    padding: 10px;
+}
