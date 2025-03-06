@@ -135,3 +135,29 @@
 
 
  }
+
+ .partnership-models{
+   margin: 30px auto;
+   background-color: #e0e0e048;
+   padding: 20px;
+   border-radius: 10px;
+ }
+
+ .partnership-models .title{
+   font-size: 20px;
+   font-weight: 500;
+ }
+
+ .partnership-models .description{
+   font-size: 14px;
+   line-height: 18px;
+   font-weight: 300;
+ }
+
+.partnership-models .img{
+   background-color: #FFA348;
+   width: fit-content;
+   padding: 15px;
+   border-radius: 50%;
+   color: white;
+}

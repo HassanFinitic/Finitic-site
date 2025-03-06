@@ -53,11 +53,21 @@
     padding: 10px 0;
 }
 
-.slogin img{
-    /* border: 1px solid #cacaca; */
+.slogins .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     object-fit: contain;
-    background-color: white;    
-    border-radius: 30%;
-    padding: 10px;
+    background-color: white; 
+    border: 1px solid #cacaca;   
+    border-radius: 50%;
+    padding: 5px;  
+    text-align: center;  
 }
+
+.slogins .img img{
+    width: 60%;
+}
+
+

@@ -6,8 +6,8 @@ const WhyFintic = () => {
   return (
     <section className='container'>
           <div className={style.header}>
-      <span>HOW IT WORKS</span>
-      <h2 className={style.heading}>Steps to Partnership</h2>
+      <span>Partner with FINITIC</span>
+      <h2 className={style.heading}>Why Partner with FINITIC?</h2>
       </div>
       <div className={style.container}>
       {featuresData.map((group, index) => (
