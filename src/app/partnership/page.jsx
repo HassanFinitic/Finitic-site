@@ -8,6 +8,7 @@ import HowItWorksPartnership from "@/components/howItWorksPartnership/HowItWorks
 import Subscribe from "@/components/subscribe/Subscribe"
 import Faq from "@/components/faq/Faq"
 import { partnershipModels } from "@/data/partnershipData";
+import Flex from "@/components/flex/Flex"
 
 export const metadata = {
   title: "Partner with Us | Finitic Partnership Programs",
@@ -19,15 +20,18 @@ const page = () => {
   return (
     <div >
         <Header title={"FINITIC Partnership Program"} decription={"Collaborate, Earn, and Grow"} />
-        <p className={style.p}>with Finitic Information Technology</p>
+        <p className={style.p}>Enhance your brokerage with advanced technology for smarter growth.</p>
+        <Flex>
+          
+        </Flex>
         <div className={`container ${style["partnership-flex"]}` }>
              <div>
                 <h6>Partnership Program</h6>
                 <p>We recognize the transformative power of partnerships. By aligning with innovators and industry leaders in forex trading, we deliver solutions that empower forex brokers and create opportunities for our partners to earn and grow with us in the forex market.</p>
              </div>
-             <div>
+             {/* <div>
                 <Image src={img}  width={400} height={300} alt="image" />
-             </div>
+             </div> */}
         </div>
         <WhyFintic />
         <PartnershipModels toggleData={partnershipModels}/>
