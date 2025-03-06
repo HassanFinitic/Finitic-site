@@ -68,7 +68,7 @@ const HowItWorks = () => {
   return (
     <div className={ `container ${style["how-it-works__container"]}`}>
       <Header title="How it works" decription="Customizable, efficient Forex trading CRM solutions." />
-      <Grid colsLarge={1} colsMedium={1} colsSmall={1} gap="20px">
+      <Grid colsLarge={3} colsMedium={2} colsSmall={1} gap="20px">
         {
           howItWorksData.map((item, index) => (
             <div className={style["how-it-works__item"]} key={index} data-aos="flip-up"
