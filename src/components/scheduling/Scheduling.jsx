@@ -4,12 +4,14 @@ import Input from "../shared/input/Input";
 import style from "./scheduling.module.css";
 import Submit from "../shared/submit/Submit";
 import Link from "next/link";
+import { sendData } from "@/apis/form";
+import { toast, ToastContainer } from "react-toastify";  // Import toast and ToastContainer
+import 'react-toastify/dist/ReactToastify.css';  // Import the CSS for toast notifications
 
 const Scheduling = ({ subTitle, buttonTitle }) => {
   const [formData, setFormData] = React.useState({
     fullName: "",
     phone: "",
-    source: "website",
     email: "",
     country: " ",
     jobTitle: "",
@@ -27,7 +29,7 @@ const Scheduling = ({ subTitle, buttonTitle }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Ensure registrationPlan is always uppercase
@@ -39,16 +41,33 @@ const Scheduling = ({ subTitle, buttonTitle }) => {
     // Log the form data to the console
     console.log(updatedFormData);
 
-    setSubmitTitle("Thank You");
+    try {
+      const res = await sendData(updatedFormData);
+      console.log(res);
 
-    // Clear the form after submission
-    setFormData({
-      fullName: "",
-      phone: "",
-      email: "",
-      jobTitle: "",
-      registrationPlan: "STARTER", 
-    });
+      if (res.isSuccess) {
+        setSubmitTitle("Thank You");
+
+        // Show success toast message
+        toast.success("Your data has been submitted successfully!");
+
+        // Clear the form after submission
+        setFormData({
+          fullName: "",
+          phone: "",
+          email: "",
+          jobTitle: "",
+          registrationPlan: "STARTER", 
+        });
+      } else {
+        // Show error toast message if isSuccess is false
+        toast.error(res.message || "Something went wrong!");
+      }
+    } catch (error) {
+      // Handle unexpected errors
+      toast.error("An error occurred while submitting your data.");
+      console.error(error);
+    }
   };
 
   return (
@@ -114,6 +133,9 @@ const Scheduling = ({ subTitle, buttonTitle }) => {
           {submitTitle}
         </Submit>
       </form>
+
+      {/* Toast container to display the notifications */}
+      <ToastContainer />
     </div>
   );
 };
