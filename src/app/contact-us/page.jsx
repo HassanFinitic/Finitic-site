@@ -54,24 +54,24 @@ const page = () => {
           <h4>Contact Us</h4>
           <form className={style.form}>
             <div className={style.inputGroup}>
-              <label>First Name</label>
-              <input type="text" placeholder="Jane Smith" />
+              <label htmlFor="fullName">First Name</label>
+              <input id="fullName" type="text" placeholder="Jane Smith" />
             </div>
             <div className={style.inputGroup}>
-              <label>Email Address</label>
-              <input type="email" placeholder="test@gmail.com" />
+              <label htmlFor="email">Email Address</label>
+              <input id="email" type="email" placeholder="test@gmail.com" />
             </div>
             <div className={style.inputGroup}>
-              <label>Phone Number</label>
-              <input type="text" placeholder="+123 456 789" />
+              <label htmlFor="phoneNumber">Phone Number</label>
+              <input id="phoneNumber" type="text" placeholder="+123 456 789" />
             </div>
             <div className={style.inputGroup}>
-              <label>Location</label>
-              <input type="text" placeholder="United States" />
+              <label htmlFor="location">Location</label>
+              <input id="location" type="text" placeholder="United States" />
             </div>
             <div className={style.textareaGroupFull}>
-              <label>Message</label>
-              <textarea placeholder="Enter your message"></textarea>
+              <label htmlFor="message">Message</label>
+              <textarea id="message" placeholder="Enter your message"></textarea>
             </div>
             <Submit className={style.submitButton} type="submit">
               Submit
