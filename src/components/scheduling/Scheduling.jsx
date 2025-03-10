@@ -7,6 +7,7 @@ import Link from "next/link";
 import { sendData } from "@/apis/form";
 import { toast, ToastContainer } from "react-toastify";  // Import toast and ToastContainer
 import 'react-toastify/dist/ReactToastify.css';  // Import the CSS for toast notifications
+import ReCAPTCHA from "react-google-recaptcha"; 
 
 const Scheduling = ({ subTitle, buttonTitle }) => {
   const [formData, setFormData] = React.useState({
@@ -20,6 +21,7 @@ const Scheduling = ({ subTitle, buttonTitle }) => {
 
   const [loading, setLoading] = React.useState(false);
   const [submitTitle, setSubmitTitle] = React.useState(buttonTitle || "Submit");
+  const [captchaValue, setCaptchaValue] = React.useState(null);   
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,6 +44,13 @@ const Scheduling = ({ subTitle, buttonTitle }) => {
     console.log(updatedFormData);
 
     try {
+      // Check if reCAPTCHA is validated
+      if (!captchaValue) {
+        toast.error("Please verify that you are not a robot!");
+        return;
+      }
+
+      // Proceed to send data
       const res = await sendData(updatedFormData);
       console.log(res);
 
@@ -59,15 +68,20 @@ const Scheduling = ({ subTitle, buttonTitle }) => {
           jobTitle: "",
           registrationPlan: "STARTER", 
         });
+        setCaptchaValue(null); 
       } else {
         // Show error toast message if isSuccess is false
         toast.error(res.message || "Something went wrong!");
       }
     } catch (error) {
       // Handle unexpected errors
-      toast.error("An error occurred while submitting your data.");
+      toast.error(error?.response?.data?.message || "An error occurred while submitting your data.");
       console.error(error);
     }
+  };
+
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value); 
   };
 
   return (
@@ -129,6 +143,11 @@ const Scheduling = ({ subTitle, buttonTitle }) => {
         <p className={style["p"]}>
           By clicking the button below, you agree to our Terms and have read our Privacy Policy
         </p>
+        <ReCAPTCHA
+          sitekey="6LfHsO8qAAAAAGKbgbfRLywCUVepWthDNmNaD_cq"
+          onChange={handleCaptchaChange}
+          onErrored={() => toast.error("Error with reCAPTCHA. Please try again.")}
+        />
         <Submit loading={loading} type="submit">
           {submitTitle}
         </Submit>
