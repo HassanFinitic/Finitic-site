@@ -21,25 +21,8 @@ export const metadata = {
     "Forex automated trading", "What is forex trading", "How to trade forex", "Forex trading basics", "Forex trading tutorial"
   ],
   openGraph: {
-    // type: "website",
-    // locale: "en_US",
-    // url: "https://finitic.com",
-    // title: "Finitic Technology",
-    // description: "Finitic develops innovative FinTech solutions that empower brokers/investors to streamline your financial operations. Explore our cutting-edge products and services.",
-    // siteName: "Finitic Technology",
-    images: [ "/images/logo.png"
-      // {
-      //   url: "/images/logo.png",
-      //   width: 1200,
-      //   height: 630,
-      // },
-    ],
+    images: [ "/images/logo.png" ],
   },
-  // twitter: {
-  //   cardType: "summary_large_image",
-  //   site: "@finitictech",
-  //   creator: "@finitictech",
-  // },
   icons: {
     icon: [
       {
