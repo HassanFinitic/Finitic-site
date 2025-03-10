@@ -6,9 +6,9 @@ import Email from "../../../public/assets/icons/Email";
 import Submit from "@/components/shared/submit/Submit";
 
 export const metadata = {
-  title: "Forex FAQ | Frequently Asked Questions | Finitic Technologies ",
+  title: "Forex Contact Us | Contact Us | Finitic Technologies ",
   description:"Find answers to common questions about forex trading, account management, trading platforms, and more in our comprehensive Forex FAQ section.",
-  keywords: ["Forex FAQ", "frequently asked questions", "forex trading", "account management", "trading platforms"],
+  keywords: ["Forex Contact Us", "frequently asked questions", "forex trading", "account management", "trading platforms"],
 };
 
 const page = () => {
