@@ -9,7 +9,7 @@ import { toast, ToastContainer } from "react-toastify";  // Import toast and Toa
 import 'react-toastify/dist/ReactToastify.css';  // Import the CSS for toast notifications
 import ReCAPTCHA from "react-google-recaptcha"; 
 
-const Scheduling = ({ subTitle, buttonTitle }) => {
+const Scheduling = ({ title, subTitle, buttonTitle }) => {
   const [formData, setFormData] = React.useState({
     fullName: "",
     phone: "",
@@ -86,7 +86,7 @@ const Scheduling = ({ subTitle, buttonTitle }) => {
 
   return (
     <div className={style["scheduling-container"]}>
-      <h3 className={style["title"]}>Schedule Your Demo Now</h3>
+      <h3 className={style["title"]}>{title || "Schedule Your Demo Now"}</h3>
       <p className={style["p"]}>{subTitle}</p>
       <form className={style["form"]} onSubmit={handleSubmit}>
         <Input

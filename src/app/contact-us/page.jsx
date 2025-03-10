@@ -4,6 +4,7 @@ import HeadOffice from "../../../public/assets/icons/HeadOffice";
 import Phone from "../../../public/assets/icons/Phone";
 import Email from "../../../public/assets/icons/Email";
 import Submit from "@/components/shared/submit/Submit";
+import Scheduling from "@/components/scheduling/Scheduling";
 
 export const metadata = {
   title: "Contact Us | Finitic – Get in Touch with Our Team",
@@ -50,7 +51,7 @@ const page = () => {
             <p>info@finitic.com</p>
           </div>
         </section>
-        <div className={style.formSection}>
+        {/* <div className={style.formSection}>
           <h4>Contact Us</h4>
           <form className={style.form}>
             <div className={style.inputGroup}>
@@ -77,7 +78,8 @@ const page = () => {
               Submit
             </Submit>
           </form>
-        </div>
+        </div> */}
+        <Scheduling title="Contact Us" />
       </div>
       </div>
     </div>
