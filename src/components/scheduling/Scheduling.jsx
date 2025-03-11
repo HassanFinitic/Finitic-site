@@ -159,16 +159,23 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
           }}
           renderInput={(params) => (
             <TextField
-              {...params}
-              label="Choose a country"
-              className={countrySelect["input-style"]}
-              slotProps={{
-                htmlInput: {
-                  ...params.inputProps,
-                  autoComplete: "new-password", // disable autocomplete and autofill
-                },
-              }}
-            />
+      {...params}
+      label="Choose a country"
+      className={countrySelect["input-style"]}
+      slotProps={{
+        htmlInput: {
+          ...params.inputProps,
+          autoComplete: "new-password", // disable autocomplete and autofill
+        },
+      }}
+      sx={{
+        "& .MuiInputLabel-root": {
+          fontSize: "14px", 
+          color: "#999999",
+          backgroundColor: "green",
+        },
+      }}
+    />
           )}
         />
 
