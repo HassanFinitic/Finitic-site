@@ -19,10 +19,10 @@
 }
 .select{
     width: 100% ;
-    border-radius: 10px ;
+    border-radius: 5px ;
     padding: 12px;
     background-color:#efefef ;
-    border: 1px solid #E6E6E6;
+    border: 2px solid gray;
     color: #999999 ;
 }
 
@@ -41,11 +41,11 @@
     text-decoration: underline; 
   }
 .select:hover{
-    border: 1px solid #608af9 ;
+    border: 2px solid black ;
 }
 .select:focus{
-    border: 1px solid #608af9 ;
-    outline: 1px solid #608af9;
+    border: 2px solid #608af9 ;
+    outline: 2px solid #608af9;
 }
 .p{
     color: var(--font-color-4);

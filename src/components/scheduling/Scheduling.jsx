@@ -2,7 +2,7 @@
 import React from "react";
 import Input from "../shared/input/Input";
 import style from "./scheduling.module.css";
-import "./countrySelect.module.css";
+import countrySelect from "./countrySelect.module.css";
 import Submit from "../shared/submit/Submit";
 import Link from "next/link";
 import { sendData } from "@/apis/form";
@@ -128,24 +128,10 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
         />
 
         <Autocomplete
-          id="country-select-demo"
+          // id="country-select-demo"
+          className={countrySelect["input-style-container"]}
           sx={{
             width: "100%",
-            backgroundColor: "#efefef",
-            border: "1px solid #E6E6E6 !important",
-            color: "#999999",
-            borderRadius: "10px",
-            outline: "none !important",
-            // height: "40px",
-            // Adding hover state
-            "&:hover": {
-              border: "1px solid #608af9 !important",
-            },
-            // Adding focus state
-            "&:focus": {
-              border: "1px solid #608af9 !important",
-              outline: "1px solid #608af9 !important",
-            },
           }}
           options={countries}
           autoHighlight
@@ -173,24 +159,9 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
           }}
           renderInput={(params) => (
             <TextField
-              sx={{
-                // height: "40px",
-                // backgroundColor: "#efefef",
-                // color: "#999999",
-                // borderRadius: "10px",
-                // Adding hover state
-                "&:hover": {
-                  outline: "none !important",
-                  border: "1px solid #608af9 !important",
-                },
-                // Adding focus state
-                "&:focus": {
-                  outline: "none",
-                  border: "1px solid #608af9 !important",
-                },
-              }}
               {...params}
               label="Choose a country"
+              className={countrySelect["input-style"]}
               slotProps={{
                 htmlInput: {
                   ...params.inputProps,
