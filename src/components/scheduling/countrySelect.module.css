@@ -1,0 +1,53 @@
+.country-select-container {
+    position: relative;
+    background-color: green;
+    width: 100% !important;
+  }
+  
+  .country-input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .country-input:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+  }
+  
+  .options-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 4px 0;
+    padding: 0;
+    list-style: none;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .option-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .option-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .flag {
+    margin-right: 8px;
+    flex-shrink: 0;
+  }

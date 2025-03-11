@@ -2,32 +2,44 @@
 import React from "react";
 import Input from "../shared/input/Input";
 import style from "./scheduling.module.css";
+import "./countrySelect.module.css";
 import Submit from "../shared/submit/Submit";
 import Link from "next/link";
 import { sendData } from "@/apis/form";
-import { toast, ToastContainer } from "react-toastify";  // Import toast and ToastContainer
-import 'react-toastify/dist/ReactToastify.css';  // Import the CSS for toast notifications
-import ReCAPTCHA from "react-google-recaptcha"; 
+import { toast, ToastContainer } from "react-toastify"; // Import toast and ToastContainer
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS for toast notifications
+import ReCAPTCHA from "react-google-recaptcha";
+import { countries } from "@/data/countries";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
 
 const Scheduling = ({ title, subTitle, buttonTitle }) => {
   const [formData, setFormData] = React.useState({
     fullName: "",
     phone: "",
     email: "",
-    country: " ",
+    country: "", // Initialize with an empty string for country
     jobTitle: "",
-    registrationPlan: "STARTER", 
+    registrationPlan: "STARTER",
   });
 
   const [loading, setLoading] = React.useState(false);
   const [submitTitle, setSubmitTitle] = React.useState(buttonTitle || "Submit");
-  const [captchaValue, setCaptchaValue] = React.useState(null);   
+  const [captchaValue, setCaptchaValue] = React.useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
+    });
+  };
+
+  const handleCountryChange = (event, newValue) => {
+    setFormData({
+      ...formData,
+      country: newValue ? newValue.label : "", // Store the country name (label)
     });
   };
 
@@ -66,22 +78,26 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
           phone: "",
           email: "",
           jobTitle: "",
-          registrationPlan: "STARTER", 
+          registrationPlan: "STARTER",
+          country: "",
         });
-        setCaptchaValue(null); 
+        setCaptchaValue(null);
       } else {
         // Show error toast message if isSuccess is false
         toast.error(res.message || "Something went wrong!");
       }
     } catch (error) {
       // Handle unexpected errors
-      toast.error(error?.response?.data?.message || "An error occurred while submitting your data.");
+      toast.error(
+        error?.response?.data?.message ||
+          "An error occurred while submitting your data."
+      );
       console.error(error);
     }
   };
 
   const handleCaptchaChange = (value) => {
-    setCaptchaValue(value); 
+    setCaptchaValue(value);
   };
 
   return (
@@ -93,14 +109,14 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
           formData={formData}
           handleChange={handleChange}
           type="text"
-          name="fullName" 
+          name="fullName"
           placeholder="Enter Your Name"
         />
         <Input
           formData={formData}
           handleChange={handleChange}
           type="text"
-          name="phone" 
+          name="phone"
           placeholder="Enter Your Phone"
         />
         <Input
@@ -110,6 +126,81 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
           name="email"
           placeholder="Enter Your Email"
         />
+
+        <Autocomplete
+          id="country-select-demo"
+          sx={{
+            width: "100%",
+            backgroundColor: "#efefef",
+            border: "1px solid #E6E6E6 !important",
+            color: "#999999",
+            borderRadius: "10px",
+            outline: "none !important",
+            // height: "40px",
+            // Adding hover state
+            "&:hover": {
+              border: "1px solid #608af9 !important",
+            },
+            // Adding focus state
+            "&:focus": {
+              border: "1px solid #608af9 !important",
+              outline: "1px solid #608af9 !important",
+            },
+          }}
+          options={countries}
+          autoHighlight
+          getOptionLabel={(option) => option.label}
+          onChange={handleCountryChange} // Handle country change
+          renderOption={(props, option) => {
+            const { key, ...optionProps } = props;
+            return (
+              <Box
+                key={key}
+                component="li"
+                sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
+                {...optionProps}
+              >
+                <img
+                  loading="lazy"
+                  width="20"
+                  srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
+                  src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
+                  alt=""
+                />
+                {option.label} ({option.code}) +{option.phone}
+              </Box>
+            );
+          }}
+          renderInput={(params) => (
+            <TextField
+              sx={{
+                // height: "40px",
+                // backgroundColor: "#efefef",
+                // color: "#999999",
+                // borderRadius: "10px",
+                // Adding hover state
+                "&:hover": {
+                  outline: "none !important",
+                  border: "1px solid #608af9 !important",
+                },
+                // Adding focus state
+                "&:focus": {
+                  outline: "none",
+                  border: "1px solid #608af9 !important",
+                },
+              }}
+              {...params}
+              label="Choose a country"
+              slotProps={{
+                htmlInput: {
+                  ...params.inputProps,
+                  autoComplete: "new-password", // disable autocomplete and autofill
+                },
+              }}
+            />
+          )}
+        />
+
         <select
           required
           onChange={handleChange}
@@ -121,15 +212,15 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
           <option value="Manager">Manager</option>
           <option value="Broker">Broker</option>
           <option value="Trader">Trader</option>
-          <option value="Developer">Developer</option> 
+          <option value="Developer">Developer</option>
           <option value="Other">Other</option>
         </select>
         <select
-          defaultValue={"STARTER"} 
+          defaultValue={"STARTER"}
           required
           onChange={handleChange}
           className={style.select}
-          name="registrationPlan" 
+          name="registrationPlan"
           id="registrationPlan"
         >
           <option value="">Select Your Plan</option>
@@ -141,12 +232,15 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
           More about plans?
         </Link>
         <p className={style["p"]}>
-          By clicking the button below, you agree to our Terms and have read our Privacy Policy
+          By clicking the button below, you agree to our Terms and have read our
+          Privacy Policy
         </p>
         <ReCAPTCHA
           sitekey="6LfHsO8qAAAAAGKbgbfRLywCUVepWthDNmNaD_cq"
           onChange={handleCaptchaChange}
-          onErrored={() => toast.error("Error with reCAPTCHA. Please try again.")}
+          onErrored={() =>
+            toast.error("Error with reCAPTCHA. Please try again.")
+          }
         />
         <Submit loading={loading} type="submit">
           {submitTitle}
