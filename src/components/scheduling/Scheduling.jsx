@@ -14,7 +14,13 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 
-const Scheduling = ({ title, subTitle, buttonTitle }) => {
+const Scheduling = ({
+  title,
+  subTitle,
+  buttonTitle,
+  showJobTitleAndPlan = true,
+  currentPath
+}) => {
   const [formData, setFormData] = React.useState({
     fullName: "",
     phone: "",
@@ -22,6 +28,7 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
     country: "", // Initialize with an empty string for country
     jobTitle: "",
     registrationPlan: "STARTER",
+    message: "", // Add a message field to the form data
   });
 
   const [loading, setLoading] = React.useState(false);
@@ -63,7 +70,7 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
       }
 
       // Proceed to send data
-      const res = await sendData(updatedFormData);
+      const res = await sendData(updatedFormData, currentPath);
       console.log(res);
 
       if (res.isSuccess) {
@@ -80,6 +87,7 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
           jobTitle: "",
           registrationPlan: "STARTER",
           country: "",
+          message: "", // Clear the message field as well
         });
         setCaptchaValue(null);
       } else {
@@ -128,7 +136,6 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
         />
 
         <Autocomplete
-          // id="country-select-demo"
           className={countrySelect["input-style-container"]}
           sx={{
             width: "100%",
@@ -172,42 +179,74 @@ const Scheduling = ({ title, subTitle, buttonTitle }) => {
                 "& .MuiInputLabel-root": {
                   fontSize: "14px",
                   color: "#999999",
+                  backgroundColor: "#efefef",
                 },
               }}
             />
           )}
         />
 
-        <select
-          required
-          onChange={handleChange}
-          className={style["select"]}
-          name="jobTitle"
-          id="jobTitle"
-        >
-          <option value="">Select Your Job Title</option>
-          <option value="Manager">Manager</option>
-          <option value="Broker">Broker</option>
-          <option value="Trader">Trader</option>
-          <option value="Developer">Developer</option>
-          <option value="Other">Other</option>
-        </select>
-        <select
-          defaultValue={"STARTER"}
-          required
-          onChange={handleChange}
-          className={style.select}
-          name="registrationPlan"
-          id="registrationPlan"
-        >
-          <option value="">Select Your Plan</option>
-          <option value="STARTER">Starter</option>
-          <option value="PREMIUM">Premium</option>
-          <option value="ENTERPRISE">Enterprise</option>
-        </select>
-        <Link href="/pricing" className={style.link}>
-          More about plans?
-        </Link>
+        {/* Conditionally render jobTitle and registrationPlan or message field */}
+        {showJobTitleAndPlan ? (
+          <>
+            <select
+              required
+              onChange={handleChange}
+              className={style["select"]}
+              name="jobTitle"
+              id="jobTitle"
+            >
+              <option value="">Select Your Job Title</option>
+              <option value="Manager">Manager</option>
+              <option value="Broker">Broker</option>
+              <option value="Trader">Trader</option>
+              <option value="Developer">Developer</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <select
+              defaultValue={"STARTER"}
+              required
+              onChange={handleChange}
+              className={style.select}
+              name="registrationPlan"
+              id="registrationPlan"
+            >
+              <option value="">Select Your Plan</option>
+              <option value="STARTER">Starter</option>
+              <option value="PREMIUM">Premium</option>
+              <option value="ENTERPRISE">Enterprise</option>
+            </select>
+
+            <Link href="/pricing" className={style.link}>
+              More about plans?
+            </Link>
+          </>
+        ) : (
+          <>
+            <TextField
+              formData={formData}
+              className={countrySelect["input-style"]}
+              onChange={handleChange}
+              type="text"
+              name="message"
+              label="Enter your message"
+              multiline
+              rows={4} // Adjust the number of rows to make it a bigger text area
+              fullWidth // Optional to make it full width
+              variant="outlined"
+              sx={{
+                marginBottom: "16px", 
+                "& .MuiInputLabel-root": {
+                  fontSize: "14px",
+                  color: "#999999",
+                  backgroundColor: "#efefef",
+                },
+              }}
+            />
+          </>
+        )}
+
         <p className={style["p"]}>
           By clicking the button below, you agree to our Terms and have read our
           Privacy Policy
