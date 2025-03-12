@@ -10,7 +10,7 @@ export const metadata = {
 const Registration = () => {
   return (
     <div>
-       <Scheduling />
+       <Scheduling currentPath="registration" />
        <Testimonials />
        <Faq />
     </div>

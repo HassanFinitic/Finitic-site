@@ -60,7 +60,7 @@ export default function page() {
             <p className={style.description}>The most effective marketing and management tool for introducing brokers. With advanced features and customizable options, it empowers your partners to achieve more in the forex market.</p>
           </div>
           <div className={style.right_bottom}>
-          <Scheduling subTitle={"Boost Your IB Performance"} buttonTitle={"Become a Partner"}  />
+          <Scheduling currentPath='ib-portal' subTitle={"Boost Your IB Performance"} buttonTitle={"Become a Partner"}  />
           </div>
         </div>
 

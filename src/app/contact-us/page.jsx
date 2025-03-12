@@ -79,7 +79,7 @@ const page = () => {
             </Submit>
           </form>
         </div> */}
-        <Scheduling title="Contact Us" />
+        <Scheduling currentPath="contact-us" showJobTitleAndPlan={false} title="Contact Us" />
       </div>
       </div>
     </div>

@@ -38,7 +38,7 @@ export default function Home() {
       <Landing />
       <Hero />
       <Clients />
-      <Scheduling />
+      <Scheduling currentPath="home" />
       <Confidence Data={confidenceData} />
       <Products
         productsData={productsData}
