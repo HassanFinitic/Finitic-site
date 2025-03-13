@@ -29,7 +29,7 @@ export default function Footer() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <Header decription={"Start your journey from today"} />
+          <Header decription={"Start your journey today"} />
           <div style={{ padding: "1rem 0" }}>
             <Button url={"/contact-us"} text={"Contact us"} center={true} />
           </div>
