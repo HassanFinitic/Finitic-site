@@ -18,11 +18,12 @@
   .icon {
     width: fit-content;
     height: fit-content;
-    background: var(--linear);
-    color: green;
+    /* background: var(--linear); */
+    /* color: green; */
     border-radius: 20%;
     padding: 10px;
     display: inline-block;
+    border: 1px solid #e0e0e0;
     /* position: relative;
     top: -20px; */
     margin-bottom: 15px;
