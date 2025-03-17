@@ -2,6 +2,8 @@
 .grid {
   display: grid;
   gap: var(--gap);
+  align-items: center;
+  justify-items: center;
 
    /* Large screens (default) */
   grid-template-columns: repeat(var(--cols-large), 1fr);
