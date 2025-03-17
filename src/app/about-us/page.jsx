@@ -17,7 +17,7 @@ export default function page() {
     return (
         <section className={`container ${style["about-us-container"]}`}>
             <Header title={"About Us"} />
-            <p>Welcome to FINITIC – Redefining Fintech Excellence At FINITIC, innovation meets expertise to shape the future of financial technology. We’re more than just a fintech company—we’re a team of visionary developers dedicated to revolutionizing how forex brokers and forex traders manage their businesses using cutting-edge tools like Forex CRM software and the best forex trading platform.</p>
+            <p>Welcome to FINITIC – Redefining Fintech Excellence. At FINITIC, innovation meets expertise to shape the future of financial technology. We’re more than just a fintech company—we’re a team of visionary developers dedicated to revolutionizing how forex brokers and forex traders manage their businesses using cutting-edge tools like Forex CRM software and the best forex trading platform.</p>
             <p>   Our Purpose: <span> Elevating Financial Operations </span>
                 <br /> Since our inception, FINITIC has focused on crafting cutting-edge solutions to simplify and enhance brokerage operations. From ensuring top-tier data security to streamlining workflows with tools like Forex signals and Forex trading platforms, our suite of products empowers brokers and traders to thrive in the competitive landscape of Forex trading.</p>
             <AboutGrid />
