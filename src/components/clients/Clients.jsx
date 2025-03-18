@@ -5,7 +5,7 @@ import { CLIENTS } from "@/data/images";
 
 const Clients = () => {
     return (
-        <div className={style["clients-container"]}>
+        <div data-aos="fade-up" data-aos-duration="1000" className={style["clients-container"]}>
             <p className={style["title"]}>Trusted by thousands of companies worldwide</p>
             <div className={style["partners-content"]}>
                 <div className={style["partners"]}>
