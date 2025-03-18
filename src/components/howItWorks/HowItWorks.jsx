@@ -76,7 +76,7 @@ const HowItWorks = () => {
             data-aos-duration={item?.delay}>
               <div className={style["how-it-works__item-icon"]}>
                 <Image width={50} height={50} src={item.image} alt={item.imagealt} />
-                <h3  className={style["how-it-works__item-title"]}>{item.title}</h3>
+                <h6  className={style["how-it-works__item-title"]}>{item.title}</h6>
               </div>
               
               <p className={style["how-it-works__item-description"]}>{item.description}</p>
