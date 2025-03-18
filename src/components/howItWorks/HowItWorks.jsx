@@ -75,7 +75,7 @@ const HowItWorks = () => {
             data-aos-easing="ease-out-cubic"
             data-aos-duration={item?.delay}>
               <div className={style["how-it-works__item-icon"]}>
-                <Image width={50} height={50} src={item.image} alt={item.imagealt} />
+                <Image width={40} height={40} src={item.image} alt={item.imagealt} />
                 <h6  className={style["how-it-works__item-title"]}>{item.title}</h6>
               </div>
               
