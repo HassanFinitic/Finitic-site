@@ -16,7 +16,7 @@ export const confidenceData = [
         delay: "500"
     },
     {
-        image: "/assets/images/Realtime.svg",
+        image: "/assets/images/pamm5.svg",
         imagealt: "detailed fintech reporting",
         title: "Automated Reporting",
         description:
