@@ -109,7 +109,7 @@ const Scheduling = ({
   };
 
   return (
-    <div data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" className={style["scheduling-container"]}>
+    <div data-aos="fade-up" data-aos-duration="1000" className={style["scheduling-container"]}>
       <h3 className={style["title"]}>{title || "Schedule Your Demo Now"}</h3>
       <p className={style["p"]}>{subTitle}</p>
       <form className={style["form"]} onSubmit={handleSubmit}>
