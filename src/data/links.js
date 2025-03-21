@@ -52,11 +52,11 @@ export const linksData = [
         url: "/pricing",
         text: "Plans",
     },
-    {
-        id: 5,
-        url: "/blog",
-        text: "Blogs",
-    },
+    // {
+    //     id: 5,
+    //     url: "/blog",
+    //     text: "Blogs",
+    // },
     {
         id: 6,
         url: "/faq",
