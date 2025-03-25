@@ -5,6 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { CiCalendar } from "react-icons/ci";
 import { useState, useEffect } from "react";
 
 // Helper component to render content items
@@ -76,8 +77,11 @@ export default function Page({ params }) {
         align={"center"}
         justify={"space-between"}
       >
-        <Flex className={styles.left} gap={"10px"}>
-          <Flex className={styles.date}></Flex>
+        <Flex align={"center"} justify={"center"} className={styles.left} gap={"10px"}>
+          <Flex align={"center"} justify={"center"} gap={"5px"} className={styles.date}>
+            <CiCalendar size={20} />
+            <p>{data.date}</p>
+          </Flex>
           <p className={styles.timeToRead}>{data.timeToRead} min</p>
           <p className={styles.type}>{data.type}</p>
         </Flex>

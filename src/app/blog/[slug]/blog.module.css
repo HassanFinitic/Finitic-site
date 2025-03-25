@@ -85,3 +85,28 @@
     border-radius: 10px;
     font-size: 14px;
   }
+
+  .left{
+    color: #808080;
+
+    @media screen and (max-width: 600px) {
+      margin: 15px 0;
+    }
+  }
+
+  .type{
+    position: relative;
+    margin-left: 15px;
+  }
+
+  .type::before{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--button-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+  }
