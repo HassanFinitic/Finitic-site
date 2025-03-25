@@ -69,3 +69,13 @@
     font-size: 1.4rem;
     color: #333;
   }
+
+  .social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid #8080803a;
+    border-radius: 10px;
+    font-size: 14px;
+  }

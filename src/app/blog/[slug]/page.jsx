@@ -1,5 +1,11 @@
+"use client";
 import Flex from "@/components/flex/Flex";
 import styles from "./blog.module.css";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 // Helper component to render content items
 function RenderContent({ content }) {
@@ -32,19 +38,30 @@ function RenderContent({ content }) {
   );
 }
 
-// Dynamic Page Component (Server Component)
-export default async function Page({ params }) {
+// Client-side only page component
+export default function Page({ params }) {
   const { slug } = params;
+  
+  const [data, setData] = useState(null);
+  const [currentUrl, setCurrentUrl] = useState('');
 
-  let data = null;
+  useEffect(() => {
+    // Set the current URL for sharing
+    setCurrentUrl(window.location.href);
 
-  try {
-    // Try importing the JSON data dynamically
-    data = await import(`@/data/blogs/${slug}.json`);
-  } catch (error) {
-    console.error("Error loading JSON data:", error);
-    data = {}; // Set to empty object if there is an error
-  }
+    // Dynamically import data based on slug
+    const loadData = async () => {
+      try {
+        const response = await import(`@/data/blogs/${slug}.json`);
+        setData(response);
+      } catch (error) {
+        console.error("Error loading JSON data:", error);
+        setData({});
+      }
+    };
+
+    loadData();
+  }, [slug]); // This will run when the slug changes
 
   if (!data) {
     return <p>Failed to load the page content.</p>;
@@ -53,23 +70,60 @@ export default async function Page({ params }) {
   return (
     <main className={`container ${styles.main}`}>
       <h1 className={styles.title}>{data.title}</h1>
-      <Flex direction={"row"} directionSmall={"column"} align={"center"} justify={"space-between"}>
+      <Flex
+        direction={"row"}
+        directionSmall={"column"}
+        align={"center"}
+        justify={"space-between"}
+      >
         <Flex className={styles.left} gap={"10px"}>
           <Flex className={styles.date}></Flex>
           <p className={styles.timeToRead}>{data.timeToRead} min</p>
           <p className={styles.type}>{data.type}</p>
         </Flex>
-        <Flex className={styles.right} gap={"10px"}>
-            Share With
+        <Flex align={"center"} justify={"center"} className={styles.right} gap={"10px"}>
+          <div className="text">Share With :</div>
+          <Flex gap={"5px"} className="links">
+            <a
+              className={styles["social-icon"]}
+              href={`https://www.facebook.com/share.php?u=${encodeURIComponent(currentUrl)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              className={styles["social-icon"]}
+              href={`https://www.instagram.com/finiticme?url=${encodeURIComponent(currentUrl)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              className={styles["social-icon"]}
+              href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(currentUrl)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              className={styles["social-icon"]}
+              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaXTwitter />
+            </a>
+          </Flex>
         </Flex>
       </Flex>
       <div className={styles.imageContainer}>
         <img src={data.image} alt={data.imageTitle} />
       </div>
-      <p className={styles.description}>{data.description}</p>
       {Object.entries(data.sections).map(([sectionKey, section]) => (
         <section key={sectionKey} className={styles.section}>
-          {/* Handle nested subsections (e.g., key_features) */}
           {sectionKey === "key_features" ? (
             <>
               <h2>Key Features</h2>
