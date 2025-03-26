@@ -52,7 +52,7 @@ export default function Home() {
 
       <Pricing />
       <HowItWorks />
-      <StayAHead />
+      {/* <StayAHead /> */}
       <Testimonials />
       <Subscribe />
       <Faq  />
