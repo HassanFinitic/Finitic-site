@@ -1,59 +1,57 @@
-.scheduling-container{
-    padding: 76px 0;
-    width: 70%;
-    margin: auto;
+.scheduling-container {
+  padding: 76px 0;
+  width: 70%;
+  margin: auto;
 }
-.title{
-    color: var(--font-heading-3);
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 500;
+.title {
+  color: var(--font-heading-3);
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
 }
-.form{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
-.select{
-    width: 100% ;
-    border-radius: 5px ;
-    padding: 12px;
-    background-color:#efefef ;
-    border: 2px solid gray;
-    color: #999999 ;
+.select {
+  width: 100%;
+  border-radius: 5px;
+  padding: 12px;
+  background-color: #efefef;
+  border: 2px solid gray;
+  color: #999999;
 }
 
-  
-  .link {
-    width: 100%;
-    margin-top: -15px;
-    margin-left: 15px;
-    color: #0070f3; 
-    text-decoration: none; 
-    font-size: 12px;
-    
-  }
-  
-  .link:hover {
-    text-decoration: underline; 
-  }
-.select:hover{
-    border: 2px solid black ;
+.link {
+  width: 100%;
+  margin-top: -10px;
+  margin-left: 15px;
+  color: #0070f3;
+  text-decoration: none;
+  font-size: 12px;
 }
-.select:focus{
-    border: 2px solid #608af9 ;
-    outline: 2px solid #608af9;
+
+.link:hover {
+  text-decoration: underline;
 }
-.p{
-    color: var(--font-color-4);
-    font-size: 16px;
-    text-align: center;
+.select:hover {
+  border: 2px solid black;
+}
+.select:focus {
+  border: 2px solid #608af9;
+  outline: 2px solid #608af9;
+}
+.p {
+  color: var(--font-color-4);
+  font-size: 16px;
+  text-align: center;
 }
 @media screen and (max-width: 1024px) {
-    .scheduling-container{
-        width: 80%;
-    }
+  .scheduling-container {
+    width: 80%;
   }
+}

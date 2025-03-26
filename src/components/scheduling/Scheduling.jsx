@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Input from "../shared/input/Input";
 import style from "./scheduling.module.css";
 import countrySelect from "./countrySelect.module.css";
 import Submit from "../shared/submit/Submit";
@@ -13,6 +12,7 @@ import { countries } from "@/data/countries";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 const Scheduling = ({
   title,
@@ -28,7 +28,7 @@ const Scheduling = ({
     country: "",
     countryCode: "", 
     jobTitle: "",
-    registrationPlan: "STARTER",
+    registrationPlan: "",
     message: "", 
   });
 
@@ -49,6 +49,7 @@ const Scheduling = ({
       ...formData,
       country: newValue ? newValue.label : "", // Store the country name (label)
       countryCode: newValue ? `+${newValue.phone}` : "", // Store the country code
+      phone: newValue ? `+${newValue.phone} ${formData.phone}` : formData.phone,
     });
   };
 
@@ -115,46 +116,51 @@ const Scheduling = ({
       <h3 className={style["title"]}>{title || "Schedule Your Demo Now"}</h3>
       <p className={style["p"]}>{subTitle}</p>
       <form className={style["form"]} onSubmit={handleSubmit}>
-        <Input
-          formData={formData}
-          handleChange={handleChange}
-          type="text"
+        {/* Replacing custom Input with MUI TextField for Full Name */}
+        <TextField
+          label="Enter Your Name"
           name="fullName"
-          placeholder="Enter Your Name"
-        />
-        <Input
-          formData={formData}
-          handleChange={handleChange}
-          type="text"
-          name="phone"
-          placeholder="Enter Your Phone"
-        />
-        <Input
-          formData={formData}
-          handleChange={handleChange}
-          type="email"
-          name="email"
-          placeholder="Enter Your Email"
+          value={formData.fullName}
+          onChange={handleChange}
+          fullWidth
+          variant="outlined"
+          margin="normal"
         />
 
+        {/* Replacing custom Input with MUI TextField for Phone */}
+        <TextField
+          label={`Enter Your Phone ${formData.countryCode || ""}`}
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          fullWidth
+          variant="outlined"
+          margin="normal"
+        />
+
+        {/* Replacing custom Input with MUI TextField for Email */}
+        <TextField
+          label="Enter Your Email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          fullWidth
+          variant="outlined"
+          margin="normal"
+        />
+
+        {/* Country Dropdown with MUI Autocomplete */}
         <Autocomplete
-          className={countrySelect["input-style-container"]}
-          sx={{
-            width: "100%",
-          }}
+          // className={countrySelect["input-style-container"]}
+          sx={{ width: "100%" , marginTop: "10px" }}
           options={countries}
           autoHighlight
           getOptionLabel={(option) => option.label}
-          onChange={handleCountryChange} 
+          onChange={handleCountryChange}
           renderOption={(props, option) => {
             const { key, ...optionProps } = props;
             return (
-              <Box
-                key={key}
-                component="li"
-                sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
-                {...optionProps}
-              >
+              <Box key={key} component="li" sx={{ "& > img": { mr: 2, flexShrink: 0 } }} {...optionProps}>
                 <img
                   loading="lazy"
                   width="20"
@@ -170,55 +176,64 @@ const Scheduling = ({
             <TextField
               {...params}
               label="Choose a country"
-              className={countrySelect["input-style"]}
+              // className={countrySelect["input-style"]}
               slotProps={{
                 htmlInput: {
                   ...params.inputProps,
                   autoComplete: "new-password", // disable autocomplete and autofill
                 },
               }}
-              sx={{
-                "& .MuiInputLabel-root": {
-                  fontSize: "14px",
-                  color: "#999999",
-                  backgroundColor: "#efefef",
-                },
-              }}
+              // sx={{
+              //   "& .MuiInputLabel-root": {
+              //     fontSize: "14px",
+              //     color: "#999999",
+              //     backgroundColor: "#efefef",
+              //   },
+              // }}
             />
           )}
         />
 
-        {/* Conditionally render jobTitle and registrationPlan or message field */}
+        {/* Conditionally render jobTitle and registrationPlan using MUI Select */}
         {showJobTitleAndPlan ? (
           <>
-            <select
-              required
-              onChange={handleChange}
-              className={style["select"]}
-              name="jobTitle"
-              id="jobTitle"
-            >
-              <option value="">Select Your Job Title</option>
-              <option value="Manager">Manager</option>
-              <option value="Broker">Broker</option>
-              <option value="Trader">Trader</option>
-              <option value="Developer">Developer</option>
-              <option value="Other">Other</option>
-            </select>
+            {/* Job Title Select */}
+            <FormControl fullWidth margin="normal">
+              <InputLabel htmlFor="jobTitle">Select Your Job Title</InputLabel>
+              <Select
+                label="Select Your Job Title"
+                value={formData.jobTitle}
+                onChange={handleChange}
+                name="jobTitle"
+                required
+              >
 
-            <select
-              defaultValue={"STARTER"}
-              required
-              onChange={handleChange}
-              className={style.select}
-              name="registrationPlan"
-              id="registrationPlan"
-            >
-              <option value="">Select Your Plan</option>
-              <option value="STARTER">Starter</option>
-              <option value="PREMIUM">Premium</option>
-              <option value="ENTERPRISE">Enterprise</option>
-            </select>
+                <MenuItem value="">Select Your Job Title</MenuItem>
+                <MenuItem value="Manager">Manager</MenuItem>
+                <MenuItem value="Broker">Broker</MenuItem>
+                <MenuItem value="Trader">Trader</MenuItem>
+                <MenuItem value="Developer">Developer</MenuItem>
+                <MenuItem value="Other">Other</MenuItem>
+              </Select>
+            </FormControl>
+
+            {/* Registration Plan Select */}
+            <FormControl fullWidth margin="normal">
+              <InputLabel htmlFor="registrationPlan">Select Your Plan</InputLabel>
+              <Select
+                label="Select Your Plan"
+                value={formData.registrationPlan}
+                onChange={handleChange}
+                name="registrationPlan"
+                required
+              >
+
+                <MenuItem value="">Select Your Plan</MenuItem>
+                <MenuItem value="STARTER">Starter</MenuItem>
+                <MenuItem value="PREMIUM">Premium</MenuItem>
+                <MenuItem value="ENTERPRISE">Enterprise</MenuItem>
+              </Select>
+            </FormControl>
 
             <Link href="/pricing" className={style.link}>
               More about plans?
@@ -227,24 +242,15 @@ const Scheduling = ({
         ) : (
           <>
             <TextField
-              formData={formData}
-              className={countrySelect["input-style"]}
-              onChange={handleChange}
-              type="text"
-              name="message"
               label="Enter your message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               multiline
               rows={4} // Adjust the number of rows to make it a bigger text area
-              fullWidth // Optional to make it full width
+              fullWidth
               variant="outlined"
-              sx={{
-                marginBottom: "16px", 
-                "& .MuiInputLabel-root": {
-                  fontSize: "14px",
-                  color: "#999999",
-                  backgroundColor: "#efefef",
-                },
-              }}
+              margin="normal"
             />
           </>
         )}
