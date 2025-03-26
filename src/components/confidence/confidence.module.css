@@ -1,10 +1,6 @@
 .confidence-container{
     padding: 50px 0px ; 
 }
-
-  .grid-item {
-    min-height: 400px;
-  }
   .grid-item:hover {
      transform: translateY(-10px);
      -webkit-transform: translateY(-10px);
@@ -61,7 +57,7 @@
       }
     }
     .grid-item {
-      min-height: 300px;
+      margin-bottom: 50px;
     }
 
   }
