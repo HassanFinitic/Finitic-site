@@ -25,7 +25,8 @@ const Scheduling = ({
     fullName: "",
     phone: "",
     email: "",
-    country: "", 
+    country: "",
+    countryCode: "", 
     jobTitle: "",
     registrationPlan: "STARTER",
     message: "", 
@@ -47,6 +48,7 @@ const Scheduling = ({
     setFormData({
       ...formData,
       country: newValue ? newValue.label : "", // Store the country name (label)
+      countryCode: newValue ? `+${newValue.phone}` : "", // Store the country code
     });
   };
 
@@ -143,7 +145,7 @@ const Scheduling = ({
           options={countries}
           autoHighlight
           getOptionLabel={(option) => option.label}
-          onChange={handleCountryChange} // Handle country change
+          onChange={handleCountryChange} 
           renderOption={(props, option) => {
             const { key, ...optionProps } = props;
             return (
