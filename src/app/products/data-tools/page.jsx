@@ -7,6 +7,28 @@ import Subscribe from "@/components/subscribe/Subscribe";
 import styles from "./dataTools.module.css";
 import Check from "../../../../public/assets/icons/Check";
 
+export const metadata = {
+  title: "Finitic Data Tools – Powerful Data Management & Analysis Solutions",
+  description: "Boost productivity with AI-driven data tools from Finitic. Optimize data management, analytics, automation, and visualization for smarter business decisions. Enhance efficiency with big data processing, predictive analytics, and seamless data integration.",
+  keywords: [
+    "AI data tools",
+    "data management software",
+    "data analytics solutions",
+    "big data processing",
+    "predictive analytics",
+    "data automation",
+    "machine learning analytics",
+    "business intelligence tools",
+    "cloud data integration",
+    "real-time data analysis",
+    "data visualization software",
+    "enterprise data solutions",
+    "data science tools",
+    "Finitic data platform",
+    "advanced data insights"
+  ]
+};
+
 const data = [
   {
     planTitle: "Basic",
