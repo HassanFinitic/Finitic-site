@@ -41,12 +41,24 @@ function RenderContent({ content }) {
 
 // Client-side only page component
 export default function Page({ params }) {
-  const { slug } = params;
+  const [slug, setSlug] = useState(null);
+
+  useEffect(() => {
+    // Wait for the params to be resolved
+    const loadSlug = async () => {
+      const unwrappedParams = await params;
+      setSlug(unwrappedParams.slug);
+    };
+
+    loadSlug();
+  }, [params]);
 
   const [data, setData] = useState(null);
   const [currentUrl, setCurrentUrl] = useState("");
 
   useEffect(() => {
+    if (!slug) return;
+
     // Set the current URL for sharing
     setCurrentUrl(window.location.href);
 
@@ -58,7 +70,6 @@ export default function Page({ params }) {
 
         // Set meta data dynamically based on imported data
         if (response) {
-          console.log("hello", response.metaData);
           document.title = response.metaData?.title || "Finitic Blog";
           document
             .querySelector('meta[name="description"]')
@@ -80,7 +91,7 @@ export default function Page({ params }) {
   }, [slug]); // This will run when the slug changes
 
   if (!data) {
-    return <p>Failed to load the page content.</p>;
+    return <p>Loading the page content...</p>;
   }
 
   return (
