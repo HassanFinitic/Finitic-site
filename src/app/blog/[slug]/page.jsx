@@ -42,9 +42,9 @@ function RenderContent({ content }) {
 // Client-side only page component
 export default function Page({ params }) {
   const { slug } = params;
-  
+
   const [data, setData] = useState(null);
-  const [currentUrl, setCurrentUrl] = useState('');
+  const [currentUrl, setCurrentUrl] = useState("");
 
   useEffect(() => {
     // Set the current URL for sharing
@@ -55,6 +55,21 @@ export default function Page({ params }) {
       try {
         const response = await import(`@/data/blogs/${slug}.json`);
         setData(response);
+
+        // Set meta data dynamically based on imported data
+        if (response) {
+          console.log("hello", response.metaData);
+          document.title = response.metaData?.title || "Finitic Blog";
+          document
+            .querySelector('meta[name="description"]')
+            ?.setAttribute("content", response.metaData?.description || "");
+          document
+            .querySelector('meta[name="keywords"]')
+            ?.setAttribute(
+              "content",
+              response.metaData?.keywords.join(", ") || ""
+            );
+        }
       } catch (error) {
         console.error("Error loading JSON data:", error);
         setData({});
@@ -77,20 +92,37 @@ export default function Page({ params }) {
         align={"center"}
         justify={"space-between"}
       >
-        <Flex align={"center"} justify={"center"} className={styles.left} gap={"10px"}>
-          <Flex align={"center"} justify={"center"} gap={"5px"} className={styles.date}>
+        <Flex
+          align={"center"}
+          justify={"center"}
+          className={styles.left}
+          gap={"10px"}
+        >
+          <Flex
+            align={"center"}
+            justify={"center"}
+            gap={"5px"}
+            className={styles.date}
+          >
             <CiCalendar size={20} />
             <p>{data.date}</p>
           </Flex>
           <p className={styles.timeToRead}>{data.timeToRead} min</p>
           <p className={styles.type}>{data.type}</p>
         </Flex>
-        <Flex align={"center"} justify={"center"} className={styles.right} gap={"10px"}>
+        <Flex
+          align={"center"}
+          justify={"center"}
+          className={styles.right}
+          gap={"10px"}
+        >
           <div className="text">Share With :</div>
           <Flex gap={"5px"} className="links">
             <a
               className={styles["social-icon"]}
-              href={`https://www.facebook.com/share.php?u=${encodeURIComponent(currentUrl)}`}
+              href={`https://www.facebook.com/share.php?u=${encodeURIComponent(
+                currentUrl
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -98,7 +130,9 @@ export default function Page({ params }) {
             </a>
             <a
               className={styles["social-icon"]}
-              href={`https://www.instagram.com/finiticme?url=${encodeURIComponent(currentUrl)}`}
+              href={`https://www.instagram.com/finiticme?url=${encodeURIComponent(
+                currentUrl
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -106,7 +140,9 @@ export default function Page({ params }) {
             </a>
             <a
               className={styles["social-icon"]}
-              href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(currentUrl)}`}
+              href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+                currentUrl
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -114,7 +150,9 @@ export default function Page({ params }) {
             </a>
             <a
               className={styles["social-icon"]}
-              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}`}
+              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+                currentUrl
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
             >
