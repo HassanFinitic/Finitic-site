@@ -20,24 +20,24 @@
     cursor: pointer;
     white-space: nowrap;
     width: 150px;
-    
-    .button{
-        position: relative;
-        outline: none;
-        border: none;
-        background-color: transparent;
-    }
+}
 
-    .arrow {
-        display: none;
-    }
+.button{
+    position: relative;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
 
-    &:hover {
-        width: 220px;
-        justify-content: space-between; 
-    }
+.arrow {
+    display: none;
+}
 
-    &:hover .arrow {
-        display: inline-block;
-    }
+.button-container:hover {
+    width: 220px;
+    justify-content: space-between; 
+}
+
+.button-container:hover .arrow {
+    display: inline-block;
 }
