@@ -7,8 +7,31 @@ import Link from "next/link";
 import Grid from "@/components/grid/Grid";
 import Flex from "@/components/flex/Flex";
 import Image from "next/image";
+
+export const metadata = {
+  title: "Finitic Blog – Latest Insights on Forex, Fintech & Trading Technology",
+  description: "Explore expert insights on Forex trading, Fintech innovations, AI-driven trading strategies, algorithmic trading, blockchain, and financial automation. Stay ahead with the latest trends in finance, trading technology, and data analytics from industry leaders.",
+  keywords: [
+    "Forex blog",
+    "Fintech trends",
+    "AI trading strategies",
+    "algorithmic trading",
+    "Forex market analysis",
+    "financial technology",
+    "blockchain in finance",
+    "automated trading systems",
+    "trading bots",
+    "digital payments",
+    "DeFi trends",
+    "big data in finance",
+    "risk management",
+    "trading analytics",
+    "financial automation",
+    "Finitic blog"
+  ]
+};
+
 export default function page() {
-  console.log(Blogs);
   return (
     <div>
       <div style={{ marginBottom: "100px" }} className="container">
