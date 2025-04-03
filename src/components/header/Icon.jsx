@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa6";
 import { FaBarsStaggered } from "react-icons/fa6";
 
 export default function Icon({toggleIcon, isOpen, style}) {
-  console.log(style)
+  // console.log(style)
     return (
     <div className={style["icon"]} onClick={toggleIcon}>
         <div

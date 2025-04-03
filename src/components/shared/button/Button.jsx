@@ -11,7 +11,8 @@ export default function Button({ text, center, background, url }) {
         <Link href={url} className={`${style["button-container"]}`}
           style={{
             margin: center ? "0 auto" : "0",
-            background: background ? "linear-gradient(to top, #1A2B56, #1A2B56)" : "linear-gradient(to top, var(--button-color), var(--button-color-hover))"
+            background: background ? "linear-gradient(to top, #1A2B56, #1A2B56)" : "linear-gradient(to top, var(--button-color), var(--button-color-hover))",
+            color: "white"
           }}>
           <button className={style["button"]}>{text}</button>
           <FaArrowRight className={style["arrow"]} />
@@ -20,7 +21,8 @@ export default function Button({ text, center, background, url }) {
         <div className={`${style["button-container"]}`}
           style={{
             margin: center ? "0 auto" : "0",
-            background: background ? "linear-gradient(to top, rgb(47, 47, 47), rgb(98, 98, 98))" : "linear-gradient(to top, var(--button-color), var(--button-color-hover))"
+            background: background ? "linear-gradient(to top, rgb(47, 47, 47), rgb(98, 98, 98))" : "linear-gradient(to top, var(--button-color), var(--button-color-hover))",
+            color: "white"
           }}>
           <button className={style["button"]}>{text}</button>
           <FaArrowRight className={style["arrow"]} />

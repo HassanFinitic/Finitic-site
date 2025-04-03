@@ -63,7 +63,7 @@ const Scheduling = ({
     };
 
     // Log the form data to the console
-    console.log(updatedFormData);
+    // console.log(updatedFormData);
 
     try {
       // Check if reCAPTCHA is validated
@@ -74,7 +74,7 @@ const Scheduling = ({
 
       // Proceed to send data
       const res = await sendData(updatedFormData, currentPath);
-      console.log(res);
+      // console.log(res);
 
       if (res.isSuccess) {
         setSubmitTitle("Thank You");
