@@ -125,6 +125,7 @@ const Scheduling = ({
           fullWidth
           variant="outlined"
           margin="normal"
+          required
         />
 
         {/* Replacing custom Input with MUI TextField for Phone */}
@@ -136,6 +137,10 @@ const Scheduling = ({
           fullWidth
           variant="outlined"
           margin="normal"
+          required
+          inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
+          error={formData.phone && !/^\d+$/.test(formData.phone)}
+          helperText={formData.phone && !/^\d+$/.test(formData.phone) ? "Enter valid phone number" : ""}
         />
 
         {/* Replacing custom Input with MUI TextField for Email */}
