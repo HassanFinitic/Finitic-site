@@ -189,7 +189,13 @@ export default function Page({ params }) {
             </>
           ) : (
             <>
-              <h2>{sectionKey.replace(/_/g, " ").toUpperCase()}</h2>
+              {
+                sectionKey === "introduction" ? (
+                  <></>
+                ) : (
+                  <h2>{sectionKey.replace(/_/g, " ").toUpperCase()}</h2>
+                )
+              }
               <RenderContent content={section.content} />
             </>
           )}
