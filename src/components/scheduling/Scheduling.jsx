@@ -130,18 +130,25 @@ const Scheduling = ({
 
         {/* Replacing custom Input with MUI TextField for Phone */}
         <TextField
-          label={`Enter Your Phone ${formData.countryCode || ""}`}
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          fullWidth
-          variant="outlined"
-          margin="normal"
-          required
-          inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
-          error={formData.phone && !/^\d+$/.test(formData.phone)}
-          helperText={formData.phone && !/^\d+$/.test(formData.phone) ? "Enter valid phone number" : ""}
-        />
+  label={`Enter Your Phone ${formData.countryCode || ""}`}
+  name="phone"
+  value={formData.phone}
+  onChange={handleChange}
+  fullWidth
+  variant="outlined"
+  margin="normal"
+  required
+  inputProps={{
+    inputMode: "tel", // Better for phone input on mobile
+    pattern: "^\\+?[0-9 ]*$" // Accepts optional + at start, digits, and spaces
+  }}
+  error={!!formData.phone && !/^\+?[0-9 ]*$/.test(formData.phone)}
+  helperText={
+    !!formData.phone && !/^\+?[0-9 ]*$/.test(formData.phone)
+      ? "Enter a valid phone number (digits, spaces, optional leading +)"
+      : "Include country code if applicable (e.g. +1 123 456 7890)"
+  }
+/>
 
         {/* Replacing custom Input with MUI TextField for Email */}
         <TextField
