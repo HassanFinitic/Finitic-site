@@ -3,6 +3,8 @@ import "./globals.css";
 import "aos/dist/aos.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale} from 'next-intl/server';
 
 const sora = Sora({
   variable: "--font-sora",
@@ -34,9 +36,11 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const locale = await getLocale();
+
   return (
-    <html lang="en">
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <head>
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBV1ZGC3FC"></script>
@@ -84,6 +88,7 @@ export default function RootLayout({ children }) {
         </noscript>
       </head>
       <body className={`${sora.variable}`}>
+      <NextIntlClientProvider>
         <Header />
         <div
           style={{
@@ -94,6 +99,7 @@ export default function RootLayout({ children }) {
           {children}
         </div>
         <Footer />
+        </NextIntlClientProvider>
 
         {/* Google Tag Manager noscript */}
         <iframe 

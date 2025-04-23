@@ -13,6 +13,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 const Scheduling = ({
   title,
@@ -35,6 +36,8 @@ const Scheduling = ({
   const [loading, setLoading] = React.useState(false);
   const [submitTitle, setSubmitTitle] = React.useState(buttonTitle || "Submit");
   const [captchaValue, setCaptchaValue] = React.useState(null);
+
+  const t = useTranslations();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -68,7 +71,7 @@ const Scheduling = ({
     try {
       // Check if reCAPTCHA is validated
       if (!captchaValue) {
-        toast.error("Please verify that you are not a robot!");
+        toast.error(t("error robot"));
         return;
       }
 
@@ -80,7 +83,7 @@ const Scheduling = ({
         setSubmitTitle("Thank You");
 
         // Show success toast message
-        toast.success("Your data has been submitted successfully!");
+        toast.success(t("success send data"));
 
         // Clear the form after submission
         setFormData({
@@ -112,13 +115,14 @@ const Scheduling = ({
   };
 
   return (
+    <>
     <div data-aos="fade-up" data-aos-duration="1000" className={style["scheduling-container"]}>
-      <h3 className={style["title"]}>{title || "Schedule Your Demo Now"}</h3>
+      <h3 className={style["title"]}>{title || t("Schedule Your Demo Now")}</h3>
       <p className={style["p"]}>{subTitle}</p>
       <form className={style["form"]} onSubmit={handleSubmit}>
         {/* Replacing custom Input with MUI TextField for Full Name */}
         <TextField
-          label="Enter Your Name"
+          label={t("Enter Your Name")}
           name="fullName"
           value={formData.fullName}
           onChange={handleChange}
@@ -130,29 +134,29 @@ const Scheduling = ({
 
         {/* Replacing custom Input with MUI TextField for Phone */}
         <TextField
-  label={`Enter Your Phone ${formData.countryCode || ""}`}
-  name="phone"
-  value={formData.phone}
-  onChange={handleChange}
-  fullWidth
-  variant="outlined"
-  margin="normal"
-  required
-  inputProps={{
-    inputMode: "tel", // Better for phone input on mobile
-    pattern: "^\\+?[0-9 ]*$" // Accepts optional + at start, digits, and spaces
-  }}
-  error={!!formData.phone && !/^\+?[0-9 ]*$/.test(formData.phone)}
-  helperText={
-    !!formData.phone && !/^\+?[0-9 ]*$/.test(formData.phone)
-      ? "Enter a valid phone number (digits, spaces, optional leading +)"
-      : "Include country code if applicable (e.g. +1 123 456 7890)"
+          label={t("Enter Your Phone") + (formData.countryCode ? ` ${formData.countryCode}` : "")}
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          fullWidth
+          variant="outlined"
+          margin="normal"
+          required
+          inputProps={{
+            inputMode: "tel", // Better for phone input on mobile
+            pattern: "^\\+?[0-9 ]*$" // Accepts optional + at start, digits, and spaces
+          }}
+          error={!!formData.phone && !/^\+?[0-9 ]*$/.test(formData.phone)}
+          helperText={
+            !!formData.phone && !/^\+?[0-9 ]*$/.test(formData.phone)
+              ? t("country code error text")
+              : t("countery code text")
   }
 />
 
         {/* Replacing custom Input with MUI TextField for Email */}
         <TextField
-          label="Enter Your Email"
+          label={t("Enter Your Email")}
           name="email"
           value={formData.email}
           onChange={handleChange}
@@ -187,7 +191,7 @@ const Scheduling = ({
           renderInput={(params) => (
             <TextField
               {...params}
-              label="Choose a country"
+              label={t("Choose a country")}
               // className={countrySelect["input-style"]}
               slotProps={{
                 htmlInput: {
@@ -211,7 +215,7 @@ const Scheduling = ({
           <>
             {/* Job Title Select */}
             <FormControl fullWidth margin="normal">
-              <InputLabel htmlFor="jobTitle">Select Your Job Title</InputLabel>
+              <InputLabel htmlFor="jobTitle">{t("Select Your Job Title")}</InputLabel>
               <Select
                 label="Select Your Job Title"
                 value={formData.jobTitle}
@@ -220,35 +224,35 @@ const Scheduling = ({
                 required
               >
 
-                <MenuItem value="">Select Your Job Title</MenuItem>
-                <MenuItem value="Manager">Manager</MenuItem>
-                <MenuItem value="Broker">Broker</MenuItem>
-                <MenuItem value="Trader">Trader</MenuItem>
-                <MenuItem value="Developer">Developer</MenuItem>
-                <MenuItem value="Other">Other</MenuItem>
+                <MenuItem value="">{t("Select Your Job Title")}</MenuItem>
+                <MenuItem value="Manager">{t("Manager")}</MenuItem>
+                <MenuItem value="Broker">{t("Broker")}</MenuItem>
+                <MenuItem value="Trader">{t("Trader")}</MenuItem>
+                <MenuItem value="Developer">{t("Developer")}</MenuItem>
+                <MenuItem value="Other">{t("Other")}</MenuItem>
               </Select>
             </FormControl>
 
             {/* Registration Plan Select */}
             <FormControl fullWidth margin="normal">
-              <InputLabel htmlFor="registrationPlan">Select Your Plan</InputLabel>
+              <InputLabel htmlFor="registrationPlan">{t("Select Your Plan")}</InputLabel>
               <Select
-                label="Select Your Plan"
+                label={t("Select Your Plan")}
                 value={formData.registrationPlan}
                 onChange={handleChange}
                 name="registrationPlan"
                 required
               >
 
-                <MenuItem value="">Select Your Plan</MenuItem>
-                <MenuItem value="STARTER">Starter</MenuItem>
-                <MenuItem value="PREMIUM">Premium</MenuItem>
-                <MenuItem value="ENTERPRISE">Enterprise</MenuItem>
+                <MenuItem value="">{t("Select Your Plan")}</MenuItem>
+                <MenuItem value="STARTER">{t("Starter")}</MenuItem>
+                <MenuItem value="PREMIUM">{t("Premium")}</MenuItem>
+                <MenuItem value="ENTERPRISE">{t("Enterprise")}</MenuItem>
               </Select>
             </FormControl>
 
             <Link href="/pricing" className={style.link}>
-              More about plans?
+              {t("more about plans?")}
             </Link>
           </>
         ) : (
@@ -268,8 +272,7 @@ const Scheduling = ({
         )}
 
         <p className={style["p"]}>
-          By clicking the button below, you agree to our Terms and have read our
-          Privacy Policy
+          {t("By clicking the button below, you agree to our Terms and have read our Privacy Policy")}
         </p>
         <ReCAPTCHA
           sitekey="6LfHsO8qAAAAAGKbgbfRLywCUVepWthDNmNaD_cq"
@@ -278,14 +281,17 @@ const Scheduling = ({
             toast.error("Error with reCAPTCHA. Please try again.")
           }
         />
+        <br />
         <Submit loading={loading} type="submit">
-          {submitTitle}
+          {t(`${buttonTitle || "Submit"}`)}
         </Submit>
       </form>
 
-      {/* Toast container to display the notifications */}
-      <ToastContainer />
+      
     </div>
+    {/* Toast container to display the notifications */}
+    <ToastContainer />
+    </>
   );
 };
 

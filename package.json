@@ -17,6 +17,7 @@
     "axios": "^1.8.2",
     "classnames": "^2.5.1",
     "next": "15.1.4",
+    "next-intl": "^4.0.2",
     "next-seo": "^6.6.0",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",

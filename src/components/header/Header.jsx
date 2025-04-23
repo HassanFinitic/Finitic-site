@@ -8,9 +8,12 @@ import Icon from "./Icon";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 import Button from "./Button";
+import Switcher from "../SwitcherButton/Switcher";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations();
 
   const toggleIcon = () => {
     setIsOpen(!isOpen);
@@ -26,13 +29,14 @@ export default function Header() {
         
         {/* Logo */}
         <Logo logo={logo} alt="Finitic Logo" />
+        {/* <Switcher /> */}
         
         {/* Links */}
         <Links linksData={linksData} />
 
       <div className={style["button-container"]}>
         {/* Button */}
-        <Button url={"/contact-us"}  title="Start New Challenge" />
+        <Button url={"/contact-us"}  title={t("start New Challenge")} />
 
         {/* Mobile Menu Icon */}
         <Icon toggleIcon={toggleIcon} isOpen={isOpen} style={style} />

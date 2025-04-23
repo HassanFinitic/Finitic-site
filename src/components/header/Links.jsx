@@ -3,9 +3,12 @@ import Link from "next/link";
 import React, { useState } from "react";
 import style from "./header.module.css";
 import ArrowDown from "../../../public/assets/icons/ArrowDown";
+import { useTranslations } from "next-intl";
 
 export default function Links({ linksData }) {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  // const  t  = useTranslations('Header');
+  const t = useTranslations();
 
   const toggleDropdown = (id) => {
     setActiveDropdown((prev) => (prev === id ? null : id));
@@ -25,16 +28,15 @@ export default function Links({ linksData }) {
             <li className={style["link-item"]}>
               {link.subLinks ? (
                 <div
-                  // onClick={() => toggleDropdown(link.id)}
                   className={style["link"]}
                 >
-                  <span className={style["white-text"]}>{link.text}</span>
-                  <span className={style["gray-text"]}>{link.text}</span>
+                  <span className={style["white-text"]}>{t(link.text)}</span>
+                  <span className={style["gray-text"]}>{t(link.text)}</span>
                 </div>
               ) : (
                 <Link onClick={() => setActiveDropdown(null)} href={link.url} className={style["link"]}>
-                  <span className={style["white-text"]}>{link.text}</span>
-                  <span className={style["gray-text"]}>{link.text}</span>
+                  <span className={style["white-text"]}>{t(link.text)}</span>
+                  <span className={style["gray-text"]}>{t(link.text)}</span>
                 </Link>
               )}
             </li>

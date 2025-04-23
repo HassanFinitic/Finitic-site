@@ -75,3 +75,69 @@ export const linksData = [
     // },
   
 ];
+
+// export const linksData = [
+//     {
+//       id: 1,
+//       url: "/products",
+//       textKey: "products",
+//       subLinks: [
+//         {
+//           id: 1,
+//           url: "/products/ib",
+//           textKey: "products.ibPortal"
+//         },
+//         {
+//           id: 2,
+//           url: "/products/forex",
+//           textKey: "products.forexCRM"
+//         },
+//         {
+//           id: 3,
+//           url: "/products/physical-gold",
+//           textKey: "products.physicalGold"
+//         },
+//         {
+//           id: 4,
+//           url: "/products/pamm-mam",
+//           textKey: "products.pammMam"
+//         },
+//         {
+//           id: 5,
+//           url: "/products/prop-firm",
+//           textKey: "products.propFirm"
+//         },
+//         {
+//           id: 6,
+//           url: "/products/data-tools",
+//           textKey: "products.dataTools"
+//         }
+//       ]
+//     },
+//     {
+//       id: 2,
+//       url: "/partnership",
+//       textKey: "partner"
+//     },
+//     {
+//       id: 3,
+//       url: "/contact-us",
+//       textKey: "contact"
+//     },
+//     {
+//       id: 4,
+//       url: "/pricing",
+//       textKey: "plans"
+//     },
+//     {
+//       id: 5,
+//       url: "/blog",
+//       textKey: "blogs"
+//     },
+//     {
+//       id: 6,
+//       url: "/faq",
+//       textKey: "faqs"
+//     }
+//   ];
+  
