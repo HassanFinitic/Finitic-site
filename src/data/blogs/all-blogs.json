@@ -18,4 +18,14 @@
     "type": "News",
     "timeToRead": "6"
   }
+  ,
+  {
+    "slug": "pamm-mam-system",
+    "title": "PAMM vs. MAM: Which Investment Model Fits Your Brokerage?",
+    "description": "Explore the benefits of PAMM and MAM systems for Forex brokerages, and learn how FINITIC provides fully integrated, customizable solutions for professional asset management.",
+    "image": "/assets/images/pamm-mam-system.jpg",
+    "imageTitle": "Featured",
+    "type": "News",
+    "timeToRead": "6"
+  }
 ]

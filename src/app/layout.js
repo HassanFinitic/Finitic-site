@@ -67,6 +67,38 @@ export default async function RootLayout({ children }) {
           `}
         </script>
 
+        {/* LinkedIn Pixel */}
+        <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
+                _linkedin_partner_id = "8323345";
+                window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+                window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+              `,
+            }}
+          />
+          
+          {/* LinkedIn Pixel */}
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(l) {
+                  if (!l) {
+                    window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+                    window.lintrk.q=[];
+                  }
+                  var s = document.getElementsByTagName("script")[0];
+                  var b = document.createElement("script");
+                  b.type = "text/javascript"; b.async = true;
+                  b.src = "https://snap.licdn.com/li.lmsanalytics/insight.min.js";
+                  s.parentNode.insertBefore(b, s);
+                })(window.lintrk);
+              `,
+            }}
+          />
+
         {/* Facebook Pixel */}
         <script>
           {`
@@ -82,6 +114,7 @@ export default async function RootLayout({ children }) {
             fbq('track', 'PageView');
           `}
         </script>
+        {/* Facebook Pixel noscript */}
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }} 
                src="https://www.facebook.com/tr?id=1312830792810806&ev=PageView&noscript=1" />
@@ -106,6 +139,10 @@ export default async function RootLayout({ children }) {
           src="https://www.googletagmanager.com/ns.html?id=GTM-W6P6VVRR" 
           height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} 
         ></iframe>
+
+        {/* LinkedIn Pixel noscript */}
+        <noscript> <img height="1" width="1" style={{ display: 'none' }} alt=""
+          src="https://px.ads.linkedin.com/collect/?pid=8323345&fmt=gif" /> </noscript>
       </body>
     </html>
   );

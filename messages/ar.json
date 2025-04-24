@@ -38,6 +38,9 @@
       "success send data": "تم إرسال بياناتك بنجاح!",
       "error robot": "يرجى التحقق من أنك لست روبوتًا!",
       "Something went wrong!": "حدث خطأ ما!",
-      "An error occurred while submitting your data.": "حدث خطأ أثناء إرسال بياناتك.",
-      "Error with reCAPTCHA. Please try again.": "حدث خطأ في reCAPTCHA. يرجى المحاولة مرة أخرى."
+      "An error occurred while submitting your data": "حدث خطأ أثناء إرسال بياناتك.",
+      "Error with reCAPTCHA Please try again": "حدث خطأ في reCAPTCHA. يرجى المحاولة مرة أخرى.",
+      
+      "min": "دقايق",
+      "Share With": "مشاركه مع"
     }

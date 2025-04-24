@@ -110,3 +110,35 @@
     left: -15px;
     transform: translateY(-50%);
   }
+
+
+  .tableWrapper {
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    /* text-align: left; */
+    text-align: center;
+  }
+  
+  .table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+
+  .link{
+    color: var(--font-heading-3);
+    text-decoration: underline;
+    padding-top: 50px;
+    margin-inline-start: 5px;
+  }

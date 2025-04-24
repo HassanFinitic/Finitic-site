@@ -8,7 +8,7 @@ import Icon from "./Icon";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
 import Button from "./Button";
-import Switcher from "../SwitcherButton/Switcher";
+// import Switcher from "../SwitcherButton/Switcher";
 import { useTranslations } from "next-intl";
 
 export default function Header() {

@@ -7,22 +7,68 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { CiCalendar } from "react-icons/ci";
 import { useState, useEffect } from "react";
+import { useLocale } from "next-intl";
+import { useTranslations } from "use-intl";
 
 // Helper component to render content items
 function RenderContent({ content }) {
-  if (!content) {
-    return null; // Return nothing if content is not available
-  }
+  if (!content) return null;
 
   return (
     <>
       {Array.isArray(content) ? (
-        content.map((item, index) =>
-          typeof item === "string" ? (
-            <p className={styles.description} key={index}>
-              {item}
-            </p>
-          ) : (
+        content.map((item, index) => {
+          if (typeof item === "string") {
+            return (
+              <p className={styles.description} key={index}>
+                {item}
+              </p>
+            );
+          }
+
+          // ✅ Enhanced table structure
+          if (item.table?.headers && item.table?.rows) {
+            return (
+              <div key={index} className={styles.tableWrapper}>
+                <table className={styles.table}>
+                  <thead>
+                    <tr>
+                      {item.table.headers.map((header, i) => (
+                        <th key={i}>{header}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {item.table.rows.map((row, i) => (
+                      <tr key={i}>
+                        {row.map((cell, j) => (
+                          <td key={j}>{cell}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            );
+          }
+
+          // ✅ Link structure
+          if (item.link?.text && item.link?.url) {
+            return (
+              <a
+                className={styles.link}
+                href={item.link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={index}
+              >
+                {item.link.text}
+              </a>
+            );
+          }
+
+          // ✅ Default to list if it's just an object
+          return (
             <ul key={index} className={styles.list}>
               {Object.entries(item).map(([key, value]) => (
                 <li key={key}>
@@ -30,8 +76,8 @@ function RenderContent({ content }) {
                 </li>
               ))}
             </ul>
-          )
-        )
+          );
+        })
       ) : (
         <p>No content available</p>
       )}
@@ -39,9 +85,11 @@ function RenderContent({ content }) {
   );
 }
 
+
 // Client-side only page component
 export default function Page({ params }) {
   const [slug, setSlug] = useState(null);
+  const t = useTranslations();
 
   useEffect(() => {
     // Wait for the params to be resolved
@@ -49,9 +97,12 @@ export default function Page({ params }) {
       const unwrappedParams = await params;
       setSlug(unwrappedParams.slug);
     };
-
     loadSlug();
   }, [params]);
+
+  const locale = useLocale();
+
+  console.log(locale);
 
   const [data, setData] = useState(null);
   const [currentUrl, setCurrentUrl] = useState("");
@@ -65,6 +116,7 @@ export default function Page({ params }) {
     // Dynamically import data based on slug
     const loadData = async () => {
       try {
+        // const response = await import(`@/data/blogs/${slug}-${locale}.json`);
         const response = await import(`@/data/blogs/${slug}.json`);
         setData(response);
 
@@ -88,7 +140,7 @@ export default function Page({ params }) {
     };
 
     loadData();
-  }, [slug]); // This will run when the slug changes
+  }, [slug, locale]); // This will run when the slug changes
 
   if (!data) {
     return <p>Loading the page content...</p>;
@@ -118,7 +170,7 @@ export default function Page({ params }) {
             <CiCalendar size={20} />
             <p>{data.date}</p>
           </Flex>
-          <p className={styles.timeToRead}>{data.timeToRead} min</p>
+          <p className={styles.timeToRead}>{data.timeToRead} {t('min')}</p>
           <p className={styles.type}>{data.type}</p>
         </Flex>
         <Flex
@@ -127,7 +179,7 @@ export default function Page({ params }) {
           className={styles.right}
           gap={"10px"}
         >
-          <div className="text">Share With :</div>
+          <div className="text">{t('Share With')} :</div>
           <Flex gap={"5px"} className="links">
             <a
               className={styles["social-icon"]}
