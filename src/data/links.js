@@ -18,7 +18,7 @@ export const linksData = [
             {
                 id:3,
                 url:"/products/physical-gold",
-                text:"Physical Gold"
+                text:"Physical Gold System"
             },
             {
                 id:4,
@@ -28,12 +28,12 @@ export const linksData = [
             {
                 id:5,
                 url:"/products/prop-firm",
-                text:"Prop Firm"
+                text:"Prop Firm Solutions"
             },
             {
                 id:6,
                 url:"/products/data-tools",
-                text:"Data Tools"
+                text:"Market Data Tools"
             }
         ]
     },

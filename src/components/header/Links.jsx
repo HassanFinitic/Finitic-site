@@ -69,7 +69,7 @@ export default function Links({ linksData }) {
                       href={subLink.url}
                       className={style["dropdown-item"]}
                     >
-                      {subLink.text}
+                      {t(subLink.text)}
                     </Link>
                   ))}
                 </div>

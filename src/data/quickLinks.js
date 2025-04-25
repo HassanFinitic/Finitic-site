@@ -13,16 +13,6 @@ export const quickLinksData = [
                 url: "/about-us",
                 text: "About Us",
             },
-            // {
-            //     id: 3,
-            //     url: "/legal",
-            //     text: "Legal",
-            // },
-            // {
-            //     id: 4,
-            //     url: "/blog",
-            //     text: "Blog",
-            // },
             {
                 id: 5,
                 url: "/contact-us",
@@ -58,7 +48,7 @@ export const quickLinksData = [
             {
                 id: 5,
                 url: "/products/prop-firm",
-                text: "Prop Firm System",
+                text: "Prop Firm Solutions",
             },
             {
                 id: 6,
@@ -77,11 +67,6 @@ export const quickLinksData = [
                 url: "/faq",
                 text: "FAQ",
             },
-            // {
-            //     id: 2,
-            //     url: "/",
-            //     text: "Terms",
-            // },
             {
                 id: 2,
                 url: "/privacy-policy",

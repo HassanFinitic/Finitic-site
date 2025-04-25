@@ -13,8 +13,10 @@ import Header from "../shared/header/Header";
 import Button from "../shared/button/Button";
 import { useEffect } from "react";
 import Aos from "aos";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations();
   useEffect(() => {
     Aos.init({
       duration: 500,
@@ -29,27 +31,26 @@ export default function Footer() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <Header decription={"Start your journey today"} />
+          <Header decription={t("Start your journey today")} />
           <div style={{ padding: "1rem 0" }}>
-            <Button url={"/contact-us"} text={"Contact us"} center={true} />
+            <Button url={"/contact-us"} text={t("Contact Us")} center={true} />
           </div>
         </div>
         <div className={style["top"]}>
           <div className={style["content"]}>
             <Logo logo={logo} alt="Finitic Logo" />
             <p className={style["solutions"]}>
-              Solutions that fuel growth and accelerate <br /> your business
-              success
+              {t("Solutions that fuel growth and accelerate your business success")}
             </p>
           </div>
           <div className={style["quick-links"]}>
             {quickLinksData.map((quickLink) => (
               <div key={quickLink.id} className={style["quick-link"]}>
-                <p className={style["title"]}>{quickLink.title}</p>
+                <p className={style["title"]}>{t(quickLink.title)}</p>
                 <ul className={style["links"]}>
                   {quickLink.links.map((link) => (
                     <li className={style["link"]} key={link.id}>
-                      <Link href={link.url}>{link.text}</Link>
+                      <Link href={link.url}>{t(link.text)}</Link>
                     </li>
                   ))}
                 </ul>
@@ -61,9 +62,9 @@ export default function Footer() {
         <div className={style["bottom"]}>
           <div className={style["copyright"]}>
             <p className={style["copyright-text"]}>
-              Copyright © <CurrentYear /> FINITIC INFORMATION TECHNOLOGY
+              {t("Copyright © 2025 FINITIC INFORMATION TECHNOLOGY")}
             </p>
-            <p className={style["copyright-text"]}>All Rights Reserved</p>
+            <p className={style["copyright-text"]}>{t("All rights reserved")}</p>
           </div>
           <div className={style["social-icons"]}>
             <Link
