@@ -57,10 +57,10 @@
     border: 0px;
     /* margin: 20px 0; */
     cursor: pointer;
+    width: 150px;
     /* position: relative;
     top: -72px;
     right: -156px; */
-
 }
 
 @keyframes horizontal-shaking {
