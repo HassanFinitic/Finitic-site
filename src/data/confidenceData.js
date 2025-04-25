@@ -4,7 +4,7 @@ export const confidenceData = [
         imagealt: "Customize your software to match your forex needs",
         title: "Customizable Solutions",
         description:
-            "Adapt our platform to meet your unique brokerage needs and growth goals.",
+            "Adapt our platform to meet your unique brokerage needs and growth goals",
         delay: "0"
     },
     {
@@ -12,7 +12,7 @@ export const confidenceData = [
         imagealt: "daily live forex trading reports",
         title: "Real-Time Data",
         description:
-            "Access live Forex trading insights for quick decisions.",
+            "Access live Forex trading insights for quick decisions",
         delay: "500"
     },
     {
@@ -20,7 +20,7 @@ export const confidenceData = [
         imagealt: "detailed fintech reporting",
         title: "Automated Reporting",
         description:
-            "Simplify operations with detailed, real-time reports for smarter decision-making.",
+            "Simplify operations with detailed, real-time reports for smarter decision-making",
         delay: "1000"
     },
 
