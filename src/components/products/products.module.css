@@ -25,6 +25,7 @@
   padding: 28px 24px;
   border-radius: 28px;
   justify-items: center;
+  min-height: 400px;
   max-height: 500px;
 
 }

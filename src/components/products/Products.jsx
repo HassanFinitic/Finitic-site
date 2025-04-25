@@ -4,8 +4,10 @@ import styles from "./products.module.css"
 import React, { useEffect } from "react";
 import Aos from "aos";
 import Grid from "../grid/Grid";
+import { useTranslations } from "next-intl";
 const Products = ({productsData,subDescription,description,title}) => {
-    useEffect(() => {
+  const t = useTranslations();  
+  useEffect(() => {
         Aos.init({
           duration: 1000, 
           once: true
@@ -21,8 +23,8 @@ const Products = ({productsData,subDescription,description,title}) => {
                   data-aos-easing="ease-out-cubic"
                   data-aos-duration={product.delay}>
                     <div>{product.icon}</div>
-                    <h6>{product.title}</h6>
-                    <p>{product.description}</p>
+                    <h6>{t(product.title)}</h6>
+                    <p>{t(product.description)}</p>
                 </div>
             ))}
         </Grid>

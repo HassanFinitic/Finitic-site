@@ -11,42 +11,42 @@ export const productsData = [
       icon: <Forex />,
       title: "Forex CRM",
       description:
-        "A centralized platform tailored for brokers to manage client relationships, streamline operations, and implement effective Forex trading strategies.",
+        "A centralized platform tailored for brokers to manage client relationships, streamline operations, and implement effective Forex trading strategies",
       delay: "0"
     },
     {
       icon: <Ib />,
       title: "IB Portal",
       description:
-        "Equip Brokers with a user-friendly system to track performance, manage commissions, and leverage advanced Forex analysis tools.",
+        "Equip Brokers with a user-friendly system to track performance, manage commissions, and leverage advanced Forex analysis tools",
            delay: "500"
     },
     {
       icon: <Gold />,
       title: "Physical Gold System",
       description:
-        "Offer secure trading and management of gold assets, providing brokers with a reliable solution alongside Forex trading platforms.",
+        "Offer secure trading and management of gold assets, providing brokers with a reliable solution alongside Forex trading platforms",
            delay: "1000"
     },
     {
       icon: <Mam />,
       title: "PAMM/MAM",
       description:
-        "Enable efficient management of pooled accounts with customizable tools that align with your brokerage’s Forex trading strategies.",
+        "Enable efficient management of pooled accounts with customizable tools that align with your brokerage’s Forex trading strategies",
              delay: "1000"
     },
     {
       icon: <Mt4 />,
       title: "MT4/MT5 Administration",
       description:
-        "Seamlessly integrate with leading Forex trading platforms, optimizing broker operations and enhancing strategic trading.",
+        "Seamlessly integrate with leading Forex trading platforms, optimizing broker operations and enhancing strategic trading",
       delay: "500"
     },
     {
       icon: <Prop />,
       title: "Prop Firm Solutions",
       description:
-        "Empower brokers to design proprietary trading programs with tools for evaluating performance, implementing Forex signals, and fostering trader success.",
+        "Empower brokers to design proprietary trading programs with tools for evaluating performance, implementing Forex signals, and fostering trader success",
         delay: "0"
     },
   ];

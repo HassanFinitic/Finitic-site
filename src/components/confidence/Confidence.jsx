@@ -16,7 +16,7 @@ const Confidence = ({Data,title,decription}) => {
       }, []);
   return (
     <div className={` container ${styles["confidence-container"]}`}>
-        <Header  decription={t(title) || t("We Ensure Your Business Operates with Confidence")} />
+        <Header  decription={title || t("We Ensure Your Business Operates with Confidence")} />
         {decription && <p className={styles["confidence-decription"]}>{t("Expand your portfolio with FINITIC’s gold trading platform and provide your clients with trusted solutions to diversify investments in precious metals trading.")}</p>}
         <Grid colsLarge={3} colsMedium={2} colsSmall={1} gap={"10"}>
             {Data.map((product,index) => (
