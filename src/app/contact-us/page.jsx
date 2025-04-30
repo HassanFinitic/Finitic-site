@@ -32,8 +32,7 @@ const page = () => {
               Head Office
             </h6>
             <p>
-              Business Bay – Burj Khalifa Str. Prime Tower 21st Floor - Office
-              No 2104 – Dubai- United Arab Emirates
+            Office 2102, Donna Tower, Silicon Oasis, Dubai, UAE, Dubai, United Arab Emirates
             </p>
           </div>
           <div className={style["contact-us__info-content"]}>
@@ -41,7 +40,11 @@ const page = () => {
               <Phone />
               Phone
             </h6>
-            <p>+971 4 568 9835</p>
+            <span>Head Quarter: (Dubai - UAE)  </span>
+            <p> +971 4 575 8863</p>
+
+            <span>Operations: (Cairo - Egypt)  </span>
+            <p> 0225173607</p>
           </div>
           <div className={style["contact-us__info-content"]}>
             <h6 className="">
