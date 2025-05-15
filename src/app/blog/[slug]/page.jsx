@@ -67,6 +67,36 @@ function RenderContent({ content }) {
             );
           }
 
+          // ✅ Enhanced: Mixed array of links and text
+          if (Array.isArray(item.link)) {
+            return (
+              <p key={index} className={styles.description}>
+                {item.link.map((linkItem, i) => {
+                  if (typeof linkItem === "string") {
+                    return <span key={i}>{linkItem} </span>;
+                  }
+
+                  if (typeof linkItem === "object" && linkItem.text && linkItem.url) {
+                    return (
+                      <a
+                        key={i}
+                        href={linkItem.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.link}
+                      >
+                        {linkItem.text}
+                      </a>
+                    );
+                  }
+
+                  return null; // Ignore unknown structures
+                })}
+              </p>
+            );
+          }
+
+
           // ✅ Default to list if it's just an object
           return (
             <ul key={index} className={styles.list}>

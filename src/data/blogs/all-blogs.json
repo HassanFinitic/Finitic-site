@@ -28,4 +28,14 @@
     "type": "News",
     "timeToRead": "6"
   }
+  ,
+  {
+    "slug": "physical-gold-systems",
+    "title": "Why More Brokers Are Adding Physical Gold Trading Systems to Their Platforms?",
+    "description": "In a world of economic uncertainty, gold remains one of the most trusted and time-tested assets. While digital currencies and forex pairs experience constant fluctuations, physical gold stands out as a reliable store of value.",
+    "image": "/assets/images/physical-gold-systems.jpg",
+    "imageTitle": "Featured",
+    "type": "News",
+    "timeToRead": "6"
+  }
 ]
