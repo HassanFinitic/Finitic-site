@@ -116,5 +116,10 @@
       "Copyright © 2025 FINITIC INFORMATION TECHNOLOGY": "Copyright © 2025 FINITIC INFORMATION TECHNOLOGY",
       "All rights reserved": "All rights reserved",
       "min": "min",
-      "Share With": "Share With"
+      "Share With": "Share With",
+
+
+      "IB_Portal_Page" : {
+        "hello": "hello"
+      }
     }

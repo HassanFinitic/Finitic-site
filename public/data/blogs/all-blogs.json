@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "all-in-one-hybrid-system-for-brokers",
+    "title": "The All-in-One Hybrid System for Brokers",
+    "description": "Brokers face increasing challenges managing clients, trading platforms, and partner networks across disconnected systems. This fragmentation leads to inefficiencies, higher costs, and operational slowdowns.",
+    "image": "/assets/images/all-in-one-hybrid-system-for-brokers.jpg",
+    "imageTitle": "Featured",
+    "type": "News",
+    "timeToRead": "5"
+  }
+  ,
+  {
+    "slug": "transforming-forex-trading-with-finitics-crm",
+    "title": "Transforming Forex Trading with FINITIC’s CRM: A Seamless Journey for Brokers",
+    "description": "Discover how FINITIC’s Forex CRM helps brokers streamline their operations, increase efficiency, and boost client satisfaction. A must-have tool for growth in the forex trading industry.",
+    "image": "/assets/images/transforming-forex-trading-with-finitics-crm.jpg",
+    "imageTitle": "Featured",
+    "type": "News",
+    "timeToRead": "6"
+  }
+  ,
+  {
+    "slug": "pamm-mam-system",
+    "title": "PAMM vs. MAM: Which Investment Model Fits Your Brokerage?",
+    "description": "Explore the benefits of PAMM and MAM systems for Forex brokerages, and learn how FINITIC provides fully integrated, customizable solutions for professional asset management.",
+    "image": "/assets/images/pamm-mam-system.jpg",
+    "imageTitle": "Featured",
+    "type": "News",
+    "timeToRead": "6"
+  }
+  ,
+  {
+    "slug": "physical-gold-systems",
+    "title": "Why More Brokers Are Adding Physical Gold Trading Systems to Their Platforms?",
+    "description": "In a world of economic uncertainty, gold remains one of the most trusted and time-tested assets. While digital currencies and forex pairs experience constant fluctuations, physical gold stands out as a reliable store of value.",
+    "image": "/assets/images/physical-gold-systems.jpg",
+    "imageTitle": "Featured",
+    "type": "News",
+    "timeToRead": "6"
+  }
+]

@@ -146,9 +146,17 @@ export default function Page({ params }) {
     // Dynamically import data based on slug
     const loadData = async () => {
       try {
-        // const response = await import(`@/data/blogs/${slug}-${locale}.json`);
-        const response = await import(`@/data/blogs/${slug}.json`);
-        setData(response);
+        const response = await fetch(`/data/blogs/${slug}.json`);
+        // const response = await fetch(`/data/blogs/${slug}-${locale}.json`);
+        // let response;
+        // if (locale === "ar") {
+        //   response = await fetch(`/data/blogs/${slug}-ar.json`);
+        // } else {
+        //   response = await fetch(`/data/blogs/${slug}-en.json`);
+        // }
+
+        const json = await response.json();
+        setData(json);
 
         // Set meta data dynamically based on imported data
         if (response) {
