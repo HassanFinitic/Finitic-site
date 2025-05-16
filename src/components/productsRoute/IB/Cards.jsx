@@ -5,9 +5,11 @@ import { useEffect } from 'react'
 import Flex from '@/components/flex/Flex'
 import { MdElectricBolt } from 'react-icons/md'
 import Aos from "aos";
+import { useTranslations } from 'next-intl';
 
 export default function Cards({data}) {
 
+    const t = useTranslations("IB_Portal_Page");
     useEffect(() => {
         Aos.init({
           duration: 1000, 
@@ -27,8 +29,8 @@ export default function Cards({data}) {
                   </div>
                 
                 </div>
-                <div className={style.title}>{feature.title}</div>
-                <div className={style.description}>{feature.description}</div>
+                <div className={style.title}>{t(feature.title)}</div>
+                <div className={style.description}>{t(feature.description)}</div>
                 </Flex>
               </div>
             ))
