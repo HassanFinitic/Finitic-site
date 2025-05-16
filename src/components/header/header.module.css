@@ -95,6 +95,13 @@
 
 /* end the links */
 
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 .button-container .button {
   position: relative;
   outline: none;

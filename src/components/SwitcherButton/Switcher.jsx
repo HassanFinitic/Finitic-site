@@ -1,35 +1,38 @@
 import { locales } from '@/i18n/config';
-import { setUserLocale } from '@/services/locale';
-import React from 'react';
-import './Switcher.css'; // Create this CSS file for styles
+import { setUserLocale, getUserLocale } from '@/services/locale';
+import React, { useEffect, useState } from 'react';
+import './Switcher.css';
 
-const localeFlagMap = {
-  en: 'gb',  // English -> Great Britain
-  ar: 'sa',  // Arabic -> Saudi Arabia
-  // Add more mappings as needed
+const localeLabelMap = {
+  en: 'English',
+  ar: 'العربية',
 };
 
 export default function Switcher() {
-  const handleClick = (locale) => {
-    setUserLocale(locale);
+  const [currentLocale, setCurrentLocale] = useState('en');
+
+  useEffect(() => {
+    const fetchLocale = async () => {
+      const storedLocale = await getUserLocale();
+      setCurrentLocale(storedLocale || 'en');
+    };
+
+    fetchLocale();
+  }, []);
+
+  const handleClick = () => {
+    const newLocale = currentLocale === 'en' ? 'ar' : 'en';
+    console.log("newLocale", newLocale);
+    setUserLocale(newLocale);
+    setCurrentLocale(newLocale);
   };
 
   return (
-    <div className="switcher-container">
-      {locales.map((locale) => (
-        <button
-          className="flag-button"
-          onClick={() => handleClick(locale)}
-          key={locale}
-          aria-label={`Switch language to ${locale}`}
-        >
-          <img
-            src={`https://flagcdn.com/24x18/${localeFlagMap[locale]}.png`}
-            alt={`${locale} flag`}
-            className="flag-icon"
-          />
-        </button>
-      ))}
-    </div>
+    <button className="switcher-button" onClick={handleClick}>
+      <p>{currentLocale === 'en' ? 'العربية' : 'English'}</p>
+      <span className="globe-icon" role="img" aria-label="language switcher">
+        🌐
+      </span>
+    </button>
   );
 }

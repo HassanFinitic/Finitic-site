@@ -29,12 +29,12 @@ export default function Header() {
         
         {/* Logo */}
         <Logo logo={logo} alt="Finitic Logo" />
-        {/* <Switcher /> */}
         
         {/* Links */}
         <Links linksData={linksData} />
 
       <div className={style["button-container"]}>
+      {/* <Switcher /> */}
         {/* Button */}
         <Button url={"/contact-us"}  title={t("start New Challenge")} />
 

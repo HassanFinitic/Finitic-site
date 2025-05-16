@@ -1,26 +1,27 @@
-.switcher-container {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-  }
-  
-  .flag-button {
-    background: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 6px;
-    cursor: pointer;
-    transition: border-color 0.3s, transform 0.2s;
-  }
-  
-  .flag-button:hover {
-    border-color: #0070f3;
-    transform: scale(1.05);
-  }
-  
-  .flag-icon {
-    width: 24px;
-    height: 18px;
-    display: block;
-  }
+.switcher-button {
+  background: none;
+  border: none;
+  color: #1a1a1a;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  /* flex-direction: row-reverse; */
+
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  font-weight: 500;
+  width: 100px;
+}
+
+.switcher-button:hover {
+  opacity: 0.8;
+}
+
+
+.globe-icon {
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
   
