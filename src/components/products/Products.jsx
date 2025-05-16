@@ -23,8 +23,8 @@ const Products = ({productsData,subDescription,description,title}) => {
                   data-aos-easing="ease-out-cubic"
                   data-aos-duration={product.delay}>
                     <div>{product.icon}</div>
-                    <h6>{t(product.title)}</h6>
-                    <p>{t(product.description)}</p>
+                    <h6>{product.title}</h6>
+                    <p>{product.description}</p>
                 </div>
             ))}
         </Grid>
