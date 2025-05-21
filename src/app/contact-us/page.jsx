@@ -43,8 +43,8 @@ const page = () => {
             <span>Head Quarter: (Dubai - UAE)  </span>
             <p> +971 4 575 8863</p>
 
-            <span>Operations: (Cairo - Egypt)  </span>
-            <p> 0225173607</p>
+            {/* <span>Operations: (Cairo - Egypt)  </span>
+            <p> 0225173607</p> */}
           </div>
           <div className={style["contact-us__info-content"]}>
             <h6 className="">
