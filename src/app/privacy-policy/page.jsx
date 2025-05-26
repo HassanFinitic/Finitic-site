@@ -37,8 +37,32 @@ const ourPolicy = [
         lastContent: ``
     },
     {
-        id: 2,
+        id: 13,
         number: 2,
+        title: "Terms & Conditions",
+        content: `We accept payments online using Visa and MasterCard credit/debit card in AED`,
+    },
+    {
+        id: 14,
+        number: 3,
+        title: "Delivery & Shipping",
+        content: `Finitic will NOT deal or provide any services or products to any of OFAC (Office of Foreign Assets Control) sanctions countries in accordance with the law of UAE`,
+    },
+    {
+        id: 15,
+        number: 4,
+        title: "Refund/Return",
+        content: `Refunds will be done only through the Original Mode of Payment`,
+    },
+    {
+        id: 16,
+        number: 5,
+        title: "Governing Law and Jurisdiction",
+        content: `Any purchase, dispute or claim arising out of or in connection with this website shall be governed and construed in accordance with the laws of UAE`,
+    },
+    {
+        id: 2,
+        number: 6,
         title: "Information we collect about you",
         content: `Each time you use the Service we may automatically collect the following information:`,
         array: [
@@ -63,28 +87,28 @@ const ourPolicy = [
     },
     {
         id: 3,
-        number: 3,
+        number: 7,
         title: "Information we receive from other sources",
         content: "We may receive information about you if you use any of the other websites we operate or the other services we provide. In this case we will have informed you when we collected that data that it may be shared internally and combined with data collected via the Service. We are also working closely with third parties (including, for example, business partners, sub-contractors in technical, payment and delivery services, advertising networks, analytics providers, search information providers, credit reference agencies) and may receive information about you from them. ",
         array:[]
     },
     {
         id: 4,
-        number: 4,
+        number: 8,
         title: "Use of cookies",
         content: "We use cookies on our website to distinguish you from other users of our website and Service. This helps us to provide you with a better experience when you browse our website and allows us to improve the website and Service.",
         array: []
     },
     {
         id: 5,
-        number: 5,
+        number: 9,
         title: "If you are under 13 years of age",
         content: "If you're under the age of 13, you may not have an account on the Service. We do not knowingly collect information from or direct any of our content specifically to children under 13. If we learn or have reason to suspect that you are a user who is under the age of 13, we will unfortunately have to close your account. Please see our Customer Terms for information about account termination.",
         array: [],
     },
     {
         id: 6,
-        number: 6,
+        number: 10,
         title: "Uses made of Information",
         content: "We will only use information held about you for the following purposes.",
         array: []
@@ -203,7 +227,7 @@ By using our websites and/or the Service you consent to our third-party service 
   },
   {
     id: 12,
-    number: 7,
+    number: 11,
     title: "Your rights",
     content: "",
     array:[],
@@ -272,6 +296,7 @@ export default function Page() {
             </div>
             
             <h1 className={styles.title}>Privacy Policy</h1>
+            <p className={styles.inform}>All credit/debit cards details and personally identifiable information will NOT be stored, sold, shared, rented or leased to any third parties</p>
             <p className={styles.content}>{mainContent}</p>
 
             <div className={styles.policiesContainer}>
