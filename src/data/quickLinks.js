@@ -73,7 +73,12 @@ export const quickLinksData = [
                 text: "Privacy Policy",
             },
             {
-                id: 3,
+                id:3,
+                url: "/cancellation-policy",
+                text: "Cancellation Policy",
+            },
+            {
+                id: 4,
                 url: "/blog",
                 text: "Blogs",
             },
