@@ -1,0 +1,35 @@
+.fullContainer {
+    padding: 2rem 0;
+    color: var(--white-font-color);
+  }
+  
+  .section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+  }
+  
+  .description {
+    margin-bottom: 1rem;
+    color: var(--gray-font-color);
+  }
+  
+  .list {
+    padding-left: 1.2rem;
+    list-style-type: disc;
+  }
+  
+  .listItem {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    color: var(--gray-font-color);
+  }
+  
+  .listItem strong {
+    color: var(--white-font-color);
+  }
+  
