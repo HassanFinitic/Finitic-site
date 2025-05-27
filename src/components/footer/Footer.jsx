@@ -93,6 +93,12 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+            <div className={style["images"]}>
+            <img src="/assets/images/master_card.png" alt="" />
+            <img src="/assets/images/visa.jpg" alt="" />
+            <img src="/assets/images/secure_code.png" alt="" />
+            <img src="/assets/images/verified.png" alt="" />
+            </div>
       </div>
     </div>
   );
