@@ -15,7 +15,7 @@ export default function AccordionItem ({ title, children }) {
                 className={styles.accordionHeader}
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <span className={`${isOpen ? styles["plus-active"] : ""}`}>
+                <span className={isOpen ? styles["plus-active"] : ""}>
                     <Plus />
                 </span>
                 {title}

@@ -11,6 +11,7 @@ import IconsSection from '@/components/shared/iconsSection/IconsSection'
 import WhyPropFirm from '@/components/whyPropFirm/WhyPropFirm'
 import Subscribe from '@/components/subscribe/Subscribe'
 import Faq from '@/components/faq/Faq'
+import { useTranslations } from "next-intl";
 
 export const metadata = {
   title: "Top Prop Trading Firm | Funded Forex Trading Accounts ",
@@ -19,41 +20,41 @@ export const metadata = {
 };
 
 const page = () => {
+    const t = useTranslations("prop_firm_page");
   return (
     <div className={style["prop-firm-container"]}>
       <ProductHeader
-        title={"Prop Firm System"}
-        productName={"Prop Trading Firms"}
-        startDescription={"Empowering Brokers to lead the"}
+        title={t("Prop Firm System")}
+        productName={t("Prop Trading Firms")}
+        startDescription={t("Empowering Brokers to lead the")}
       />
       <p className={style.description}>
-        Build, manage, and scale your proprietary trading firm with a fully
-        customizable and automated system.
+        {t("Build, manage, and scale your proprietary trading firm with a fully customizable and automated system")}
       </p>
-      <ProductButton title={"Book A Demo"} />
+      <ProductButton title={t("Book A Demo")} />
       <PamSolution
         image="/assets/images/propfirm.jpg"
         highLightTitle="Prop Firm"
-        title="System"
-        description="Our Prop Firm System is a complete solution designed for brokers looking to establish and expand their proprietary trading firms. With advanced automation, seamless platform integration, and risk management tools, you can efficiently attract, evaluate, and manage traders while maximizing profitability."
+        title={t("System")}
+        description={t("Our Prop Firm System is a complete solution designed for brokers looking to establish and expand their proprietary trading firms With advanced automation, seamless platform integration, and risk management tools, you can efficiently attract, evaluate, and manage traders while maximizing profitability")}
       />
       <IconsSection
         iconsInfo={[
           {
             icon: <Prop1 />,
-            title: "Multiple Accounts Managed",
+            title: t("Multiple Accounts Managed"),
           },
           {
             icon: <Prop2 />,
-            title: "Performance Tracking",
+            title: t("Performance Tracking"),
           },
           {
             icon: <Prop3 />,
-            title: "Allocation Methods",
+            title: t("Allocation Methods"),
           },
           {
             icon: <Prop4 />,
-            title: "System Integration",
+            title: t("System Integration"),
           },
         ]}
       />

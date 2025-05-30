@@ -37,11 +37,16 @@
   }
   
   .feature {
-    margin-left: 20px;
+    margin-inline-start: 20px;
     padding: 10px;
     border-left: 2px solid #FFAA00;
     margin-top: 20px;
     border-radius: 10px;
+  }
+
+  html[dir="rtl"] .feature{
+    border-right: 2px solid #FFAA00;
+    border-left: none;
   }
   
   .feature .title {

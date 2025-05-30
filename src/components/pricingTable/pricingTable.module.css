@@ -51,7 +51,7 @@
   
 
   .pricingTable tr td:first-child {
-    text-align: left;
+    text-align: start;
     color: #1F1F1F;
   }
   
@@ -60,7 +60,7 @@
     background: #f9f9f9;
   }
   
-  .pricingTable thead tr:first-child th:first-child {
+  /* .pricingTable thead tr:first-child th:first-child {
     border-top-left-radius: 28px;
    }
    
@@ -90,4 +90,4 @@
   
  .pricingTable tbody tr:last-child td:last-child {
     border-bottom-right-radius: 28px;
-   } 
+   }  */

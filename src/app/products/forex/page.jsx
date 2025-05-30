@@ -1,12 +1,13 @@
 import style from './forex.module.css';
 import WhyFiniticCrm from '@/components/whyFiniticCrm/WhyFiniticCrm';
 import Products from '@/components/products/Products';
-import { productsDataForex } from '@/data/productsDataForex';
+import { useProductsDataForex } from '@/data/productsDataForex';
 import Faq from '@/components/faq/Faq';
 import Subscribe from '@/components/subscribe/Subscribe';
 import ForexFeatures from '@/components/forexFeatures/ForexFeatures';
 import ProductHeader from '@/components/shared/productHeader/ProductHeader';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export const metadata = {
   title: "Forex CRM | CRM for Forex Brokers & Investors | Finitic Technologies",
@@ -15,15 +16,17 @@ export const metadata = {
 };
 
 export default function index() {
+const t = useTranslations('Forex_CRM_Page');
+const productsDataForex = useProductsDataForex();
   return (
     <div className={`  ${style["forex-container"]}`}>
-        <ProductHeader  title={"Simplify, Optimize, Succeed"} productName={"Forex CRM"} startDescription={"Your Complete"} endDescription={"Solution"}/>
-       <p className={style.decription}>FINITIC’s Forex CRM: A seamless solution for forex brokers to manage clients, track leads, and scale operations efficiently.</p>
-       <Link href={`/contact-us`}><button className={style.button}>Get Your CRM in 7 days only</button></Link>
+        <ProductHeader  title={t("Simplify, Optimize, Succeed")} productName={t("Forex CRM")} startDescription={t("Your Complete")} endDescription={t("Solution")}/>
+       <p className={style.decription}>{t("FINITIC’s Forex CRM: A seamless solution for forex brokers to manage clients, track leads, and scale operations efficiently")}</p>
+       <Link href={`/contact-us`}><button className={style.button}>{t("Get Your CRM in 7 days only")}</button></Link>
        <WhyFiniticCrm />
        <ForexFeatures />
        <Products productsData={productsDataForex} 
-        description={"How FINITIC's Forex CRM Benefits Your Brokerage ?"}
+        description={t("How FINITIC's Forex CRM Benefits Your Brokerage ?")}
        />
        <Subscribe />
        <Faq />

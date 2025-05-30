@@ -3,15 +3,15 @@ import React from "react";
 import style from "./physical-gold.module.css";
 import Cards from "@/components/productsRoute/IB/Cards";
 import Heading from "@/components/productsRoute/shared/Heading";
-import { metalsSolutionsData } from "@/data/metalsSolutionsData";
 import Image from "next/image";
 import WhyFiniticGold from "@/components/whyFiniticGold/WhyFiniticGold";
 import Confidence from "@/components/confidence/Confidence";
-import { featuresGoldData } from "@/data/featuresGoldData";
+import { useFeaturesGoldData } from "@/data/featuresGoldData";
 import ProductButton from "@/components/shared/productButton/ProductButton";
 import ProductHeader from "@/components/shared/productHeader/ProductHeader";
-import { featuresGold } from "@/data/featuresGold";
-
+import { useFeaturesGold } from "@/data/featuresGold";
+import { useTranslations } from "next-intl";
+import { useMetalsSolutionsData } from "@/data/metalsSolutionsData";
 export const metadata = {
   title: "Physical Gold System | Buy & Sell Physical Gold | Finitic Technologies",
   description:"Trade physical gold with Finitic Technologies. Securely buy, sell, and store physical gold with competitive pricing and reliable service.",
@@ -19,27 +19,31 @@ export const metadata = {
 };
 
 const page = () => {
+  const metalsSolutionsData = useMetalsSolutionsData();
+  const featuresGold = useFeaturesGold();
+  const featuresGoldData = useFeaturesGoldData();
+  const t = useTranslations("physical_gold_page");
   return (
     <div className={` ${style["physical-gold-container"]}`}>
       <ProductHeader
-        title={"Top-Tier Provider of Gold Trading Platforms"}
-        productName={"Physical Gold"}
-        startDescription={"Comprehensive "}
-        endDescription={"Trading Platform"}
+        title={t("Top-Tier Provider of Gold Trading Platforms")}
+        productName={t("Physical Gold")}
+        startDescription={t("Comprehensive")}
+        endDescription={t("Trading Platform")}
       />
       <p className={style.decription}>
-        Secure, Scalable, and Fully Integrated System.
+        {t("Secure, Scalable, and Fully Integrated System")}
       </p>
-      <ProductButton title={"Request Your Demo"} />
+      <ProductButton title={t("Request Your Demo")} />
       <div style={{ background: "#F3F3F3" }}>
         <div className="container" style={{ paddingTop: "120px" }}>
-          <Heading title={"Comprehensive Precious Metals Solutions"} />
+          <Heading title={t("Comprehensive Precious Metals Solutions")} />
 
           <Cards data={metalsSolutionsData} />
 
           <div style={{ marginTop: "50px" }}>
             <Header
-              decription={"Trade Gold Forex and Precious Metals with Ease."}
+              decription={t("Trade Gold Forex and Precious Metals with Ease")}
             />
             <div className={style["forex-container"]}>
               <div className={style["forex-item"]}>
@@ -49,7 +53,7 @@ const page = () => {
                   height={20}
                   width={20}
                 />
-                Margin Requirement from 0.5%
+                {t("Margin Requirement from 1/2%")}
               </div>
               <div className={style["forex-item"]}>
                 <Image
@@ -58,7 +62,7 @@ const page = () => {
                   height={20}
                   width={20}
                 />
-                14+ Connectivity Options
+                {t("14+ Connectivity Options")}
               </div>
               <div className={style["forex-item"]}>
                 <Image
@@ -67,7 +71,7 @@ const page = () => {
                   height={20}
                   width={20}
                 />
-                13 Instruments
+                {t("13 Instruments")}
               </div>
               <div className={style["forex-item"]}>
                 <Image
@@ -76,7 +80,7 @@ const page = () => {
                   height={20}
                   width={20}
                 />
-                23/5 Trading hours
+                {t("23/5 Trading hours")}
               </div>
             </div>
           </div>
@@ -84,8 +88,8 @@ const page = () => {
         </div>
         <Confidence
           Data={featuresGoldData}
-          title="Features That Set Us Apart"
-          decription="Expand your portfolio with FINITIC’s gold trading platform and provide your clients with trusted solutions to diversify investments in precious metals trading."
+          title={t("Features That Set Us Apart")}
+          decription={t("Expand your portfolio with FINITIC’s gold trading platform and provide your clients with trusted solutions to diversify investments in precious metals trading")}
         />
       </div>
     </div>

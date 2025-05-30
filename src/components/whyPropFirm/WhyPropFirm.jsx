@@ -2,34 +2,38 @@ import React from "react";
 import styles from "./whyPropFirm.module.css";
 import Image from "next/image";
 import Header from "../shared/header/Header";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 const WhyPropFirm = () => {
+  const t = useTranslations("prop_firm_page");
+  const lang = useLocale();
   const features = [
     {
-      title: "Customizable Challenge Plans",
+      title: t("Customizable Challenge Plans"),
       description:
-        "Tailor trading challenges your prop trading firm’s unique strategy. Set profit targets, drawdowns, and timeframes to align with your goals and attract skilled traders.",
+        t("Tailor trading challenges your prop trading firm’s unique strategy Set profit targets, drawdowns, and timeframes to align with your goals and attract skilled traders"),
     },
     {
-      title: "Streamlined Evaluation Process",
+      title: t("Streamlined Evaluation Process"),
       description:
-        "Automate trader evaluations with transparent workflows. Save time and ensure fairness, a hallmark of leading forex prop firms.",
+        t("Automate trader evaluations with transparent workflows Save time and ensure fairness, a hallmark of leading forex prop firms"),
     },
     {
-      title: "Advanced Analytics & Reporting",
+      title: t("Advanced Analytics & Reporting"),
       description:
-        "Track trader performance in real-time. Use detailed analytics to optimize trading operations and enhance the profitability of your prop trading company.",
+        t("Track trader performance in real-time Use detailed analytics to optimize trading operations and enhance the profitability of your prop trading company"),
     },
     {
-      title: "Flexible Payout Structures",
+      title: t("Flexible Payout Structures"),
       description:
-        "Offer customizable rewards, intervals, and methods to retain top-performing traders and boost your firm’s reputation in the competitive forex prop firm market.",
+        t("Offer customizable rewards, intervals, and methods to retain top-performing traders and boost your firm’s reputation in the competitive forex prop firm market"),
     },
   ];
   return (
     <div className={`container `}>
-      <Header decription={"Why Choose Our Prop Firm System?"} />
+      <Header decription={t("Why Choose Our Prop Firm System?")} />
       <p className={styles.subheading}>
-        Taking control of your Brokerage has never been easier.
+        {t("Taking control of your Brokerage has never been easier")}
       </p>
       <div className={`${styles.whyPropFirm}`}>
         <div className={styles.leftSection}>
@@ -45,7 +49,9 @@ const WhyPropFirm = () => {
             ))}
           </div>
         </div>
-        <div className={styles.rightSection}>
+        {
+          lang === "en" && (
+            <div className={styles.rightSection}>
           <div className={styles.card}>
             <Image
               width={300}
@@ -55,6 +61,9 @@ const WhyPropFirm = () => {
             />
           </div>
         </div>
+          )
+        }
+        
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import Flex from "@/components/flex/Flex";
 import Subscribe from "@/components/subscribe/Subscribe";
 import styles from "./dataTools.module.css";
 import Check from "../../../../public/assets/icons/Check";
+import { useTranslations } from "next-intl";
 
 export const metadata = {
   title: "Finitic Data Tools – Powerful Data Management & Analysis Solutions",
@@ -97,26 +98,95 @@ const data = [
 ];
 
 export default function page() {
+  const t = useTranslations("data_tools_page");
+
+  const data = [
+    {
+      planTitle: t("Basic"),
+      subTitle: t("Best for trying our APIs"),
+      price: 500,
+      features: [
+        t("10 Product"),
+        t("10 API calls per minute (6 seconds each)"),
+        t("1 Websockets"),
+        t("1 Years Historical K-line"),
+        t("Last Price"),
+        t("End of Day Data"),
+      ],
+    },
+    {
+      planTitle: t("Starter"),
+      subTitle: t("Best for WebSocket"),
+      price: 1000,
+      features: [
+        t("100 products available"),
+        t("Supports Forex, Commodities, Stocks, Cryptocurrencies"),
+        t("60 API calls per minute (1 second each)"),
+        t("1 Websockets"),
+        t("1 Years Historical K-line"),
+        t("Last Price"),
+        t("End of Day Data"),
+        t("Real-time K-line"),
+        t("Order Book"),
+        t("Real-time tick-by-tick"),
+      ],
+    },
+    {
+      planTitle: t("Premium"),
+      subTitle: t("Best for Trades"),
+      price: 2000,
+      features: [
+        t("200 products available"),
+        t("Supports Forex, Commodities, Stocks, Cryptocurrencies"),
+        t("600 API calls per minute (10 second each)"),
+        t("3 Websockets"),
+        t("3 Years Historical K-line"),
+        t("Last Price"),
+        t("End of Day Data"),
+        t("Real-time K-line"),
+        t("Order Book"),
+        t("Real-time tick-by-tick"),
+      ],
+    },
+    {
+      planTitle: t("Professional"),
+      subTitle: t("Best for exchanges"),
+      price: 3000,
+      features: [
+        t("3000 products available"),
+        t("Supports Forex, Commodities, Stocks, Cryptocurrencies"),
+        t("1200 API calls per minute (20 second each)"),
+        t("10 Websockets"),
+        t("5 Years Historical K-line"),
+        t("Last Price"),
+        t("End of Day Data"),
+        t("Real-time K-line"),
+        t("Order Book"),
+        t("Real-time tick-by-tick"),
+      ],
+    },
+  ];
+
   return (
     <div>
       <Header
-        title="Advanced Market Data Tools"
-        decription="Real-Time Market Data APIs"
+        title={t("Advanced Market Data Tools")}
+        decription={t("Real-Time Market Data APIs")}
         fontSizeDescription={"3rem"}
       />
       <Header
-        title="Forex, Commodities, and Crypto"
-        decription="Ultra-fast, highly accurate, and seamlessly integrated for uninterrupted trading."
+        title={t("Forex, Commodities, and Crypto")}
+        decription={t("Ultra-fast, highly accurate, and seamlessly integrated for uninterrupted trading")}
         fontSizeDescription={"1rem"}
       />
 
       <Flex gap="40px" align="center" justify="center">
         <Button
           background={"black"}
-          text="Get your Free API Key"
+          text={t("Get your Free API Key")}
           url="/registration"
         />
-        <Button text="View Pricing" url="/registration" />
+        <Button text={t("View Pricing")} url="/registration" />
       </Flex>
 
       <br />
@@ -124,8 +194,8 @@ export default function page() {
       <br />
 
       <Header
-        title="Real-time & Historical"
-        decription="Extensive Market Data APIs"
+        title={t("Real-time & Historical")}
+        decription={t("Extensive Market Data APIs")}
         fontSizeDescription={"1.5rem"}
       />
 
@@ -155,7 +225,7 @@ export default function page() {
           >
             <h6 className={styles.title}>{item.planTitle}</h6>
             <p className={styles.subTitle}>{item.subTitle}</p>
-            <p className={styles.description}>{item.price} USD <span> /Month</span></p>
+            <p className={styles.description}>{item.price} {t("USD")} <span> {t("/Month")}</span></p>
             <ul>
               {item.features.map((feature, index) => (
                 <li key={index}>

@@ -6,8 +6,9 @@ import PartnershipModels from "@/components/partnershipModels/page";
 import HowItWorksPartnership from "@/components/howItWorksPartnership/HowItWorksPartnership";
 import Subscribe from "@/components/subscribe/Subscribe";
 import Faq from "@/components/faq/Faq";
-import { partnershipModels } from "@/data/partnershipData";
+import { usePartnershipModels } from "@/data/partnershipData";
 import Flex from "@/components/flex/Flex";
+import { useTranslations } from "next-intl";
 
 export const metadata = {
   title: "Partner with Us | Finitic Partnership Programs",
@@ -23,30 +24,35 @@ export const metadata = {
   ],
 };
 
-const slogin = [
-  {
-    text: "Customizable",
-    icon: "./assets/images/Partnet-Customization.svg",
-  },
-  {
-    text: "Peak Performance",
-    icon: "./assets/images/Partner-Peak Performance.svg",
-  },
-  {
-    text: "Top Security",
-    icon: "./assets/images/Partner-Security.svg",
-  },
-];
+
 
 const page = () => {
+    const t = useTranslations("partner_ship_page");
+    const partnershipModels = usePartnershipModels();
+
+    const slogin = [
+      {
+        text: t("Customizable"),
+        icon: "./assets/images/Partnet-Customization.svg",
+      },
+      {
+        text: t("Peak Performance"),
+        icon: "./assets/images/Partner-Peak Performance.svg",
+      },
+      {
+        text: t("Top Security"),
+        icon: "./assets/images/Partner-Security.svg",
+      },
+    ];
+
   return (
     <div>
       <Header
-        title={"FINITIC Partnership Program"}
-        decription={"Collaborate, Earn, and Grow"}
+        title={t("FINITIC Partnership Program")}
+        decription={t("Collaborate, Earn, and Grow")}
       />
       <p className={style.p}>
-        Enhance your brokerage with advanced technology for smarter growth.
+        {t("Enhance your brokerage with advanced technology for smarter growth")}
       </p>
       <Flex
         justify="center"
@@ -73,12 +79,9 @@ const page = () => {
       </Flex>
       <div className={`container ${style["partnership-flex"]}`}>
         <div>
-          <h6>Partnership Program</h6>
+          <h6>{t("Partnership Program")}</h6>
           <p>
-            We recognize the transformative power of partnerships. By aligning
-            with innovators and industry leaders in forex trading, we deliver
-            solutions that empower forex brokers and create opportunities for
-            our partners to earn and grow with us in the forex market.
+            {t("We recognize the transformative power of partnerships By aligning with innovators and industry leaders in forex trading, we deliver solutions that empower forex brokers and create opportunities for our partners to earn and grow with us in the forex market")}
           </p>
         </div>
         {/* <div>

@@ -1,6 +1,7 @@
 import styles from "./pricingTable.module.css";
-
+import { useTranslations } from "next-intl";
 const PricingTable = () => {
+  const t = useTranslations("pricing_page");
   return (
     <div className={styles.container}>
       <div className={styles.tableWrapper}>
@@ -8,9 +9,9 @@ const PricingTable = () => {
           <thead>
             <tr>
               <th></th>
-              <th className={styles.plan}>Starter</th>
-              <th className={styles.plan}>Premium</th>
-              <th className={styles.plan}>Enterprise</th>
+              <th className={styles.plan}>{t("Starter")}</th>
+              <th className={styles.plan}>{t("Premium")}</th>
+              <th className={styles.plan}>{t("Enterprise")}</th>
             </tr>
           </thead>
           <tbody>

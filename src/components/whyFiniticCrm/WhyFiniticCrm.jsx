@@ -6,8 +6,10 @@ import style from "./whyFiniticCrm.module.css"
 import Image from "next/image"
 import Aos from "aos"
 import { useEffect } from "react"
+import { useTranslations } from "next-intl";
 
 const WhyFiniticCrm = () => {
+      const t = useTranslations('Forex_CRM_Page');
       useEffect(() => {
           Aos.init({
             duration: 1000, 
@@ -16,7 +18,7 @@ const WhyFiniticCrm = () => {
         }, []);
   return (
     <div className={ `     ${style["whyFinicCrm-container"]}`}>
-      <Header fontSizeDescription="35px" decription={"Why Choose FINITIC's Forex CRM?"} />
+      <Header fontSizeDescription="35px" decription={t("Why Choose FINITIC's Forex CRM?")} />
       <div className={`container ${style["finitic-crm__grid-container"]}`}>
         <Grid  colsLarge={3} colsMedium={2} colsSmall={1} gap="24px">
           {whyFinticCrmData.slice(0, 3).map((card) => (
@@ -26,8 +28,8 @@ const WhyFiniticCrm = () => {
               <div className={style.iconContainer}>
                 <Image width={100} height={200} src={card.icon} alt={card.title} className={style.icon} />
               </div>
-              <h6 className={style.title}>{card.title}</h6>
-              <p className={style.description}>{card.description}</p>
+              <h6 className={style.title}>{t(card.title)}</h6>
+              <p className={style.description}>{t(card.description)}</p>
             </div>
           ))}
         </Grid>
@@ -41,8 +43,8 @@ const WhyFiniticCrm = () => {
               <div className={style.iconContainer}>
                 <Image width={100} height={200} src={card.icon} alt={card.title} className={style.icon} />
               </div>
-              <h6 className={style.title}>{card.title}</h6>
-              <p className={style.description}>{card.description}</p>
+              <h6 className={style.title}>{t(card.title)}</h6>
+              <p className={style.description}>{t(card.description)}</p>
             </div>
           ))}
         </Grid>

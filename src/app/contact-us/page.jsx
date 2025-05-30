@@ -3,9 +3,8 @@ import style from "./contact-us.module.css";
 import HeadOffice from "../../../public/assets/icons/HeadOffice";
 import Phone from "../../../public/assets/icons/Phone";
 import Email from "../../../public/assets/icons/Email";
-import Submit from "@/components/shared/submit/Submit";
 import Scheduling from "@/components/scheduling/Scheduling";
-
+import { useTranslations } from "next-intl";
 export const metadata = {
   title: "Contact Us | Finitic – Get in Touch with Our Team",
   description:"Have questions or need support? Reach out to the Finitic team today! Contact us for inquiries, support, or partnership opportunities. We’re here to help!",
@@ -13,34 +12,34 @@ export const metadata = {
 };
 
 const page = () => {
+  const t = useTranslations("contact_us_page");
   return (
     <div className={`  ${style["contact-us_container"]}`}>
       <Header
-        title={"Contact"}
-        decription={"Contact us to discuss your needs and ideas"}
+        title={t("Contact")}
+        decription={t("Contact us to discuss your needs and ideas")}
       />
       <div className="container">
       <div className={style["contact-us_content"]}>
         <section className={style["contact-us__info-section"]}>
           <p>
-            We value your input and are here to support your goals. Together, we
-            can shape the future of fintech innovation. Let’s start today.
+            {t("We value your input and are here to support your goals Together, we can shape the future of fintech innovation Let’s start today")}
           </p>
           <div className={style["contact-us__info-content"]}>
             <h6 className="">
               <HeadOffice />
-              Head Office
+              {t("Head Office")}
             </h6>
             <p>
-            Office 2102, Donna Tower, Silicon Oasis, Dubai, UAE, Dubai, United Arab Emirates
+            {t("Office 2102, Donna Tower, Silicon Oasis, Dubai, UAE, Dubai, United Arab Emirates")}
             </p>
           </div>
           <div className={style["contact-us__info-content"]}>
             <h6 className="">
               <Phone />
-              Phone
+              {t("Phone")}
             </h6>
-            <span>Head Quarter: (Dubai - UAE)  </span>
+            {/* <span>Head Quarter: (Dubai - UAE)  </span> */}
             <p> +971 4 575 8863</p>
 
             {/* <span>Operations: (Cairo - Egypt)  </span>
@@ -49,7 +48,7 @@ const page = () => {
           <div className={style["contact-us__info-content"]}>
             <h6 className="">
               <Email />
-              Email
+              {t("Email")}
             </h6>
             <p>info@finitic.com</p>
           </div>
@@ -82,7 +81,7 @@ const page = () => {
             </Submit>
           </form>
         </div> */}
-        <Scheduling currentPath="contact-us" showJobTitleAndPlan={false} title="Contact Us" />
+        <Scheduling currentPath="contact-us" showJobTitleAndPlan={false} title={t("Contact Us")} />
       </div>
       </div>
     </div>

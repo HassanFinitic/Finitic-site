@@ -119,7 +119,7 @@ function RenderContent({ content }) {
 // Client-side only page component
 export default function Page({ params }) {
   const [slug, setSlug] = useState(null);
-  const t = useTranslations();
+  const t = useTranslations("blog_page");
 
   useEffect(() => {
     // Wait for the params to be resolved
@@ -146,8 +146,8 @@ export default function Page({ params }) {
     // Dynamically import data based on slug
     const loadData = async () => {
       try {
-        const response = await fetch(`/data/blogs/${slug}.json`);
-        // const response = await fetch(`/data/blogs/${slug}-${locale}.json`);
+        // const response = await fetch(`/data/blogs/${slug}.json`);
+        const response = await fetch(`/data/blogs/${slug}-${locale}.json`);
         // let response;
         // if (locale === "ar") {
         //   response = await fetch(`/data/blogs/${slug}-ar.json`);
@@ -269,7 +269,7 @@ export default function Page({ params }) {
         <section key={sectionKey} className={styles.section}>
           {sectionKey === "key_features" ? (
             <>
-              <h2>Key Features</h2>
+              <h2>{t('Key Features')}</h2>
               {Object.entries(section).map(([featureKey, feature]) => (
                 <div key={featureKey} className={styles.feature}>
                   <h3 className={styles.title}>{feature.title}</h3>

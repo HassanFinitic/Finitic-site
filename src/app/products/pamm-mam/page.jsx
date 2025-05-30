@@ -11,41 +11,34 @@ import PamBenefits from "@/components/pamBenefits/PamBenefits";
 import WhyChooseFinitic from "@/components/whyChooseFinitic/WhyChooseFinitic";
 import IconsSection from "@/components/shared/iconsSection/IconsSection";
 import Button from "@/components/shared/button/Button";
-import Aos from "aos";
 import "aos/dist/aos.css";
+import { useTranslations } from "next-intl";
 
 export const metadata = {
   title: "PAMM/MAM - Finitic Technology",
 };
 
 const page = () => {
-  // // Correct usage of useEffect inside the component
-  // useEffect(() => {
-  //   Aos.init({
-  //     duration: 1000,
-  //     easing: "ease-in-out",
-  //   })
-  // }, [])
-
+  const t = useTranslations("pamm_mam_page");
   return (
     <div className={style["pam-container"]}>
       <ProductHeader
-        title={"PAMM/MAM Solutions"}
+        title={t("PAMM/MAM Solutions")}
         productName={"PAMM/MAM"}
-        startDescription={"Advanced "}
-        endDescription={"Systems for Scalable Forex Management"}
+        startDescription={t("Advanced")}
+        endDescription={t("Systems for Scalable Forex Management")}
       />
       <p
         data-aos="fade-up"
         data-aos-duration="2000"
         className={style["pam__description"]}
       >
-        Optimize Portfolio Performance with Smart Investment Allocation
+        {t("Optimize Portfolio Performance with Smart Investment Allocation")}
       </p>
       <Button
         data-aos="fade-up"
         data-aos-duration="3000"
-        text={"Book A Demo"}
+        text={t("Book A Demo")}
         url={"/registration"}
         className={style["demoButton"]}
         center={true}
@@ -54,27 +47,27 @@ const page = () => {
         iconsInfo={[
           {
             icon: <Pamm1 />,
-            title: "Multiple Accounts Managed",
+            title: t("Multiple Accounts Managed"),
           },
           {
             icon: <Pamm2 />,
-            title: "Performance Tracking",
+            title: t("Performance Tracking"),
           },
           {
             icon: <Pamm3 />,
-            title: "Allocation Methods",
+            title: t("Allocation Methods"),
           },
           {
             icon: <Pamm4 />,
-            title: "System Integration",
+            title: t("System Integration"),
           },
         ]}
       />
       <PamSolution
         image="/assets/images/pam.png"
         highLightTitle="PAMM/MAM"
-        title="Solutions"
-        description="Our PAMM (Percentage Allocation Management Module) and MAM (Multi-Account Manager) systems revolutionize asset and forex trading portfolio management. Designed for brokers, they provide efficient, scalable, and customizable solutions tailored for modern trading platforms."
+        title={t("Solutions")}
+        description={t("Our PAMM (Percentage Allocation Management Module) and MAM (Multi-Account Manager) systems revolutionize asset and forex trading portfolio management Designed for brokers, they provide efficient, scalable, and customizable solutions tailored for modern trading platforms")}
       />
       <PamBenefits />
       <WhyChooseFinitic />

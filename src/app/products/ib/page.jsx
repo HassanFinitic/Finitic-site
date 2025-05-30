@@ -1,7 +1,7 @@
 import Scheduling from '@/components/scheduling/Scheduling'
 import React from 'react'
 import style from "./ib.module.css"
-import { featuresIB } from '@/data/featuresIB'
+import { useFeaturesIB } from '@/data/featuresIB'
 import Heading from '@/components/productsRoute/shared/Heading'
 import Cards from '@/components/productsRoute/IB/Cards'
 import CustomGrid from './../../../components/customGrid/CustomGrid';
@@ -24,6 +24,8 @@ export const metadata = {
 export default function page() {
 
     const t = useTranslations("IB_Portal_Page");
+
+    const featuresIB = useFeaturesIB();
 
   const cards = [
     {
@@ -96,7 +98,7 @@ export default function page() {
           <WhyFintic />
         </div>
 
-        <div className={`container ${style.subscribe}`}>
+        <div className={`${style.subscribe}`}>
           <Subscribe />
         </div>
 

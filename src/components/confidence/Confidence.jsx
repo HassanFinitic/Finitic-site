@@ -17,7 +17,7 @@ const Confidence = ({Data,title,decription}) => {
   return (
     <div className={` container ${styles["confidence-container"]}`}>
         <Header  decription={title || t("We Ensure Your Business Operates with Confidence")} />
-        {decription && <p className={styles["confidence-decription"]}>{t("Expand your portfolio with FINITIC’s gold trading platform and provide your clients with trusted solutions to diversify investments in precious metals trading.")}</p>}
+        {decription && <p className={styles["confidence-decription"]}>{decription}</p>}
         <Grid colsLarge={3} colsMedium={2} colsSmall={1} gap={"10"}>
             {Data.map((product,index) => (
                 <div key={index} className={styles["grid-item"]} data-aos="flip-up"
@@ -26,8 +26,8 @@ const Confidence = ({Data,title,decription}) => {
                     <div className={styles["image-container"]}> 
                       <Image width={50}  height={50} alt={product.imagealt || product.title} src={product.image} />
                     </div>
-                    <h6>{t(product.title)}</h6>
-                    <p>{t(product.description)}</p>
+                    <h6>{product.title}</h6>
+                    <p>{product.description}</p>
                 </div>
             ))}
         </Grid>

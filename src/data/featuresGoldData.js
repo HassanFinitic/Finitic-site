@@ -1,22 +1,28 @@
-export const featuresGoldData = [
+
+import { useTranslations } from "next-intl";
+
+export function useFeaturesGoldData() {
+    const t = useTranslations("physical_gold_page");
+    return [
     {
-        title: "Flexible Trading Options",
+        title: t("Flexible Trading Options"),
         description:
-          "Facilitate spot trading, physical settlement, and leverage trading to accommodate various investment strategies.",
+          t("Facilitate spot trading, physical settlement, and leverage trading to accommodate various investment strategies"),
     image: "/assets/images/gold1.svg",
       },
       {
-        title: "24/7 Support",
+        title: t("24/7 Support"),
         description:
-          "Our expert team is available around the clock to assist with trading operations, technical issues, and market insights.",
+          t("Our expert team is available around the clock to assist with trading operations, technical issues, and market insights"),
           image: "/assets/images/gold2.svg",
 
       },
       {
-        title: "Asset Integration",
+        title: t("Asset Integration"),
         description:
-          "Integrate gold trading with forex, cryptocurrencies, and other financial instruments to provide a holistic investment platform.",
+          t("Integrate gold trading with forex, cryptocurrencies, and other financial instruments to provide a holistic investment platform"),
           image: "/assets/images/gold3.svg",
 
       },
-]
+    ]
+}

@@ -7,9 +7,9 @@ export const pricingData = [
       icon: <Starter/>,
       title: "Starter",
       features: [
-        "Live Clients/Leads: 1—1,000",
+        "Live Clients/Leads: 1—2,000",
         "CRM Users: 5 users",
-        "IB Portal: Max 3 levels",
+        "IB Portal: Max 5 levels",
         "PSP Integration: 2 integrations",
         "Copier/PAMM/MAM (MT5)",
       ],
@@ -19,7 +19,7 @@ export const pricingData = [
       title: "Premium",
       features: [
         "Live Clients/Leads: Unlimited",
-        "CRM Users: 25 users",
+        "CRM Users: Unlimited",
         "IB Portal: Unlimited levels",
         "PSP Integration: 5 integrations",
         "Copier/PAMM/MAM (MT5)",
@@ -29,9 +29,9 @@ export const pricingData = [
       icon: <Enterprise/>,
       title: "Enterprise",
       features: [
-        "Live Clients/Leads: 5,000",
-        "CRM Users: 10 users",
-        "IB Portal: Max 5 levels",
+        "Live Clients/Leads: 3,000",
+        "CRM Users: 15 users",
+        "IB Portal: Max 10 levels",
         "PSP Integration: 3 integrations",
         "Copier/PAMM/MAM (MT5)",
       ],

@@ -10,12 +10,13 @@ import Testimonials from "@/components/testimonials/Testimonials";
 import Subscribe from "@/components/subscribe/Subscribe";
 import Faq from "@/components/faq/Faq";
 import { useProductsData } from "@/data/products";
-import { confidenceData } from "@/data/confidenceData";
+import { useConfidenceData } from "@/data/confidenceData";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
   const productsData = useProductsData();
   const t = useTranslations();
+  const confidenceData = useConfidenceData();
   return (
     <>
       <Landing />

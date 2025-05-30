@@ -258,7 +258,7 @@ const Scheduling = ({
         ) : (
           <>
             <TextField
-              label="Enter your message"
+              label={t("Enter Your Message")}
               name="message"
               value={formData.message}
               onChange={handleChange}

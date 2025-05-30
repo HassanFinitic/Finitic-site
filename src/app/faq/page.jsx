@@ -1,5 +1,6 @@
 import Faq from '@/components/faq/Faq'
 import React from 'react'
+import { useTranslations } from "next-intl";
 
 export const metadata = {
   title: "FAQs | Finitic Technologies",
@@ -8,9 +9,10 @@ export const metadata = {
 };
 
 const page = () => {
+    const t = useTranslations("faq_page");
   return (
     <div>
-        <Faq landingPage={false} description="Get quick answers to your questions." />
+        <Faq landingPage={false} description={t("Get quick answers to your questions")} />
     </div>
   )
 }
