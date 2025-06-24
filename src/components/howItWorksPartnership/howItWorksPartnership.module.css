@@ -18,11 +18,11 @@
     font-weight: 600;
 }
 
-html[dir="rtl"] .header span {
+:global(html[dir="rtl"] .header span){
     font-size: 20px;
 }
 
-html[dir="rtl"] .header h2 {
+:global(html[dir="rtl"] .header h2){
     font-size: 30px;
 }
 
@@ -60,7 +60,7 @@ html[dir="rtl"] .header h2 {
     top: 20px;
 }
 
-html[dir="rtl"] .stepIcon {
+:global(html[dir="rtl"] .stepIcon){
     right: auto;
     left: 100px;
 }

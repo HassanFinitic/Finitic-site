@@ -44,7 +44,7 @@
     border-radius: 10px;
   }
 
-  html[dir="rtl"] .feature{
+  :global(html[dir="rtl"] .feature){
     border-right: 2px solid #FFAA00;
     border-left: none;
   }

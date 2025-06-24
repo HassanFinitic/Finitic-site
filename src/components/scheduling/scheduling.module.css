@@ -51,7 +51,7 @@
   text-align: center;
 }
 
-html[dir="rtl"]{
+:global(html[dir="rtl"]){
   .p{
       display: none;
     }
