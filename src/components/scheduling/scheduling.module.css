@@ -50,6 +50,13 @@
   font-size: 16px;
   text-align: center;
 }
+
+html[dir="rtl"]{
+  .p{
+      display: none;
+    }
+}
+
 @media screen and (max-width: 1024px) {
   .scheduling-container {
     width: 80%;

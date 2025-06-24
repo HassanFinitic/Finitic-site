@@ -37,5 +37,14 @@
     "imageTitle": "Featured",
     "type": "News",
     "timeToRead": "6"
+  },
+  {
+    "slug": "prop-firm-system",
+    "title": "Accelerate Your Brokerage Growth: How Prop Firm Systems Enable Launch in Days, Not Months",
+    "description": "The global surge in funded trader programs has introduced a highly profitable avenue for Forex brokers looking to expand their revenue streams and client offerings. Once a niche concept, proprietary trading firms (prop firms) are now a mainstream model—and brokers who move quickly are gaining a significant competitive edge.",
+    "image": "/assets/images/prop-firm-system.jpg",
+    "imageTitle": "Featured",
+    "type": "News",
+    "timeToRead": "6"
   }
 ]

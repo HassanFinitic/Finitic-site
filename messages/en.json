@@ -155,9 +155,9 @@
         "Scalability": "Scalability",
         "Expand your Partner network without limits in the forex space": "Expand your Partner network without limits in the forex space.",
         "Partner Empowerment": "Partner Empowerment",
-        "Offer flexible rewards and innovative tools to attract and ratain top-performing IBs in the forex market": "Offer flexible rewards and innovative tools to attract and ratain top-performing IBs in the forex market.",
+        "Offer flexible rewards and innovative tools to attract and ratain top-performing IBs in the forex market": "Offer innovative rewards and tools to attract top-performing IBs",
         "Real-Time Insights": "Real-Time Insights",
-        "Access live data for informed decision-making in currency trading": "Access live data for informed decision-making in currency trading."
+        "Access live data for informed decision-making in currency trading": "Access live data for informed trading decision-making"
       
       },
 
@@ -436,6 +436,13 @@
 
       "faq_page": {
         "Get quick answers to your questions": "Get quick answers to your questions"
+    },
+
+    "blogs_page": {
+      "Blogs": "Blogs",
+      "Insights and Updates for your growth": "Insights and Updates for your growth",
+      "Contact us": "Contact us",
+      "min read": "min read"
     },
 
     "blog_page": {

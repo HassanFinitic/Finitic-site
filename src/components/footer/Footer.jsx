@@ -69,24 +69,28 @@ export default function Footer() {
           <div className={style["social-icons"]}>
             <Link
               className={style["social-icon"]}
+              target="_blank"
               href="https://www.facebook.com/share/1BAeZGSZRD"
             >
               <CiFacebook />
             </Link>
             <Link
               className={style["social-icon"]}
+              target="_blank"
               href="https://www.instagram.com/finiticme"
             >
               <FaInstagram />
             </Link>
             <Link
               className={style["social-icon"]}
+              target="_blank"
               href="https://www.linkedin.com/company/finitic1/"
             >
               <FaLinkedin />
             </Link>
             <Link
               className={style["social-icon"]}
+              target="_blank"
               href="https://x.com/finitic_me"
             >
               <RiTwitterXFill />

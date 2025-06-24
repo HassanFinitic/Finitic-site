@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "all-in-one-hybrid-system-for-brokers",
+    "title": "النظام المُدمج الشامل للوسطاء",
+    "description":"يواجه الوسطاء صعوبات متزايدة في إدارة العملاء ومنصات التداول وشبكات الشركاء من خلال أنظمة غير مترابطة، مما يؤدي إلى تشتت العمليات، وارتفاع التكاليف وبطء في الأداء التشغيلي.",
+    "image": "/assets/images/all-in-one-hybrid-system-for-brokers.jpg",
+    "imageTitle": "مميز",
+    "type": "أخبار",
+    "timeToRead": "5"
+  },
+  {
+    "slug": "transforming-forex-trading-with-finitics-crm",
+    "title": "Finitic تعيد تعريف عالم تداول الفوركس مع نظام إدارة العملاءCRM: تجربة سلسة للوسطاء",
+    "description": "اكتشف كيف يساعد نظام الـ CRM الخاص بـ FINITIC وسطاء الفوركس على تبسيط العمليات، ورفع الكفاءة، وزيادة مدى رضا العملاء. نظام الـ CRM الخاص بـ FINITIC، أداة لا غنى عنها لتحقيق النمو في صناعة تداول الفوركس.",
+    "image": "/assets/images/transforming-forex-trading-with-finitics-crm.jpg",
+    "imageTitle": "مميز",
+    "type": "أخبار",
+    "timeToRead": "6"
+  },
+  {
+    "slug": "pamm-mam-system",
+    "title": "PAMM أم MAM: أي نموذج استثماري يناسب شركتك الوسيطة؟",
+    "description": "استكشف مزايا أنظمة PAMM وMAM لشركات وساطة الفوركس، واعرف أكثر عن كيفية تقديم FINITIC لحلول متكاملة وقابلة للتخصيص لإدارة الأصول باحترافية.",
+    "image": "/assets/images/pamm-mam-system.jpg",
+    "imageTitle": "مميز",
+    "type": "أخبار",
+    "timeToRead": "6"
+  },
+  {
+    "slug": "physical-gold-systems",
+    "title": "لماذا يتجه المزيد من الوسطاء لإضافة أنظمة تداول الذهب المادي إلى منصاتهم؟",
+    "description": "في ظل حالة عدم الاستقرار الاقتصادي التي يشهدها العالم حاليًا، يظل الذهب من الأصول الأكثر موثوقية وثباتًا عبر الزمن. وبينما تشهد العملات الرقمية وأزواج الفوركس تقلبات مستمرة، يبرز الذهب المادي كوسيلة موثوقة من حيث الحفاظ على القيمة.",
+    "image": "/assets/images/physical-gold-systems.jpg",
+    "imageTitle": "مميز",
+    "type": "أخبار",
+    "timeToRead": "6"
+  },
+  {
+    "slug": "prop-firm-system",
+    "title": "نظام شركات التداول الممولة وداعاً للانتظار:  أنظمتنا تضمن لك الانطلاق السريع في سوق الفوركس",
+    "description": "لم يعد إطلاق شركة تداول مموّل (Prop Firm) مهمة معقدة تتطلب شهورًا من العمل وتكاليف ضخمة.",
+    "image": "/assets/images/prop-firm-system.jpg",
+    "imageTitle": "مميز",
+    "type": "أخبار",
+    "timeToRead": "6"
+  }
+]
