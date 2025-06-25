@@ -18,13 +18,13 @@
     font-weight: 600;
 }
 
-:global(html[dir="rtl"]) .header span{
+/* html[dir="rtl"] .header span{
     font-size: 20px;
-}
+} */
 
-:global(html[dir="rtl"]) .header h2{
+/* html[dir="rtl"] .header h2{
     font-size: 30px;
-}
+} */
 
 .steps {
     display: grid;
@@ -60,10 +60,10 @@
     top: 20px;
 }
 
-:global(html[dir="rtl"]) .stepIcon{
+/* html[dir="rtl"] .stepIcon{
     right: auto;
     left: 100px;
-}
+} */
 
 .stepTitle {
     font-size: 20px;

@@ -44,10 +44,10 @@
     border-radius: 10px;
   }
 
-  :global(html[dir="rtl"]) .feature{
+/* html[dir="rtl"] .feature{
     border-right: 2px solid #FFAA00;
     border-left: none;
-  }
+  } */
   
   .feature .title {
     font-size: 1.4rem;

@@ -51,11 +51,11 @@
   text-align: center;
 }
 
-:global(html[dir="rtl"]){
+/* html[dir="rtl"]{
   .p{
       display: none;
     }
-}
+} */
 
 @media screen and (max-width: 1024px) {
   .scheduling-container {
