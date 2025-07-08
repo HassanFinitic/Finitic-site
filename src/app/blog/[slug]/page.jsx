@@ -159,16 +159,17 @@ export default function Page({ params }) {
         setData(json);
 
         // Set meta data dynamically based on imported data
-        if (response) {
-          document.title = response.metaData?.title || "Finitic Blog";
+        if (json) {
+          console.log("response.metaData", json);
+          document.title = json.metaData?.title || "Finitic Blog";
           document
             .querySelector('meta[name="description"]')
-            ?.setAttribute("content", response.metaData?.description || "");
+            ?.setAttribute("content", json.metaData?.description || "");
           document
             .querySelector('meta[name="keywords"]')
             ?.setAttribute(
               "content",
-              response.metaData?.keywords.join(", ") || ""
+              json.metaData?.keywords.join(", ") || ""
             );
         }
       } catch (error) {
