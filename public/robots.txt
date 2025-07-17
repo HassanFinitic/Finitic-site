@@ -49,3 +49,5 @@ Disallow: /*.log$
  
 
 Crawl-delay: 5 
+
+Sitemap: https://www.finitic.com/sitemap.xml 
