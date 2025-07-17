@@ -1,0 +1,51 @@
+User-agent: * 
+
+ 
+
+Allow: / 
+
+ 
+
+Disallow: /admin/ 
+
+Disallow: /dashboard/ 
+
+Disallow: /login/ 
+
+Disallow: /register/ 
+
+Disallow: /registration/ 
+
+Disallow: /auth/ 
+
+Disallow: /user/ 
+
+Disallow: /account/ 
+
+Disallow: /checkout/ 
+
+Disallow: /cart/ 
+
+Disallow: /settings/ 
+
+Disallow: /private/ 
+
+Disallow: /api/ 
+
+Disallow: /cgi-bin/ 
+
+ 
+
+Disallow: /*.php$ 
+
+Disallow: /*.cgi$ 
+
+Disallow: /*.json$ 
+
+Disallow: /*.env$ 
+
+Disallow: /*.log$ 
+
+ 
+
+Crawl-delay: 5 
