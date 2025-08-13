@@ -46,5 +46,14 @@
     "imageTitle": "Featured",
     "type": "News",
     "timeToRead": "6"
+  },
+  {
+    "slug": "mt4-mt5",
+    "title": "How FINITIC’s MT4/MT5 Ecosystem Transforms Broker Operations",
+    "description": "In the world of online trading, the choice of platform matters—but it’s only part of the picture. For brokers, the real game-changer is how well your systems talk to each other. A seamless connection between your trading engine, CRM, IB portal, and fund management tools doesn’t just improve efficiency—it redefines your entire business model.",
+    "image": "/assets/images/mt4-mt5.jpg",
+    "imageTitle": "Featured",
+    "type": "News",
+    "timeToRead": "5"
   }
 ]

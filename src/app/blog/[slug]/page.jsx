@@ -102,7 +102,7 @@ function RenderContent({ content }) {
             <ul key={index} className={styles.list}>
               {Object.entries(item).map(([key, value]) => (
                 <li key={key}>
-                  <strong>{key.replace(/_/g, " ")}:</strong> {value}
+                  <strong>{key.replace(/_/g, " ")} {value !== "" ? ":" : ""} </strong> {value}
                 </li>
               ))}
             </ul>
