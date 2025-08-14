@@ -14,6 +14,7 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import { useTranslations } from "next-intl";
+import { brevoEmailContent } from "@/data/brevoEmailContent";
 
 const Scheduling = ({
   title,
@@ -55,7 +56,39 @@ const Scheduling = ({
       phone: newValue ? `+${newValue.phone} ${formData.phone}` : formData.phone,
     });
   };
-
+  const sendBrevoEmail = async (data) => { 
+    try {
+      const body =  data;
+      const brevoRes = await fetch("https://api.brevo.com/v3/smtp/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key": process.env.NEXT_PUBLIC_BREVO_API_KEy
+        },
+        body: JSON.stringify({
+          sender: {
+            name: "Finitic Marketing",
+            email: "marketing@finitic.com",
+          },
+          to: [
+            {
+              email: body.email,
+              name: body.name,
+            },
+          ],
+          subject: "Thank you for Your subscription in finitic",
+          htmlContent: brevoEmailContent,
+        }),
+      });
+    
+        const brevoData = await brevoRes.json();
+        console.log("Check brevData  ", brevoData);
+        return brevoData;
+      } catch (error) {
+        toast.error(`Send Brevo error:  ${error.message}`)
+        console.log(`Send Brevo error:  ${error.message}`)
+      }
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -81,7 +114,7 @@ const Scheduling = ({
 
       if (res.isSuccess) {
         setSubmitTitle("Thank You");
-
+        await sendBrevoEmail(formData);
         // Show success toast message
         toast.success(t("success send data"));
 
