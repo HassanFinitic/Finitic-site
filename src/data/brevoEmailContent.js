@@ -128,17 +128,17 @@ export const brevoEmailContent = `
 
                 <!-- HEADER --> 
 
-                <div style="background: url('https://https://freeimage.host/i/FtU4Ecx') no-repeat center top; background-size: cover; padding: 20px 30px;"> 
+                <div style="background: url('https://iili.io/FmivuwB.png') no-repeat center top; background-size: cover; padding: 20px 30px;"> 
 
-                  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap;"> 
+                  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap:20px"> 
 
-                    <div style="flex: none; width: 80px;"> 
+                    <div style="flex: none;"> 
 
-                      <img src="https://i.ibb.co/gZH2zpR1/finitic-logo-white.png" alt="Finitic" width="65" /> 
+                      <img src="https://iili.io/Fms2HSs.png" alt="Finitic" width="150" style="object-fit:cover;"  /> 
 
                     </div> 
 
-                    <div style="flex: 1; text-align: right; font-size: 12px; line-height: 1.8;"> 
+                    <div style="flex: 1; text-align: right; font-size: 12px; line-height: 1.8; margin-top:15px;"> 
 
                       <a href="https://finitic.com/?utm_source=brevo&utm_campaign=Finitic Email Welcome Message&utm_medium=email&utm_id=22"  
 
@@ -286,7 +286,7 @@ export const brevoEmailContent = `
 
             <!-- FOOTER --> 
 
-            <table width="100%" cellpadding="0" cellspacing="0" style="background: url('https://https://freeimage.host/i/FtU4Ecx') no-repeat center top; background-size: cover; padding: 30px 0; text-align: center;"> 
+            <table width="100%" cellpadding="0" cellspacing="0" style="background: url('https://iili.io/FmivuwB.png') no-repeat center top; background-size: cover; padding: 30px 0; text-align: center;"> 
 
               <tr> 
 
