@@ -117,7 +117,7 @@ const Scheduling = ({
   return (
     <>
     <div data-aos="fade-up" data-aos-duration="1000" className={style["scheduling-container"]}>
-      <h3 className={style["title"]}>{title || t("Schedule Your Demo Now")}</h3>
+      <h2 className={style["title"]}>{title || t("Schedule Your Demo Now")}</h2>
       <p className={style["p"]}>{subTitle}</p>
       <form className={style["form"]} onSubmit={handleSubmit}>
         {/* Replacing custom Input with MUI TextField for Full Name */}

@@ -20,6 +20,7 @@
 
             .text{
                 color: var(--font-color-2);
+                font-size: 20px;
             }
 
             .title{

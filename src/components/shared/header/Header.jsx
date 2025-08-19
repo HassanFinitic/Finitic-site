@@ -3,8 +3,8 @@ import styles from './header.module.css'
 const Header = ({title,decription,fontSizeDescription}) => {
     return (
         <div className={ ` ${styles.header}`} >
-            {title && <span className={styles.span} >{title}</span>}
-            <h2 style={{fontSize: fontSizeDescription ?  fontSizeDescription : "30px"}} className={styles.h2}>{decription}</h2>
+            {title && <h3 className={styles.span} >{title}</h3>}
+            <h4 style={{fontSize: fontSizeDescription ?  fontSizeDescription : "30px"}} className={styles.h2}>{decription}</h4>
         </div>
     )
 }
