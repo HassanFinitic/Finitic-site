@@ -42,8 +42,8 @@ const WhyPropFirm = () => {
               <div key={index} className={styles.featureItem}>
                 <span className={styles.circle}><span>{`0${index + 1}`}</span></span>
                 <div className={styles.featureContent}>
-                  <h6>{feature.title}</h6>
-                  <p>{feature.description}</p>
+                  <h3>{feature.title}</h3>
+                  <h4>{feature.description}</h4>
                 </div>
               </div>
             ))}

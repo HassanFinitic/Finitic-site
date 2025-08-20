@@ -53,13 +53,13 @@
   margin-left: 8px;
   margin-right: 8px;
 }
-.featureContent h6 {
+.featureContent h3 {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
-.featureContent p {
+.featureContent h4 {
   font-size: 14px;
   color: #555;
   width: 80%;
