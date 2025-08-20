@@ -9,7 +9,7 @@ const WhyFiniticGold = ({ features }) => {
     <section className={` container ${style.featuresSection}`}>
       <div className={style.content}>
         <div className={style.badge}>{t("Features")}</div>
-        <h4 className={style.heading}>{features?.title}</h4>
+        <h2 className={style.heading}>{features?.title}</h2>
         <p className={style.description}>{features?.description}</p>
         <Link href={`/registration`}>
           <button className={style.demoButton}>
@@ -23,8 +23,8 @@ const WhyFiniticGold = ({ features }) => {
       <div className={style.cards}>
         {features?.features?.map((feature, index) => (
           <div key={index} className={style.card}>
-            <h6 className={style.cardTitle}>{feature.title}</h6>
-            <p className={style.cardText}>{feature.description}</p>
+            <h3 className={style.cardTitle}>{feature.title}</h3>
+            <h4 className={style.cardText}>{feature.description}</h4>
           </div>
         ))}
       </div>

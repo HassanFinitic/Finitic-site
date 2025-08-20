@@ -17,7 +17,7 @@ const Confidence = ({Data,title,decription}) => {
   return (
     <div className={` container ${styles["confidence-container"]}`}>
         <Header  decription={title || t("We Ensure Your Business Operates with Confidence")} />
-        {decription && <p className={styles["confidence-decription"]}>{decription}</p>}
+        {decription && <h4 className={styles["confidence-decription"]}>{decription}</h4>}
         <Grid colsLarge={3} colsMedium={2} colsSmall={1} gap={"10"}>
             {Data.map((product,index) => (
                 <div key={index} className={styles["grid-item"]} data-aos="flip-up"

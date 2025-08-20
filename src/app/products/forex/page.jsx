@@ -21,7 +21,7 @@ const productsDataForex = useProductsDataForex();
   return (
     <div className={`  ${style["forex-container"]}`}>
         <ProductHeader  title={t("Simplify, Optimize, Succeed")} productName={t("Forex CRM")} startDescription={t("Your Complete")} endDescription={t("Solution")}/>
-       <p className={style.decription}>{t("FINITIC’s Forex CRM: A seamless solution for forex brokers to manage clients, track leads, and scale operations efficiently")}</p>
+       <h3 className={style.decription}>{t("FINITIC’s Forex CRM: A seamless solution for forex brokers to manage clients, track leads, and scale operations efficiently")}</h3>
        <Link href={`/contact-us`}><button className={style.button}>{t("Get Your CRM in 7 days only")}</button></Link>
        <WhyFiniticCrm />
        <ForexFeatures />

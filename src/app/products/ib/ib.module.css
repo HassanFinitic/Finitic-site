@@ -58,6 +58,7 @@
 
         .description{
             color: var(--font-color-2);
+            font-weight: 400;
         }
     }
 }

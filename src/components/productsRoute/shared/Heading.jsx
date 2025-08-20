@@ -6,9 +6,8 @@ export default function Heading({title, subTitle}) {
   return (
     <div className={style.heading}>
     <Flex direction={'column'} gap={'10px'} align={'center'}>
-      <p className={style.title}>{title}</p>
-      
-      <p className={style.subTitle}>{subTitle}</p>
+      <h2 className={style.title}>{title}</h2>
+      <h3 className={style.subTitle}>{subTitle}</h3>
     </Flex>
     </div>
   )

@@ -106,6 +106,7 @@
     color: #666;
     line-height: 30px;
     width: 80%;
+    font-weight: 400;
   }
   
   @media screen and (max-width: 1024px) {

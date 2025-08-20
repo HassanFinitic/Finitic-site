@@ -12,13 +12,13 @@ const ForexFeatures = () => {
   return (
     <div className={`container ${style["forex-features-container"]}`}>
       <div>
-        <h4 className={style.title}>{t("Transform Your Brokerage with")}</h4>
-        <h4 className={style.title}>
+        <h2 className={style.title}>{t("Transform Your Brokerage with")}</h2>
+        <h2 className={style.title}>
           {t("FINITIC's")} <span className={style["subtitle"]}>{t("Forex CRM")}</span>
-        </h4>
-        <p className={style["main-description"]}>
+        </h2>
+        <h4 className={style["main-description"]}>
         {t("Forex_Features_Main_Description")}
-        </p>
+        </h4>
         <Link href={`/registration`}><button className={style.button}>{t("Get a Demo")}</button></Link>
       </div>
       <div className={` container ${style.features}`}>

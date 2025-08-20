@@ -14,7 +14,7 @@ const ProductHeader = ({startDescription, endDescription, productName, title, fo
 
   return (
     <div className={ `container ${styles.header}`} >
-      {title && <span data-aos="fade-up" data-aos-duration="1000" className={styles.span} >{title}</span>}
+      {title && <h1 data-aos="fade-up" data-aos-duration="1000" className={styles.span} >{title}</h1>}
       <h2 data-aos="fade-up" data-aos-duration="2000" style={{fontSize: fontSizeDescription ? fontSizeDescription : "40px"}} className={styles.h2}>
         {startDescription} <span className={styles["product-name"]}> {productName}</span> {endDescription}
       </h2>

@@ -61,8 +61,8 @@ export default function page() {
         <div className={`container ${style.landing}`}>
           <div className={style.left_top}>
             <div className={style.title}><span className={style.span_1}>{t("IB Portal")}</span> {t("The best marketing tool")}</div>
-            <p className={style.subTitle}>{t("The Ultimate IB Portal for")} <span className={style.span_2}>{t("Partner Success")}</span></p>
-            <p className={style.description}>{t("The most effective marketing and management tool for introducing brokers With advanced features and customizable options it empowers your partners to achieve more in the forex market")}</p>
+            <h1 className={style.subTitle}>{t("The Ultimate IB Portal for")} <span className={style.span_2}>{t("Partner Success")}</span></h1>
+            <h4 className={style.description}>{t("The most effective marketing and management tool for introducing brokers With advanced features and customizable options it empowers your partners to achieve more in the forex market")}</h4>
           </div>
           <div className={style.right_bottom}>
           <Scheduling currentPath='ib-portal' subTitle={"Boost Your IB Performance"} buttonTitle={"Become a Partner"}  />
