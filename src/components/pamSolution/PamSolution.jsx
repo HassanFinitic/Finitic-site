@@ -10,11 +10,11 @@ const PamSolution = ({highLightTitle,image,title,description}) => {
   return (
     <div className={`container ${style["pam-solution__container"]}`}>
         <div data-aos="fade-right" data-aos-duration="1000">
-           <h6 className={style["pam-solution__title"]}>{highLightTitle}</h6>
+           <h2 className={style["pam-solution__title"]}>{highLightTitle}</h2>
             <span >
             {title}
             </span>
-            <p className={style["pam-solution__description"]}>{description}</p>
+            <h4 className={style["pam-solution__description"]}>{description}</h4>
             <Link href={`/registration`}><button className={style.demoButton}>{t("Book Your Demo")}</button></Link>
         </div>
         <div data-aos="fade-left" data-aos-duration="1000">

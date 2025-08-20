@@ -33,9 +33,9 @@ const WhyChooseFinitic = () => {
         </div>
       ))}
      </Flex>
-    <p data-aos="fade-up" data-aos-duration="2000" className={styles.subheading}>
+    <h3 data-aos="fade-up" data-aos-duration="2000" className={styles.subheading}>
       {t("PAMM/MAM Copy Trading for Smart Forex Management")}
-    </p>
+    </h3>
 
     <Grid direction="row" gap="40px" align="center" justify="center" wrap='wrap' colsLarge={3} colsMedium={2} colsSmall={1}>
       {whyChooseFinitic.map((feature, index) => (

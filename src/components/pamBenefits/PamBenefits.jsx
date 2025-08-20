@@ -8,10 +8,10 @@ const PamBenefits = () => {
     const t = useTranslations("pamm_mam_page");
     return (
         <section className={"container"}>
-            <h4 data-aos="fade-up" data-aos-duration="1000" className={style.title}>{t("Benefits for Brokers and Clients")}</h4>
-            <p data-aos="fade-up" data-aos-duration="2000" className={style.subtitle}>
+            <h2 data-aos="fade-up" data-aos-duration="1000" className={style.title}>{t("Benefits for Brokers and Clients")}</h2>
+            <h4 data-aos="fade-up" data-aos-duration="2000" className={style.subtitle}>
                 {t("Enhance Broker Operations with Advanced Trading Tools and Offer Clients Transparent, Customized Forex Strategies")}
-            </p>
+            </h4>
 
             <div className={style.grid}>
                 <div data-aos="fade-right" data-aos-duration="3000" className={style.column}>
