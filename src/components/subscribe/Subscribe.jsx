@@ -24,7 +24,7 @@ const Subscribe = () => {
             <div className={style["subscribe-container"]} data-aos="zoom-in-up">
                 <Qoute />
                 <h3>{t("Stay Ahead in Forex Innovation")}</h3>
-                <p>{t("Get ready to streamline operations, enhance trading strategies, and elevate your brokerage—all with FINITIC’s cutting-edge solutions Subscribe now and stay informed")}</p>
+                <h4>{t("Get ready to streamline operations, enhance trading strategies, and elevate your brokerage—all with FINITIC’s cutting-edge solutions Subscribe now and stay informed")}</h4>
                 <div className={style["subscribe-form"]}>
                     <input id="subscribe-input" value={email} onChange={(e) => { setEmail(e.target.value) }} type="email" required placeholder={t("Enter your email address")} />
                     <button className={style["absolute-btn"]} type="submit" onClick={handleSubmit}>{t("Subscribe")}</button>

@@ -14,11 +14,12 @@
     font-weight: 500;
     padding: 40px;
 }
-.subscribe-container p{
+.subscribe-container h4{
     font-size: 20px;
     line-height: 30px;
     width: 85%;
     margin: 30px auto;
+    font-weight: 400;
 }
 .subscribe-form {
     display: flex;

@@ -46,8 +46,8 @@ const DataAccessOptions = () => {
                   alt={option.title}
                 />
               </div>
-              <h6 className={styles.title}>{option.title}</h6>
-              <p className={styles.description}>{option.description}</p>
+              <h3 className={styles.title}>{option.title}</h3>
+              <h4 className={styles.description}>{option.description}</h4>
               {/* <button className={styles.button}>{option.action}</button> */}
             </Flex>
           </>
