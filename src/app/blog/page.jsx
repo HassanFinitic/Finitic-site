@@ -100,7 +100,7 @@ export default function Page() {
                       <p className={style.timeToRead}>{blog.timeToRead} {t("min read")}</p>
                     </Flex>
                     <h3 className={style.title}>{blog.title}</h3>
-                    <p className={style.description}>{blog.description}</p>
+                    <h4 className={style.description}>{blog.description}</h4>
                   </Flex>
                 </Flex>
               </Link>

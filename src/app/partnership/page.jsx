@@ -79,7 +79,7 @@ const page = () => {
       </Flex>
       <div className={`container ${style["partnership-flex"]}`}>
         <div>
-          <h6>{t("Partnership Program")}</h6>
+          <h2>{t("Partnership Program")}</h2>
           <p>
             {t("We recognize the transformative power of partnerships By aligning with innovators and industry leaders in forex trading, we deliver solutions that empower forex brokers and create opportunities for our partners to earn and grow with us in the forex market")}
           </p>

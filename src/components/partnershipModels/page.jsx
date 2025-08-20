@@ -33,8 +33,8 @@ const PartnershipModels = ({ toggleData }) => {
             <div className={style.img}>
               <Image src={item.image} width={25} height={25} alt={item.title} />
             </div>
-            <p className={style.title}>{item.title}</p>
-            <p className={style.description}>{item.description}</p>
+            <h3 className={style.title}>{item.title}</h3>
+            <h4 className={style.description}>{item.description}</h4>
           </Flex>
         ))}
       </Grid>

@@ -22,9 +22,9 @@ const page = () => {
       <div className="container">
       <div className={style["contact-us_content"]}>
         <section className={style["contact-us__info-section"]}>
-          <p>
+          <h4>
             {t("We value your input and are here to support your goals Together, we can shape the future of fintech innovation Let’s start today")}
-          </p>
+          </h4>
           <div className={style["contact-us__info-content"]}>
             <h6 className="">
               <HeadOffice />
