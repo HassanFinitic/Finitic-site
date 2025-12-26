@@ -55,5 +55,14 @@
     "imageTitle": "Featured",
     "type": "News",
     "timeToRead": "5"
+  },
+  {
+    "slug": "brokerage-business",
+    "title": "How a Powerful CRM Can Scale Your Brokerage Business",
+    "description": "In the highly competitive brokerage industry, growth depends on efficiency, automation, and client experience. This is where a powerful broker CRM becomes a critical asset.",
+    "image": "/assets/images/brokerage-business.jpeg",
+    "imageTitle": "Featured",
+    "type": "News",
+    "timeToRead": "5"
   }
 ]
