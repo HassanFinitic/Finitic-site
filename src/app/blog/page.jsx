@@ -34,7 +34,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/assets/images/logo.png",
         alt: "Finitic Technology"
       }
     ]
