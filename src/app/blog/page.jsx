@@ -114,6 +114,7 @@ export default async function Page() {
                 >
                   <div className={style.blogCardImage}>
                     <img src={blog.image} alt={blog.title} />
+                    <p className={style.imageTitle}>{blog.imageTitle}</p>
                   </div>
 
                   <Flex gap={"20px"} direction={"column"} className={style.blogCardContent}>
