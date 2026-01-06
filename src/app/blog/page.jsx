@@ -66,7 +66,7 @@ async function fetchBlogs() {
       title: stripTags(rawTitle),
       description: stripTags(rawExcerpt),
       image: media.link || "",
-      imageTitle: "Featured",
+      imageTitle: stripTags(media?.title?.rendered || "Featured"),
       type: post.type,
       timeToRead: Math.ceil(((post.excerpt.rendered).length) / 100)
     };
