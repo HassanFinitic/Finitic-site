@@ -7,6 +7,7 @@ import Link from "next/link";
 import Grid from "@/components/grid/Grid";
 import Flex from "@/components/flex/Flex";
 import { useLocale, useTranslations } from "next-intl";
+import Articles from "@/components/blogs/Articles";
 
 const metadata = {
   title: "Finitic Blog – Latest Insights on Forex, Fintech & Trading Technology",
@@ -100,13 +101,14 @@ export default function Page() {
                       <p className={style.timeToRead}>{blog.timeToRead} {t("min read")}</p>
                     </Flex>
                     <h3 className={style.title}>{blog.title}</h3>
-                    <h4 className={style.description}>{blog.description}</h4>
+                    <div dangerouslySetInnerHTML={{ __html: blog.description }} />
                   </Flex>
                 </Flex>
               </Link>
             </div>
           ))}
         </Grid>
+        <Articles/>
       </div>
     </div>
   );

@@ -1,0 +1,149 @@
+.main {
+    /* max-width: 800px; */
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .main .title {
+    font-size: 2.5rem;
+    /* color: #0070f3; */
+  }
+
+  .main .imageContainer {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .main .imageContainer img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    @media screen and (max-width: 600px) {
+      height: fit-content;
+      object-fit: contain;
+    }
+  }
+
+  .main .description {
+    font-size: 14px;
+    color: #666;
+    font-size: 14px;
+    color: #666;
+    margin: 10px 5px;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .feature {
+    margin-inline-start: 20px;
+    padding: 10px;
+    border-left: 2px solid #FFAA00;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+/* html[dir="rtl"] .feature{
+    border-right: 2px solid #FFAA00;
+    border-left: none;
+  } */
+  
+  .feature .title {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 10px 0px;
+  }
+
+  .list {
+    /* list-style-type: none; */
+    padding-left: 20px;
+    margin: 20px 0;
+  }
+  
+  .list li {
+    margin-bottom: 10px;
+
+  }
+  
+  .list li h1 {
+    font-size: 2.5rem;
+    color: #0070f3;
+  }
+  
+  .list li h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+  
+  .list li h3 {
+    font-size: 1.4rem;
+    color: #333;
+  }
+
+  .social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid #8080803a;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+
+  .left{
+    color: #808080;
+
+    @media screen and (max-width: 600px) {
+      margin: 15px 0;
+    }
+  }
+
+  .type{
+    position: relative;
+    margin-left: 15px;
+  }
+
+  .type::before{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--button-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+  }
+
+
+  .tableWrapper {
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    /* text-align: left; */
+    text-align: center;
+  }
+  
+  .table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+
+  .link{
+    color: var(--font-heading-3);
+    text-decoration: underline;
+    padding-top: 50px;
+    margin-inline-start: 5px;
+  }
