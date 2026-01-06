@@ -1,15 +1,14 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import style from "./blog.module.css";
 import Header from "@/components/shared/header/Header";
 import Button from "@/components/shared/button/Button";
 import Link from "next/link";
 import Grid from "@/components/grid/Grid";
 import Flex from "@/components/flex/Flex";
-import { useLocale, useTranslations } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 
-const metadata = {
-  title: "Finitic Blog – Latest Insights on Forex, Fintech & Trading Technology",
+export const metadata = {
+  title: "Finitic Blog ƒ? Latest Insights on Forex, Fintech & Trading Technology",
   description: "Explore expert insights on Forex trading, Fintech innovations, AI-driven trading strategies, algorithmic trading, blockchain, and financial automation. Stay ahead with the latest trends in finance, trading technology, and data analytics from industry leaders.",
   keywords: [
     "Forex blog",
@@ -28,38 +27,62 @@ const metadata = {
     "trading analytics",
     "financial automation",
     "Finitic blog"
-  ]
+  ],
+  openGraph: {
+    title: "Finitic Blog ’'? Latest Insights on Forex, Fintech & Trading Technology",
+    description: "Explore expert insights on Forex trading, Fintech innovations, AI-driven trading strategies, algorithmic trading, blockchain, and financial automation. Stay ahead with the latest trends in finance, trading technology, and data analytics from industry leaders.",
+    type: "website",
+    images: [
+      {
+        url: "/assets/images/logo.png",
+        alt: "Finitic Technology"
+      }
+    ]
+  }
 };
 
-export default function Page() {
-  const [blogs, setBlogs] = useState([]);
-  const locale = useLocale();
-  const t = useTranslations("blogs_page");
+function stripTags(html = "") {
+  return html.replace(/<[^>]*>/g, "").trim();
+}
 
-  useEffect(() => {
-    const loadBlogs = async () => {
-      try {
-        const data = await import(`@/../public/data/blogs/all-blogs-${locale}.json`);
-        setBlogs(data.default); 
-        document.title = metadata.title;
-        document
-          .querySelector('meta[name="description"]')
-          ?.setAttribute("content", metadata.description);
-        document
-          .querySelector('meta[name="keywords"]')
-          ?.setAttribute(
-            "content",
-            metadata.keywords.join(", ")
-          );
-      } catch (err) {
-        console.error(`Failed to load blog data for locale "${locale}"`, err);
-        setBlogs([]); // fallback
-      }
+async function fetchBlogs() {
+  const response = await fetch(
+    "https://blogs.finitic.com/?rest_route=/wp/v2/posts&_embed",
+    { next: { revalidate: 300 } }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch blogs: ${response.status}`);
+  }
+
+  const posts = await response.json();
+
+  return posts.map((post) => {
+    const media = post?._embedded?.["wp:featuredmedia"]?.[0];
+    const rawTitle = post?.title?.rendered || "";
+    const rawExcerpt = post?.excerpt?.rendered || "";
+    return {
+      slug: post?.slug || "",
+      title: stripTags(rawTitle),
+      description: stripTags(rawExcerpt),
+      image: media.link || "",
+      imageTitle: "Featured",
+      type: post.type,
+      timeToRead: Math.ceil(((post.excerpt.rendered).length) / 100)
     };
+  });
+}
 
-    loadBlogs();
-  }, [locale]);
+export default async function Page() {
+  const locale = await getLocale();
+  const t = await getTranslations("blogs_page");
 
+  let blogs = [];
+  try {
+    blogs = await fetchBlogs();
+  } catch (err) {
+    console.error(`Failed to load blog data for locale "${locale}"`, err);
+  }
   return (
     <div>
       <div style={{ marginBottom: "100px" }} className="container">
