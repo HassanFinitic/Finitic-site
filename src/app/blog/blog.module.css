@@ -17,17 +17,6 @@
     border-radius: 10px;
 }
 
-.blogCard .blogCardImage .imageTitle {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    padding: 10px;
-    background-color: #FFA348;
-    color: white;
-    font-size: 12px;
-    letter-spacing: 0.3px;
-    border-radius: 25px;
-}
 
 .blogCardContent {
     flex: 1;
