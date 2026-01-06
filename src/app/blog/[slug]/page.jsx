@@ -1,3 +1,4 @@
+"use client";
 import Flex from "@/components/flex/Flex";
 import styles from "./blog.module.css";
 import { FaXTwitter } from "react-icons/fa6";
@@ -5,7 +6,9 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { CiCalendar } from "react-icons/ci";
-import { getTranslations } from "next-intl/server";
+import { useState, useEffect } from "react";
+import { useLocale } from "next-intl";
+import { useTranslations } from "use-intl";
 
 // Helper component to render content items
 function RenderContent({ content }) {
@@ -23,7 +26,7 @@ function RenderContent({ content }) {
             );
           }
 
-          // Enhanced table structure
+          // ✅ Enhanced table structure
           if (item.table?.headers && item.table?.rows) {
             return (
               <div key={index} className={styles.tableWrapper}>
@@ -112,91 +115,75 @@ function RenderContent({ content }) {
   );
 }
 
-function stripTags(html = "") {
-  return html.replace(/<[^>]*>/g, "").trim();
-}
 
-async function fetchPost(slug) {
-  const response = await fetch(
-    `https://blogs.finitic.com/?rest_route=/wp/v2/posts&slug=${encodeURIComponent(slug)}&_embed`,
-    { next: { revalidate: 300 } }
-  );
+// Client-side only page component
+export default function Page({ params }) {
+  const [slug, setSlug] = useState(null);
+  const t = useTranslations("blog_page");
 
-  if (!response.ok) {
-    throw new Error(`Failed to fetch blog post: ${response.status}`);
-  }
+  useEffect(() => {
+    // Wait for the params to be resolved
+    const loadSlug = async () => {
+      const unwrappedParams = await params;
+      setSlug(unwrappedParams.slug);
+    };
+    loadSlug();
+  }, [params]);
 
-  const posts = await response.json();
-  const post = posts?.[0];
+  const locale = useLocale();
 
-  if (!post) {
-    return null;
-  }
+  console.log(locale);
 
-  const media = post?._embedded?.["wp:featuredmedia"]?.[0];
+  const [data, setData] = useState(null);
+  const [currentUrl, setCurrentUrl] = useState("");
 
-  return {
-    slug: post?.slug || slug,
-    title: stripTags(post?.title?.rendered || ""),
-    description: stripTags(post?.excerpt?.rendered || ""),
-    date: new Date(post?.date || Date.now()).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    }),
-    image: media?.source_url || "",
-    imageTitle: stripTags(media?.title?.rendered || "Featured"),
-    type: "News",
-    timeToRead: Math.ceil(((post.excerpt.rendered).length) / 100),
-    sections: {
-      content: {
-        content: [stripTags(post?.content?.rendered || "")]
-      }
-    },
-    metaData: {
-      title: stripTags(post?.title?.rendered || "Finitic Blog"),
-      description: stripTags(post?.excerpt?.rendered || ""),
-      keywords: []
-    }
-  };
-}
+  useEffect(() => {
+    if (!slug) return;
 
-export async function generateMetadata({ params }) {
-  const data = await fetchPost(params.slug);
+    // Set the current URL for sharing
+    setCurrentUrl(window.location.href);
 
-  if (!data) {
-    return {
-      title: "Finitic Blog",
-      description: "",
-      openGraph: {
-        title: "Finitic Blog",
-        description: "",
-        type: "article"
+    // Dynamically import data based on slug
+    const loadData = async () => {
+      try {
+        const response = await fetch(`/data/blogs/${slug}.json`);
+        // const response = await fetch(`/data/blogs/${slug}-${locale}.json`);
+        // let response;
+        // if (locale === "ar") {
+        //   response = await fetch(`/data/blogs/${slug}-ar.json`);
+        // } else {
+        //   response = await fetch(`/data/blogs/${slug}-en.json`);
+        // }
+
+        const json = await response.json();
+        setData(json);
+
+        // Set meta data dynamically based on imported data
+        if (json) {
+          console.log("response.metaData", json);
+          document.title = json.metaData?.title || "Finitic Blog";
+          document
+            .querySelector('meta[name="description"]')
+            ?.setAttribute("content", json.metaData?.description || "");
+          document
+            .querySelector('meta[name="keywords"]')
+            ?.setAttribute(
+              "content",
+              json.metaData?.keywords.join(", ") || ""
+            );
+        }
+      } catch (error) {
+        console.error("Error loading JSON data:", error);
+        setData({});
       }
     };
-  }
 
-  return {
-    title: data.metaData?.title || "Finitic Blog",
-    description: data.metaData?.description || "",
-    openGraph: {
-      title: data.metaData?.title || "Finitic Blog",
-      description: data.metaData?.description || "",
-      type: "article",
-      images: data.image ? [{ url: data.image, alt: data.imageTitle || data.title }] : []
-    }
-  };
-}
-
-export default async function Page({ params }) {
-  const t = await getTranslations("blog_page");
-  const data = await fetchPost(params.slug);
+    loadData();
+  }, [slug, locale]); // This will run when the slug changes
 
   if (!data) {
-    return <p>Blog post not found.</p>;
+    return <p>Loading the page content...</p>;
   }
-
-  const currentUrl = `https://finitic.com/blog/${data.slug}`;
 
   return (
     <main className={`container ${styles.main}`}>
@@ -287,7 +274,7 @@ export default async function Page({ params }) {
               {Object.entries(section).map(([featureKey, feature]) => (
                 <div key={featureKey} className={styles.feature}>
                   <h3 className={styles.title}>{feature.title}</h3>
-                  <div dangerouslySetInnerHTML={{__html: section.content }} />
+                  <RenderContent content={feature.content} />
                 </div>
               ))}
             </>
@@ -300,7 +287,7 @@ export default async function Page({ params }) {
                   <h2>{sectionKey.replace(/_/g, " ").toUpperCase()}</h2>
                 )
               }
-              <div dangerouslySetInnerHTML={{__html: section.content }} />
+              <RenderContent content={section.content} />
             </>
           )}
         </section>
